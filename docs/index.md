@@ -1,6 +1,6 @@
 リポジトリ: [mtakahashi1150/univ_info_cursor](https://github.com/mtakahashi1150/univ_info_cursor)
 
-**サイト更新（取得実行・UTC）**: `2026-04-04T22:26:38+00:00`
+**サイト更新（取得実行・UTC）**: `2026-04-04T22:27:07+00:00`
 
 **前回スナップショットとの差分**: あり（`sophia_oc`）
 
@@ -443,7 +443,7 @@
 
 </div>
 
-_Generated at 2026-04-04T22:26:38+00:00_
+_Generated at 2026-04-04T22:27:07+00:00_
 
 ---
 
