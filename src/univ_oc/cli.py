@@ -1,12 +1,13 @@
 from __future__ import annotations
 
 import os
+from datetime import datetime, timezone
 
 import typer
 from dotenv import load_dotenv
 
 from univ_oc import fetch as fetch_mod
-from univ_oc.config_loader import load_sources, load_target_catalog, repo_root
+from univ_oc.config_loader import load_campus_access, load_sources, load_target_catalog, repo_root
 from univ_oc.mail import build_email_body, load_smtp_settings_from_env, send_update_email
 from univ_oc.parsers import parse as parse_with
 from univ_oc.render import build_row, render_full_document
@@ -32,8 +33,9 @@ def run(
 
     sources = load_sources(root / "config" / "sources.yaml")
     catalog = load_target_catalog(root / "config" / "target_catalog.yaml")
+    campus_access = load_campus_access(root / "config" / "campus_access.yaml")
     snapshot_dir = root / "data" / "snapshots"
-    out_md = root / "docs" / "opencampus.md"
+    out_md = root / "docs" / "index.md"
 
     any_changed: list[str] = []
     rows: list[dict] = []
@@ -95,7 +97,13 @@ def run(
         )
         rows.append(row)
 
-    md = render_full_document(catalog, rows)
+    generated_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+    run_meta = {
+        "generated_at": generated_at,
+        "changed_source_ids": list(any_changed),
+        "has_diff": bool(any_changed),
+    }
+    md = render_full_document(catalog, rows, campus_access, run_meta=run_meta)
     out_md.parent.mkdir(parents=True, exist_ok=True)
     out_md.write_text(md, encoding="utf-8")
 

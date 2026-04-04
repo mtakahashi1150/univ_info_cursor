@@ -2,7 +2,7 @@
 
 GitHub ユーザー **`mtakahashi1150`** 配下のリポジトリ **`univ_info_cursor`** 用のプロジェクトです。既存の `univ_info` などと区別するため、この名前で管理します。
 
-検証済み URL からオープンキャンパス情報を取得し、`data/snapshots/` に JSON を累積、`docs/opencampus.md` に表を出力します。静的サイトは **MkDocs Material** でビルドし、**GitHub Pages**（`gh-pages` ブランチ）に公開します。更新があったときだけ **Gmail SMTP** で通知できます。
+検証済み URL からオープンキャンパス情報を取得し、`data/snapshots/` に JSON を累積、`docs/index.md` に一覧を出力します。静的サイトは **MkDocs Material** でビルドし、**GitHub Actions** の **Deploy to GitHub Pages** で公開します。更新があったときだけ **Gmail SMTP** で通知できます。
 
 - **リポジトリ**: `https://github.com/mtakahashi1150/univ_info_cursor`
 - **GitHub Pages（想定）**: `https://mtakahashi1150.github.io/univ_info_cursor/`
@@ -63,7 +63,7 @@ mkdocs serve
 
 ### GitHub Pages
 
-リポジトリ **Settings → Pages** で **Branch: gh-pages / / (root)** を有効にします。
+リポジトリ **Settings → Pages** で **Source: GitHub Actions** を選びます（初回はワークフロー実行後、環境 `github-pages` の承認が求められる場合があります）。以前 **gh-pages** ブランチを使っていた場合は、ソースを切り替えてください。
 
 ## 新しい大学を追加する
 

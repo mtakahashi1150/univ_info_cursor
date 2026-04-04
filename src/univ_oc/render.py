@@ -1,20 +1,153 @@
 from __future__ import annotations
 
 import html
+import re
 from datetime import datetime, timezone
-from typing import Any, Optional
+from typing import Any, Optional, Union
+
+# 表示順: 早慶上理 → G-MARCH → 東京4理工 → その他
+_UNIV_RANK: dict[str, int] = {
+    "早稲田大学": 10,
+    "慶應義塾大学": 11,
+    "上智大学": 12,
+    "東京理科大学": 13,
+    "明治大学": 20,
+    "青山学院大学": 21,
+    "立教大学": 22,
+    "中央大学": 23,
+    "法政大学": 24,
+    "芝浦工業大学": 30,
+    "東京都市大学": 31,
+    "東京電機大学": 32,
+    "工学院大学": 33,
+    "東京工科大学": 90,
+}
 
 
 def _md_table_cell(value: Optional[str]) -> str:
-    """Markdown 表セル内の | や改行で表が壊れないようにする。"""
     if value is None:
         return ""
     s = str(value).replace("\r\n", " ").replace("\n", " ").replace("\r", " ").strip()
     return s.replace("|", "\\|")
 
 
+def extract_schedule_dates_only(normalized: dict[str, Any], schedule_summary: str) -> str:
+    """表用: 日付らしき部分だけ抽出。"""
+    blob = schedule_summary + "\n" + "\n".join(normalized.get("schedule_lines") or [])
+    found: list[str] = []
+    for pat in (
+        r"\d{4}年\d{1,2}月\d{1,2}日(?:\([日月火水木金土]\)|（[^）]+）)?",
+        r"\d{1,2}月\d{1,2}日(?:\([日月火水木金土]\)|（[^）]+）)?",
+        r"\d{4}/\d{1,2}/\d{1,2}",
+    ):
+        for m in re.findall(pat, blob):
+            if m not in found:
+                found.append(m)
+    return "、".join(found[:14]) if found else "—"
+
+
+def sort_base_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return sorted(
+        rows,
+        key=lambda r: (
+            _UNIV_RANK.get(r.get("university") or "", 50),
+            r.get("university") or "",
+            r.get("source_id") or "",
+        ),
+    )
+
+
+def _parse_campus_access_value(val: Union[str, dict[str, Any], None]) -> tuple[str, str]:
+    """YAML の値が str または {access,duration} 辞書のとき、(図志から目安, 所要目安) を返す。"""
+    if val is None:
+        return "（目安未設定・公式で確認）", "—"
+    if isinstance(val, dict):
+        acc = str(val.get("access") or val.get("from_station") or "").strip()
+        dur = str(val.get("duration") or val.get("total") or "").strip()
+        if not acc:
+            acc = "（目安未設定・公式で確認）"
+        if not dur:
+            dur = "—"
+        return acc, dur
+    s = str(val).strip()
+    return (s if s else "（目安未設定・公式で確認）"), "—"
+
+
+def expand_display_rows(
+    base_rows: list[dict[str, Any]],
+    catalog: dict[str, Any],
+    campus_access: dict[str, dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """カタログの oc_campuses ごとに表行を分割。source_id は同一のまま（詳細アンカー共用）。"""
+    by_name = {u.get("name"): u for u in catalog.get("universities", []) if u.get("name")}
+    out: list[dict[str, Any]] = []
+    for r in base_rows:
+        sid = r.get("source_id") or ""
+        uni = r.get("university") or ""
+        cu = by_name.get(uni)
+        acc = campus_access.get(sid, {})
+        if cu and cu.get("oc_campuses"):
+            depts = cu.get("info_departments") or []
+            short_dept = "・".join(depts[:2])
+            if len(short_dept) > 100:
+                short_dept = short_dept[:97] + "…"
+            for oc in cu["oc_campuses"]:
+                campus_name = str(oc.get("campus", ""))
+                pref = str(oc.get("prefecture", ""))
+                rr = {**r}
+                rr["display_campus_line"] = f"{campus_name}（{pref}）" if pref else campus_name
+                rr["display_dept_short"] = short_dept or (r.get("department_label") or "")[:100]
+                raw_av = acc.get(campus_name, acc.get("_default"))
+                tr, dur = _parse_campus_access_value(raw_av)
+                rr["transit_note"] = tr
+                rr["duration_note"] = dur
+                out.append(rr)
+        else:
+            rr = {**r}
+            rr["display_campus_line"] = r.get("campus_label") or "—"
+            rr["display_dept_short"] = (r.get("department_label") or "")[:100]
+            tr, dur = _parse_campus_access_value(acc.get("_default"))
+            rr["transit_note"] = tr
+            rr["duration_note"] = dur
+            out.append(rr)
+    return sorted(
+        out,
+        key=lambda x: (
+            _UNIV_RANK.get(x.get("university") or "", 50),
+            x.get("university") or "",
+            x.get("display_campus_line") or "",
+        ),
+    )
+
+
+def render_repo_and_run_banner(run_meta: dict[str, Any]) -> str:
+    """ページ最上部: 更新日時・差分有無（表の前）。"""
+    gen = html.escape(run_meta.get("generated_at") or "")
+    has_diff = bool(run_meta.get("has_diff"))
+    ids = run_meta.get("changed_source_ids") or []
+    if has_diff and ids:
+        diff_line = "**前回スナップショットとの差分**: あり（`" + "`, `".join(html.escape(i) for i in ids) + "`）"
+    elif has_diff:
+        diff_line = "**前回スナップショットとの差分**: あり"
+    else:
+        diff_line = "**前回スナップショットとの差分**: なし（フィンガープリント一致）"
+
+    return "\n".join(
+        [
+            "リポジトリ: [mtakahashi1150/univ_info_cursor](https://github.com/mtakahashi1150/univ_info_cursor)",
+            "",
+            f"**サイト更新（取得実行・UTC）**: `{gen}`",
+            "",
+            diff_line,
+            "",
+            "> 表の **日程** は公式ページからの抜粋です。詳細・申込は **公式サイト** リンク先で確認してください。",
+            "> **図志駅から** の所要は手動の目安です（`config/campus_access.yaml`）。未設定時は公式で確認してください。",
+            "",
+        ]
+    )
+
+
 def render_catalog_markdown(catalog: dict[str, Any]) -> str:
-    """target_catalog.yaml から一覧表を生成。"""
     lines: list[str] = [
         "## 対象エリア・グループ・大学別（情報工学・情報科学系の整理）",
         "",
@@ -57,51 +190,79 @@ def render_catalog_markdown(catalog: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
-def render_update_summary_block(rows: list[dict[str, Any]]) -> str:
-    """今回の実行で差分があった大学のサマリー（文書先頭用）。"""
-    changed = [r for r in rows if r.get("changed_this_run")]
-    lines = [
-        "## 今回の更新サマリー",
-        "",
-    ]
-    if not changed:
-        lines.append(
-            "直近の取得では、保存済みスナップショットと**差分はありませんでした**"
-            "（公式ページのフィンガープリント一致）。"
+def _external_links_html(page_url: str, reservation_url: str) -> str:
+    chunks: list[str] = []
+    if page_url:
+        u = html.escape(page_url, quote=True)
+        chunks.append(
+            f'<a href="{u}" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a>'
         )
-        lines.append("")
-        return "\n".join(lines)
-
-    lines.append("次の大学で、公式ページから取得した内容に**変化**が検知されています。")
-    lines.append("")
-    for r in changed:
-        uni = r.get("university", "")
-        snip = r.get("update_snippet") or "掲載内容の変化"
-        lines.append(f"- **{uni}**: {snip}")
-    lines.append("")
-    lines.append(
-        "下の「一覧」表の **NEW** 列と、詳細カード左の強調枠・**NEW** バッジで同じ箇所が分かります。"
-    )
-    lines.append("")
-    return "\n".join(lines)
+    if reservation_url:
+        u = html.escape(reservation_url, quote=True)
+        chunks.append(
+            f'<a href="{u}" target="_blank" rel="noopener noreferrer">申込・予約</a>'
+        )
+    if not chunks:
+        return "—"
+    return " ".join(chunks)
 
 
-def render_quick_jump_table(rows: list[dict[str, Any]]) -> str:
-    """スマホでも横スクロールほぼ不要なジャンプ用の簡易表。"""
+def render_oc_overview_html_table(display_rows: list[dict[str, Any]]) -> str:
+    """スマホは CSS でカード風（各行に大学名を繰り返し、rowspan は使わない）。"""
     lines = [
-        "### 大学一覧（詳細へジャンプ）",
+        "## 一覧表",
         "",
-        "| 大学 | 今回 |",
-        "| --- | --- |",
+        '<div class="oc-overview-wrap" markdown="0">',
+        '<table class="oc-overview-table">',
+        "<thead><tr>",
+        '<th data-label="大学">大学</th>',
+        '<th data-label="学部・学科">学部・学科</th>',
+        '<th data-label="OC">オープンキャンパス<br/><span class="oc-th-sub">図志駅から（目安）</span><br/><span class="oc-th-sub">所要（目安）</span></th>',
+        '<th data-label="日程">日程</th>',
+        '<th data-label="差分">差分</th>',
+        '<th data-label="公式">公式</th>',
+        '<th data-label="詳細">詳細</th>',
+        "</tr></thead>",
+        "<tbody>",
     ]
-    for r in rows:
-        sid = r.get("source_id", "")
-        uni = _md_table_cell(r.get("university", ""))
-        mark = "**NEW**" if r.get("changed_this_run") else "—"
-        if sid:
-            lines.append(f"| [{uni}](#{sid}) | {mark} |")
-        else:
-            lines.append(f"| {uni} | {mark} |")
+
+    seen_changed_sid: set[str] = set()
+    for r in display_rows:
+        sid_raw = (r.get("source_id") or "").replace('"', "").replace("'", "")
+        sid = html.escape(sid_raw)
+        uni_plain = html.escape(r.get("university", "") or "")
+        new_html = ""
+        if r.get("changed_this_run") and sid_raw and sid_raw not in seen_changed_sid:
+            new_html = ' <span class="oc-new-badge">NEW</span>'
+            seen_changed_sid.add(sid_raw)
+        uni_cell = f'<a class="oc-overview-uni" href="#{sid}">{uni_plain}</a>{new_html}'
+
+        lines.append("<tr>")
+        lines.append(f'<td data-label="大学">{uni_cell}</td>')
+
+        dept = html.escape(r.get("display_dept_short") or "")
+        campus = html.escape(r.get("display_campus_line") or "")
+        transit = html.escape(r.get("transit_note") or "")
+        dur_raw = (r.get("duration_note") or "").strip()
+        dur_esc = html.escape(dur_raw) if dur_raw and dur_raw != "—" else ""
+        oc_cell = f'<span class="oc-campus-name">{campus}</span><br/><span class="oc-transit">（{transit}）</span>'
+        if dur_esc:
+            oc_cell += f'<br/><span class="oc-duration">（所要 {dur_esc}）</span>'
+
+        dates = html.escape(r.get("schedule_dates_only") or "—")
+        diff_cell = "○" if r.get("changed_this_run") else "—"
+        links_td = _external_links_html(r.get("page_url") or "", r.get("reservation_url") or "")
+        detail_td = f'<a href="#{sid}">詳細</a>' if sid_raw else "—"
+
+        lines.append(f'<td data-label="学部・学科">{dept}</td>')
+        lines.append(f'<td data-label="OC">{oc_cell}</td>')
+        lines.append(f'<td data-label="日程" class="oc-col-dates">{dates}</td>')
+        lines.append(f'<td data-label="差分" class="oc-col-diff">{diff_cell}</td>')
+        lines.append(f'<td data-label="公式" class="oc-overview-links">{links_td}</td>')
+        lines.append(f'<td data-label="詳細">{detail_td}</td>')
+        lines.append("</tr>")
+
+    lines.append("</tbody></table></div>")
     lines.append("")
     return "\n".join(lines)
 
@@ -113,31 +274,12 @@ def _schedule_bullets(schedule_summary: str, limit: int = 10) -> str:
     return "\n".join(f"    - {p}" for p in parts[:limit])
 
 
-def _external_links_html(page_url: str, reservation_url: str) -> str:
-    """公式サイトは別タブで開く（表示はラベルのみ）。"""
-    chunks: list[str] = []
-    if page_url:
-        u = html.escape(page_url, quote=True)
-        chunks.append(
-            f'<a href="{u}" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a>'
-        )
-    if reservation_url:
-        u = html.escape(reservation_url, quote=True)
-        chunks.append(
-            f'<a href="{u}" target="_blank" rel="noopener noreferrer">申込・予約の案内</a>'
-        )
-    if not chunks:
-        return "（このソースでは案内リンクのみ別途確認）"
-    return " ・ ".join(chunks)
-
-
 def render_oc_detail_cards(rows: list[dict[str, Any]]) -> str:
-    """累積情報をカード状（OC 内容優先・リンクはラベルのみ）。"""
     n = len(rows)
     lines: list[str] = [
-        "## オープンキャンパス情報（累積・自動取得）",
+        "## 大学別の詳細（公式ページへ）",
         "",
-        f"`config/sources.yaml` の検証済み URL から取得したスナップショットです（**全 {n} 件**）。",
+        f"上の **公式** または下のリンクから各大学の案内ページへ。**全 {n} ソース**（取得単位）。",
         "",
     ]
     for r in rows:
@@ -146,15 +288,11 @@ def render_oc_detail_cards(rows: list[dict[str, Any]]) -> str:
         klass = "oc-card oc-card--updated" if is_new else "oc-card"
         uni = r.get("university", "")
         uni_esc = html.escape(uni)
-
         safe_id = sid.replace('"', "").replace("'", "") if sid else "row"
         lines.append(f'<div class="{klass}" id="{html.escape(safe_id)}" markdown="1">')
         lines.append("")
         if is_new:
-            lines.append(
-                f'<h3 class="oc-title">{uni_esc} '
-                f'<span class="oc-new-badge">NEW</span></h3>'
-            )
+            lines.append(f'<h3 class="oc-title">{uni_esc} <span class="oc-new-badge">NEW</span></h3>')
         else:
             lines.append(f'<h3 class="oc-title">{uni_esc}</h3>')
         lines.append("")
@@ -162,22 +300,10 @@ def render_oc_detail_cards(rows: list[dict[str, Any]]) -> str:
         if cw:
             lines.append(f'<p class="oc-catalog-warning">{html.escape(cw)}</p>')
             lines.append("")
-        lines.append("- **OC 日程・プログラム**")
+        lines.append("- **日程（抜粋）**")
         lines.append(_schedule_bullets(r.get("schedule_summary") or ""))
-        app = r.get("application_note") or ""
-        app_esc = _md_table_cell(app) if app else ""
-        lines.append(f"- **申込・更新メモ**: {app_esc or '—'}")
         lines.append(
-            f"- **公式リンク**: {_external_links_html(r.get('page_url') or '', r.get('reservation_url') or '')}"
-        )
-        meta = (
-            f"{r.get('university_group', '')} / {r.get('department_label', '')} / "
-            f"{r.get('campus_label', '')} / 対象エリア: {r.get('area_prefectures_str', '')}"
-        )
-        lines.append(f"- **大学・学部・キャンパス**: {meta}")
-        lines.append(
-            f"- **最終取得(UTC)** `{r.get('last_fetch_at', '')}` ・ "
-            f"**最終内容更新(UTC)** `{r.get('last_content_change_at', '')}` ・ {r.get('status', '')}"
+            f"- **公式**: {_external_links_html(r.get('page_url') or '', r.get('reservation_url') or '')}"
         )
         lines.append("")
         lines.append("</div>")
@@ -228,6 +354,7 @@ def build_row(
         status = f"直近 {days_no_update} 日間、内容に変化なし"
 
     catalog_season_warning = (normalized.get("catalog_season_warning") or "").strip()
+    schedule_dates_only = extract_schedule_dates_only(normalized, sched)
 
     return {
         "source_id": source_id,
@@ -238,6 +365,7 @@ def build_row(
         "area_prefectures_str": "・".join(area_prefectures),
         "application_note": app_note,
         "schedule_summary": sched,
+        "schedule_dates_only": schedule_dates_only,
         "reservation_url": reservation_url or "",
         "page_url": page_url,
         "last_fetch_at": last_fetch_at,
@@ -249,19 +377,22 @@ def build_row(
     }
 
 
-def render_full_document(catalog: dict[str, Any], rows: list[dict[str, Any]]) -> str:
-    """先頭: 更新サマリー → 簡易一覧表 → OC 詳細カード → 末尾: 対象カタログ表。"""
-    title = "# オープンキャンパス情報（早慶上理・G-MARCH・情報系・首都圏）"
-    ordered = sorted(
-        rows,
-        key=lambda r: (not r.get("changed_this_run", False), r.get("university", "")),
-    )
+def render_full_document(
+    catalog: dict[str, Any],
+    rows: list[dict[str, Any]],
+    campus_access: dict[str, dict[str, Any]],
+    run_meta: Optional[dict[str, Any]] = None,
+) -> str:
+    run_meta = run_meta or {}
+    base_sorted = sort_base_rows(rows)
+    display_rows = expand_display_rows(base_sorted, catalog, campus_access)
+
     parts = [
-        title,
+        render_repo_and_run_banner(run_meta),
+        "# オープンキャンパス情報（早慶上理・G-MARCH・東京4理工ほか）",
         "",
-        render_update_summary_block(ordered),
-        render_quick_jump_table(ordered),
-        render_oc_detail_cards(ordered),
+        render_oc_overview_html_table(display_rows),
+        render_oc_detail_cards(base_sorted),
         "---",
         "",
         render_catalog_markdown(catalog),

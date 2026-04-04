@@ -51,6 +51,19 @@ def load_target_catalog(path: Optional[Path] = None) -> dict[str, Any]:
     return yaml.safe_load(p.read_text(encoding="utf-8"))
 
 
+def load_campus_access(path: Optional[Path] = None) -> dict[str, dict[str, Any]]:
+    """campus_access.yaml: by_source_id -> { キャンパス名: 目安文字列 or {access,duration} }"""
+    p = path or Path("config/campus_access.yaml")
+    if not p.is_file():
+        return {}
+    raw = yaml.safe_load(p.read_text(encoding="utf-8")) or {}
+    out: dict[str, dict[str, Any]] = {}
+    for sid, mapping in (raw.get("by_source_id") or {}).items():
+        if isinstance(mapping, dict):
+            out[str(sid)] = {str(k): v for k, v in mapping.items()}
+    return out
+
+
 def repo_root() -> Path:
     """config/sources.yaml からリポジトリルートを推定。"""
     cwd = Path.cwd()

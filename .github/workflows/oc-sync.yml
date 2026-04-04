@@ -8,13 +8,15 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: oc-sync
   cancel-in-progress: true
 
 jobs:
-  sync-and-publish:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -46,21 +48,30 @@ jobs:
       - name: Build static site
         run: mkdocs build
 
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
       - name: Commit snapshot changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/snapshots docs/opencampus.md || true
+          git add data/snapshots docs/index.md || true
           if git diff --staged --quiet; then
             echo "No snapshot changes to commit."
           else
-            git commit -m "chore: update OC snapshots and table"
+            git commit -m "chore: update OC snapshots and index"
             git push
           fi
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
-          force_orphan: true
+        id: deployment
+        uses: actions/deploy-pages@v4

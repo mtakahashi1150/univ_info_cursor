@@ -43,10 +43,20 @@ def test_render_table() -> None:
         days_no_update=0,
     )
     catalog = {"meta": {"area_prefectures": ["東京都"], "focus": "情報系"}, "universities": []}
-    md = render_full_document(catalog, [row])
+    md = render_full_document(
+        catalog,
+        [row],
+        {},
+        run_meta={
+            "generated_at": "2026-01-01T00:00:00+00:00",
+            "has_diff": True,
+            "changed_source_ids": ["test_src"],
+        },
+    )
     assert "テスト大学" in md
-    assert "累積" in md
-    assert "今回の更新サマリー" in md
+    assert "一覧表" in md
+    assert "oc-overview-table" in md
+    assert "前回スナップショットとの差分" in md
     assert "NEW" in md
     assert "オープンキャンパス案内" in md
     assert 'target="_blank"' in md

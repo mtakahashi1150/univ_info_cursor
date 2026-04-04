@@ -15,13 +15,13 @@ extra_css:
 
 markdown_extensions:
   - md_in_html
+  - attr_list
   - tables
   - toc:
       permalink: true
 
 nav:
-  - ホーム: index.md
-  - 累積表: opencampus.md
+  - オープンキャンパス情報: index.md
 
 plugins:
   - search
