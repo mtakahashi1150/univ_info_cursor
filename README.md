@@ -63,7 +63,13 @@ mkdocs serve
 
 ### GitHub Pages
 
-リポジトリ **Settings → Pages** で **Source: GitHub Actions** を選びます（初回はワークフロー実行後、環境 `github-pages` の承認が求められる場合があります）。以前 **gh-pages** ブランチを使っていた場合は、ソースを切り替えてください。
+リポジトリ **Settings → Pages** で **Build and deployment** の **Source** を **GitHub Actions** にします。ここが **Deploy from a branch** のままだと、`deploy-pages` が **「Failed to create deployment (status: 404)」** で失敗します（ワークフロー不備ではなく設定不足です）。
+
+1. [Settings → Pages](https://github.com/mtakahashi1150/univ_info_cursor/settings/pages) を開く  
+2. **Source** のドロップダウンで **GitHub Actions** を選ぶ（保存ボタンがあれば保存）  
+3. もう一度 **Deploy MkDocs (quick)** を **Run workflow** する  
+
+初回は **Environment: github-pages** の承認待ちになることがあります（Actions の実行画面で **Review deployments** → **Approve**）。
 
 **すぐ Pages の状況だけ確認したいとき**: **Actions** タブ → **Deploy MkDocs (quick)** → 右上 **Run workflow** → **Run workflow**。取得・SMTP は行わず、`main` の `docs/` をビルドしてデプロイします。
 

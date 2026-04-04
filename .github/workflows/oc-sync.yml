@@ -1,10 +1,16 @@
 name: Sync open campus data
 
+# deploy 404 時は Settings → Pages で Source を「GitHub Actions」に。
+# https://github.com/mtakahashi1150/univ_info_cursor/settings/pages
+
 on:
   schedule:
     # 毎日 15:00 UTC 前後（日本時間 0:00 付近）。必要に応じて変更。
     - cron: "0 15 * * *"
   workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 permissions:
   contents: write
