@@ -1,8 +1,8 @@
 リポジトリ: [mtakahashi1150/univ_info_cursor](https://github.com/mtakahashi1150/univ_info_cursor)
 
-**サイト更新（取得実行・UTC）**: `2026-04-04T22:18:58+00:00`
+**サイト更新（取得実行・UTC）**: `2026-04-04T22:26:38+00:00`
 
-**前回スナップショットとの差分**: あり（`tus_oc`）
+**前回スナップショットとの差分**: あり（`sophia_oc`）
 
 > 表の **日程** は公式ページからの抜粋です。詳細・申込は **公式サイト** リンク先で確認してください。
 > **逗子（JR 横須賀線・逗子駅／または京急逗子・葉山駅）から** の所要は手動の目安です（`config/campus_access.yaml`）。経路で大きく変わります。未設定時は公式で確認してください。
@@ -64,25 +64,25 @@
 </tr>
 <tr>
 <td data-label="大学"><a class="oc-overview-uni" href="#sophia_oc">上智大学</a></td>
-<td data-label="学部・学科">理工学部（情報理工学科ほか）</td>
+<td data-label="学部・学科">理工学部（情報理工学科ほか）・OCは一覧の【理工】表記イベントを参照</td>
 <td data-label="OC"><span class="oc-campus-name">四谷キャンパス（東京都）</span><br/><span class="oc-transit">（JR逗子→品川→地下鉄四谷三丁目 約75〜90分+徒歩）</span><br/><span class="oc-duration">（所要 計85〜100分台）</span></td>
-<td data-label="日程" class="oc-col-dates">—<br/><a class="oc-schedule-link" href="https://adm.sophia.ac.jp/jpn/event_ad/oc" target="_blank" rel="noopener noreferrer">イベント・OC情報</a></td>
-<td data-label="公式" class="oc-overview-links"><a href="https://adm.sophia.ac.jp/jpn/event_ad/oc/" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
+<td data-label="日程" class="oc-col-dates"><span class="oc-new-inline">【NEW】</span> —<br/><a class="oc-schedule-link" href="https://adm.sophia.ac.jp/jpn/event_ad" target="_blank" rel="noopener noreferrer">イベント・OC一覧</a><br/><a class="oc-schedule-link" href="https://adm.sophia.ac.jp/eng/news/english-taught/2026engsessionjuly12/" target="_blank" rel="noopener noreferrer">詳細</a></td>
+<td data-label="公式" class="oc-overview-links"><a href="https://adm.sophia.ac.jp/jpn/event_ad/" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#sophia_oc">詳細</a></td>
 </tr>
 <tr>
 <td data-label="大学"><a class="oc-overview-uni" href="#sophia_oc">上智大学</a></td>
-<td data-label="学部・学科">（キャンパスによりプログラム異なる場合あり）</td>
+<td data-label="学部・学科">同一ページに四谷・目白向けイベントを掲載（キャンパス別詳細は公式イベントを確認）</td>
 <td data-label="OC"><span class="oc-campus-name">目白聖母キャンパス（東京都）</span><br/><span class="oc-transit">（JR逗子→品川→JR目白 約75〜90分+徒歩）</span><br/><span class="oc-duration">（所要 計85〜100分台）</span></td>
-<td data-label="日程" class="oc-col-dates">—<br/><a class="oc-schedule-link" href="https://adm.sophia.ac.jp/jpn/event_ad/oc" target="_blank" rel="noopener noreferrer">イベント・OC情報</a></td>
-<td data-label="公式" class="oc-overview-links"><a href="https://adm.sophia.ac.jp/jpn/event_ad/oc/" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
+<td data-label="日程" class="oc-col-dates"><span class="oc-new-inline">【NEW】</span> —<br/><a class="oc-schedule-link" href="https://adm.sophia.ac.jp/jpn/event_ad" target="_blank" rel="noopener noreferrer">イベント・OC一覧</a><br/><a class="oc-schedule-link" href="https://adm.sophia.ac.jp/eng/news/english-taught/2026engsessionjuly12/" target="_blank" rel="noopener noreferrer">詳細</a></td>
+<td data-label="公式" class="oc-overview-links"><a href="https://adm.sophia.ac.jp/jpn/event_ad/" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#sophia_oc">詳細</a></td>
 </tr>
 <tr>
 <td data-label="大学"><a class="oc-overview-uni" href="#tus_oc">東京理科大学</a></td>
 <td data-label="学部・学科">創域情報学部・工学部（情報工学科等）<br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/informationsciencetechnology/" target="_blank" rel="noopener noreferrer">創域情報学部</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/informationsciencetechnology/informationsciencetechnology/" target="_blank" rel="noopener noreferrer">情報理工学科</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/engineering/" target="_blank" rel="noopener noreferrer">工学部</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/engineering/information/" target="_blank" rel="noopener noreferrer">情報工学科（工学部）</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/industrialscience_technology/" target="_blank" rel="noopener noreferrer">先進工学部</a></td>
 <td data-label="OC"><span class="oc-campus-name">神楽坂キャンパス（東京都）</span><br/><span class="oc-transit">（JR逗子→品川→JR飯田橋 約75〜90分+徒歩）</span><br/><span class="oc-duration">（所要 計85〜100分台）</span></td>
-<td data-label="日程" class="oc-col-dates"><span class="oc-new-inline">【NEW】</span> 2025年8月11日<br/><a class="oc-schedule-link" href="https://www.tus.ac.jp/admissions/university/visittus/opencampus" target="_blank" rel="noopener noreferrer">OCトップ</a></td>
+<td data-label="日程" class="oc-col-dates">2025年8月11日<br/><a class="oc-schedule-link" href="https://www.tus.ac.jp/admissions/university/visittus/opencampus" target="_blank" rel="noopener noreferrer">OCトップ</a></td>
 <td data-label="公式" class="oc-overview-links"><a href="https://www.tus.ac.jp/admissions/university/visittus/opencampus/" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#tus_oc">詳細</a></td>
 </tr>
@@ -90,7 +90,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#tus_oc">東京理科大学</a></td>
 <td data-label="学部・学科">薬・工学・先進工学（夏アーカイブ表記参照）<br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/informationsciencetechnology/" target="_blank" rel="noopener noreferrer">創域情報学部</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/informationsciencetechnology/informationsciencetechnology/" target="_blank" rel="noopener noreferrer">情報理工学科</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/engineering/" target="_blank" rel="noopener noreferrer">工学部</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/engineering/information/" target="_blank" rel="noopener noreferrer">情報工学科（工学部）</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/industrialscience_technology/" target="_blank" rel="noopener noreferrer">先進工学部</a></td>
 <td data-label="OC"><span class="oc-campus-name">葛飾キャンパス（東京都）</span><br/><span class="oc-transit">（JR逗子→東京→京成 お花茶屋 約85〜105分+バス）</span><br/><span class="oc-duration">（所要 計95〜115分台）</span></td>
-<td data-label="日程" class="oc-col-dates"><span class="oc-new-inline">【NEW】</span> 2025年8月10日、5月17日（日）<br/><a class="oc-schedule-link" href="https://www.tus.ac.jp/today/archive/20260204_0104.html" target="_blank" rel="noopener noreferrer">詳細（公式）</a><br/><a class="oc-schedule-link" href="https://www.tus.ac.jp/admissions/university/visittus/opencampus" target="_blank" rel="noopener noreferrer">OCトップ</a></td>
+<td data-label="日程" class="oc-col-dates">2025年8月10日、5月17日（日）<br/><a class="oc-schedule-link" href="https://www.tus.ac.jp/today/archive/20260204_0104.html" target="_blank" rel="noopener noreferrer">詳細（公式）</a><br/><a class="oc-schedule-link" href="https://www.tus.ac.jp/admissions/university/visittus/opencampus" target="_blank" rel="noopener noreferrer">OCトップ</a></td>
 <td data-label="公式" class="oc-overview-links"><a href="https://www.tus.ac.jp/admissions/university/visittus/opencampus/" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#tus_oc">詳細</a></td>
 </tr>
@@ -98,7 +98,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#tus_oc">東京理科大学</a></td>
 <td data-label="学部・学科">創域理工・創域情報（夏アーカイブ表記参照）<br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/informationsciencetechnology/" target="_blank" rel="noopener noreferrer">創域情報学部</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/informationsciencetechnology/informationsciencetechnology/" target="_blank" rel="noopener noreferrer">情報理工学科</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/engineering/" target="_blank" rel="noopener noreferrer">工学部</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/engineering/information/" target="_blank" rel="noopener noreferrer">情報工学科（工学部）</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/industrialscience_technology/" target="_blank" rel="noopener noreferrer">先進工学部</a></td>
 <td data-label="OC"><span class="oc-campus-name">野田キャンパス（千葉県）</span><br/><span class="oc-transit">（JR逗子→大船→東武アーバン 運河 約70〜90分）</span><br/><span class="oc-duration">（所要 計80〜100分台）</span></td>
-<td data-label="日程" class="oc-col-dates"><span class="oc-new-inline">【NEW】</span> 2025年8月9日、4月19日（日）<br/><a class="oc-schedule-link" href="https://www.tus.ac.jp/today/archive/20260218_0536.html" target="_blank" rel="noopener noreferrer">詳細（公式）</a><br/><a class="oc-schedule-link" href="https://www.tus.ac.jp/admissions/university/visittus/opencampus" target="_blank" rel="noopener noreferrer">OCトップ</a></td>
+<td data-label="日程" class="oc-col-dates">2025年8月9日、4月19日（日）<br/><a class="oc-schedule-link" href="https://www.tus.ac.jp/today/archive/20260218_0536.html" target="_blank" rel="noopener noreferrer">詳細（公式）</a><br/><a class="oc-schedule-link" href="https://www.tus.ac.jp/admissions/university/visittus/opencampus" target="_blank" rel="noopener noreferrer">OCトップ</a></td>
 <td data-label="公式" class="oc-overview-links"><a href="https://www.tus.ac.jp/admissions/university/visittus/opencampus/" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#tus_oc">詳細</a></td>
 </tr>
@@ -305,22 +305,22 @@
 
 </div>
 
-<div class="oc-card" id="sophia_oc" markdown="1">
+<div class="oc-card oc-card--updated" id="sophia_oc" markdown="1">
 
-<h3 class="oc-title">上智大学</h3>
+<h3 class="oc-title">上智大学 <span class="oc-new-badge">NEW</span></h3>
 
-<p class="oc-catalog-warning">※ページ本文に「2023年度 夏のオープンキャンパス」終了の案内が見えます。**2026年度の来校型OC日程は公式の最新情報で必ず確認してください。**</p>
+<p class="oc-catalog-warning">※2026年8月5日の項目は、公式見出しが「SOPHIA OPEN CAMPUS 2025」表記です。日程・対象学部は必ず公式ページで確認してください。</p>
 
 - **キャンパス別日程（抜粋・公式の該当リンクで確認）**
-    - **四谷キャンパス**: （本ページは主に過去開催・アーカイブ案内。2026年度の対面OC日程は公式で確認）
-    - **目白聖母キャンパス**: （本ページは主に過去開催・アーカイブ案内。2026年度の対面OC日程は公式で確認）
-- **公式**: <a href="https://adm.sophia.ac.jp/jpn/event_ad/oc/" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a>
+    - **四谷キャンパス**: 2026.07.12 13:00–16:00 Information Session for English-taught Programs 2026 / 2026.08.04 10:00–16:00 SOPHIA OPEN CAMPUS 2026 【神・文・外国語・総合グローバル・理工】 / 2026.08.05 10:00–16:00 SOPHIA OPEN CAMPUS 2025 【総合人間・法・経済・国際教養・SPSF】
+    - **目白聖母キャンパス**: 2026.07.12 13:00–16:00 Information Session for English-taught Programs 2026 / 2026.08.04 10:00–16:00 SOPHIA OPEN CAMPUS 2026 【神・文・外国語・総合グローバル・理工】 / 2026.08.05 10:00–16:00 SOPHIA OPEN CAMPUS 2025 【総合人間・法・経済・国際教養・SPSF】
+- **公式**: <a href="https://adm.sophia.ac.jp/jpn/event_ad/" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a>
 
 </div>
 
-<div class="oc-card oc-card--updated" id="tus_oc" markdown="1">
+<div class="oc-card" id="tus_oc" markdown="1">
 
-<h3 class="oc-title">東京理科大学 <span class="oc-new-badge">NEW</span></h3>
+<h3 class="oc-title">東京理科大学</h3>
 
 <p class="oc-catalog-warning">※2025年度夏のOCアーカイブ・動画が同ページにあります。**2026年春の開催は「重要なお知らせ」の日付を優先して確認してください。**</p>
 
@@ -443,7 +443,7 @@
 
 </div>
 
-_Generated at 2026-04-04T22:18:58+00:00_
+_Generated at 2026-04-04T22:26:38+00:00_
 
 ---
 

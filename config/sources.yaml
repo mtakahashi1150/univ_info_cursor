@@ -1,5 +1,7 @@
 # 検証済みの公式 URL のみ。推測パスは禁止。
 # 早慶上理・G-MARCH・東京4理工（四工大）ほか、情報工学・情報科学系を追う大学（学習院は情報系学部なしのため未登録）。
+# 運用メモ: 入試トップ配下の「イベント / オープンキャンパス」親ページの方が最新年度が載りやすい。
+# 子パス（…/oc/ 等）だけを固定すると過去年度ページのままになることがあるため、取得失敗や古い内容のときは親URLを再確認すること。
 
 sources:
   - id: waseda_oc
@@ -35,7 +37,7 @@ sources:
     area_prefectures:
       - 東京都
     parser: sophia
-    page_url: https://adm.sophia.ac.jp/jpn/event_ad/oc/
+    page_url: https://adm.sophia.ac.jp/jpn/event_ad/
     reservation_url: null
     tags: [情報系]
 

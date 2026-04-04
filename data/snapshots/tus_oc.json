@@ -11,7 +11,7 @@
   "page_url": "https://www.tus.ac.jp/admissions/university/visittus/opencampus/",
   "reservation_url": null,
   "fingerprint": "748f4d866b423c7983435d0f1b8f7d9a74be22b5ed596fd5c708aa83d9d16ebd",
-  "previous_fingerprint": "e94df6b293a4c64f8342d20250e1c8a162f4cc4bf85649262bd6a1d972285cd1",
+  "previous_fingerprint": "748f4d866b423c7983435d0f1b8f7d9a74be22b5ed596fd5c708aa83d9d16ebd",
   "normalized": {
     "page_title": "オープンキャンパス｜東京理科大学",
     "highlights": [
@@ -68,6 +68,6 @@
       }
     }
   },
-  "last_fetch_at": "2026-04-04T22:18:54+00:00",
+  "last_fetch_at": "2026-04-04T22:26:35+00:00",
   "last_content_change_at": "2026-04-04T22:18:54+00:00"
 }

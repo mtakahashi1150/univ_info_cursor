@@ -7,47 +7,57 @@
   "area_prefectures": [
     "東京都"
   ],
-  "page_url": "https://adm.sophia.ac.jp/jpn/event_ad/oc/",
+  "page_url": "https://adm.sophia.ac.jp/jpn/event_ad/",
   "reservation_url": null,
-  "fingerprint": "af724a3f315815b605d849f629a674bf2cc0c1e97c3d6074c71b33d07fbe0bbd",
+  "fingerprint": "32d30a1060bf48de66273067224bd8276846781a834a5b06fd40f38217119116",
   "previous_fingerprint": "af724a3f315815b605d849f629a674bf2cc0c1e97c3d6074c71b33d07fbe0bbd",
   "normalized": {
-    "page_title": "四谷キャンパス・目白聖母キャンパスで開催のイベント｜上智大学 入試情報",
+    "page_title": "イベント・オープンキャンパス・進学相談会情報｜上智大学 入試情報",
     "highlights": [
-      "四谷キャンパス・目白聖母キャンパスで開催のイベント｜上智大学 入試情報",
-      "四谷キャンパス・目白聖母キャンパスで開催のイベント（公式ページ）"
+      "2026.07.12 13:00–16:00 Information Session for English-taught Programs 2026",
+      "2026.08.04 10:00–16:00 SOPHIA OPEN CAMPUS 2026 【神・文・外国語・総合グローバル・理工】",
+      "2026.08.05 10:00–16:00 SOPHIA OPEN CAMPUS 2025 【総合人間・法・経済・国際教養・SPSF】"
     ],
     "schedule_lines": [
-      "四谷キャンパス・目白聖母キャンパスで開催のイベント｜上智大学 入試情報",
-      "四谷キャンパス・目白聖母キャンパスで開催のイベント（公式ページ）"
+      "2026.07.12 13:00–16:00 Information Session for English-taught Programs 2026",
+      "2026.08.04 10:00–16:00 SOPHIA OPEN CAMPUS 2026 【神・文・外国語・総合グローバル・理工】",
+      "2026.08.05 10:00–16:00 SOPHIA OPEN CAMPUS 2025 【総合人間・法・経済・国際教養・SPSF】"
     ],
     "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
-    "application_period_note": "各イベントの申込は公式を参照",
-    "catalog_season_warning": "※ページ本文に「2023年度 夏のオープンキャンパス」終了の案内が見えます。**2026年度の来校型OC日程は公式の最新情報で必ず確認してください。**",
-    "omit_table_schedule_dates": true,
+    "application_period_note": "各イベントの事前申込は公式を参照",
+    "catalog_season_warning": "※2026年8月5日の項目は、公式見出しが「SOPHIA OPEN CAMPUS 2025」表記です。日程・対象学部は必ず公式ページで確認してください。",
+    "omit_table_schedule_dates": false,
     "campus_block_schedule": {
       "四谷キャンパス": {
-        "schedule_summary_line": "（本ページは主に過去開催・アーカイブ案内。2026年度の対面OC日程は公式で確認）",
-        "dept_line": "理工学部（情報理工学科ほか）",
+        "schedule_summary_line": "2026.07.12 13:00–16:00 Information Session for English-taught Programs 2026 / 2026.08.04 10:00–16:00 SOPHIA OPEN CAMPUS 2026 【神・文・外国語・総合グローバル・理工】 / 2026.08.05 10:00–16:00 SOPHIA OPEN CAMPUS 2025 【総合人間・法・経済・国際教養・SPSF】",
+        "dept_line": "理工学部（情報理工学科ほか）・OCは一覧の【理工】表記イベントを参照",
         "apply_links": [
           {
-            "label": "イベント・OC情報",
-            "url": "https://adm.sophia.ac.jp/jpn/event_ad/oc"
+            "label": "イベント・OC一覧",
+            "url": "https://adm.sophia.ac.jp/jpn/event_ad"
+          },
+          {
+            "label": "詳細",
+            "url": "https://adm.sophia.ac.jp/eng/news/english-taught/2026engsessionjuly12/"
           }
         ]
       },
       "目白聖母キャンパス": {
-        "schedule_summary_line": "（本ページは主に過去開催・アーカイブ案内。2026年度の対面OC日程は公式で確認）",
-        "dept_line": "（キャンパスによりプログラム異なる場合あり）",
+        "schedule_summary_line": "2026.07.12 13:00–16:00 Information Session for English-taught Programs 2026 / 2026.08.04 10:00–16:00 SOPHIA OPEN CAMPUS 2026 【神・文・外国語・総合グローバル・理工】 / 2026.08.05 10:00–16:00 SOPHIA OPEN CAMPUS 2025 【総合人間・法・経済・国際教養・SPSF】",
+        "dept_line": "同一ページに四谷・目白向けイベントを掲載（キャンパス別詳細は公式イベントを確認）",
         "apply_links": [
           {
-            "label": "イベント・OC情報",
-            "url": "https://adm.sophia.ac.jp/jpn/event_ad/oc"
+            "label": "イベント・OC一覧",
+            "url": "https://adm.sophia.ac.jp/jpn/event_ad"
+          },
+          {
+            "label": "詳細",
+            "url": "https://adm.sophia.ac.jp/eng/news/english-taught/2026engsessionjuly12/"
           }
         ]
       }
     }
   },
-  "last_fetch_at": "2026-04-04T22:18:52+00:00",
-  "last_content_change_at": "2026-04-04T15:46:36+00:00"
+  "last_fetch_at": "2026-04-04T22:26:35+00:00",
+  "last_content_change_at": "2026-04-04T22:26:35+00:00"
 }
