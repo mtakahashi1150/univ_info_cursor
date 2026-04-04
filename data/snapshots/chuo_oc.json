@@ -9,23 +9,59 @@
   ],
   "page_url": "https://www.chuo-u.ac.jp/connect/event/opencampus2026.html",
   "reservation_url": null,
-  "fingerprint": "8947c47f114a6677aeb92e97781f5a401e418047249d5a36f820781defda759b",
-  "previous_fingerprint": "8947c47f114a6677aeb92e97781f5a401e418047249d5a36f820781defda759b",
+  "fingerprint": "350c0658293ccb561a45517d4347e626b47c7445f1339cbb9ff521b9af6c4ede",
+  "previous_fingerprint": "350c0658293ccb561a45517d4347e626b47c7445f1339cbb9ff521b9af6c4ede",
   "normalized": {
     "page_title": "オープンキャンパス 2026 | 中央大学",
-    "highlights": [],
+    "highlights": [
+      "多摩キャンパス: 開催 6/20(土)・21(日)（経済学部・商学部・文学部・総合政策学部・国際経営学部・スポーツ情報学部（仮称）【設置構想中】※1・情報農学部（仮称）【設置構想中】※2）",
+      "後楽園キャンパス: 開催 8/1(土)・2(日)（基幹理工学部・社会理工学部・先進理工学部）",
+      "市ヶ谷田町キャンパス: 開催 8/1(土)・2(日)（国際情報学部）",
+      "ミニオープンキャンパスin多摩: 2026年4月18日(土)"
+    ],
     "schedule_lines": [
-      "夏のオープンキャンパスやめました。",
-      "「オープンキャンパスは、夏。」その常識を、中央大学が変えます。",
-      "ミニオープンキャンパスin多摩",
-      "開催日2026年4月18日(土)10時～11時30分【事前申込制】",
-      "申込開始日2026年4月6日(月)16時00分～4月16日(木) 23時50分"
+      "多摩キャンパス: 開催 6/20(土)・21(日)（経済学部・商学部・文学部・総合政策学部・国際経営学部・スポーツ情報学部（仮称）【設置構想中】※1・情報農学部（仮称）【設置構想中】※2）",
+      "後楽園キャンパス: 開催 8/1(土)・2(日)（基幹理工学部・社会理工学部・先進理工学部）",
+      "市ヶ谷田町キャンパス: 開催 8/1(土)・2(日)（国際情報学部）",
+      "ミニオープンキャンパスin多摩: 2026年4月18日(土)"
     ],
     "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
     "application_period_note": "各キャンパス・日程の予約は公式を参照",
     "catalog_season_warning": "",
-    "omit_table_schedule_dates": false
+    "omit_table_schedule_dates": false,
+    "campus_block_schedule": {
+      "多摩キャンパス": {
+        "schedule_summary_line": "開催 6/20(土)・21(日)",
+        "dept_line": "経済学部・商学部・文学部・総合政策学部・国際経営学部・スポーツ情報学部（仮称）【設置構想中】※1・情報農学部（仮称）【設置構想中】※2",
+        "apply_links": [
+          {
+            "label": "日程・詳細（公式）",
+            "url": "https://www.chuo-u.ac.jp/connect/event/opencampus2026.html#tama"
+          }
+        ]
+      },
+      "後楽園キャンパス": {
+        "schedule_summary_line": "開催 8/1(土)・2(日)",
+        "dept_line": "基幹理工学部・社会理工学部・先進理工学部",
+        "apply_links": [
+          {
+            "label": "日程・詳細（公式）",
+            "url": "https://www.chuo-u.ac.jp/connect/event/opencampus2026.html#kourakuen"
+          }
+        ]
+      },
+      "市ヶ谷田町キャンパス": {
+        "schedule_summary_line": "開催 8/1(土)・2(日)",
+        "dept_line": "国際情報学部",
+        "apply_links": [
+          {
+            "label": "日程・詳細（公式）",
+            "url": "https://www.chuo-u.ac.jp/connect/event/opencampus2026.html#itl"
+          }
+        ]
+      }
+    }
   },
-  "last_fetch_at": "2026-04-04T15:29:12+00:00",
-  "last_content_change_at": "2026-04-04T04:27:11+00:00"
+  "last_fetch_at": "2026-04-04T15:47:38+00:00",
+  "last_content_change_at": "2026-04-04T15:46:37+00:00"
 }

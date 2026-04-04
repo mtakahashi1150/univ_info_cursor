@@ -9,8 +9,8 @@
   ],
   "page_url": "https://jyuken.teu.ac.jp/entrance/open/index.html",
   "reservation_url": null,
-  "fingerprint": "b64faf5039271686d5ddd6c24ff32ff98a2abaae5858a88b7ff751f647dfa08d",
-  "previous_fingerprint": "b64faf5039271686d5ddd6c24ff32ff98a2abaae5858a88b7ff751f647dfa08d",
+  "fingerprint": "279d558866919f5980c9b1c582e2adca0f89cbce5a5990c4321b99f320a44c99",
+  "previous_fingerprint": "279d558866919f5980c9b1c582e2adca0f89cbce5a5990c4321b99f320a44c99",
   "normalized": {
     "page_title": "オープンキャンパス情報 | 入試・入学案内 | 東京工科大学",
     "highlights": [
@@ -24,6 +24,8 @@
       "オープンキャンパス・入試説明会"
     ],
     "schedule_lines": [
+      "蒲田キャンパス: 8月3日(土)、8月17日(土)",
+      "八王子キャンパス: 8月4日(日)、8月18日(日)",
       "オープンキャンパスについて",
       "過去のオープンキャンパスの様子",
       "蒲田キャンパス オープンキャンパス日程",
@@ -32,8 +34,30 @@
     "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
     "application_period_note": "各キャンパス・日程の予約は公式を参照",
     "catalog_season_warning": "",
-    "omit_table_schedule_dates": false
+    "omit_table_schedule_dates": false,
+    "campus_block_schedule": {
+      "蒲田キャンパス": {
+        "schedule_summary_line": "8月3日(土)、8月17日(土)",
+        "dept_line": "デザイン・メディア・医療保健ほか（公式参照）",
+        "apply_links": [
+          {
+            "label": "日程・詳細",
+            "url": "https://jyuken.teu.ac.jp/entrance/open/index.html"
+          }
+        ]
+      },
+      "八王子キャンパス": {
+        "schedule_summary_line": "8月4日(日)、8月18日(日)",
+        "dept_line": "コンピュータサイエンス・工学ほか（公式参照）",
+        "apply_links": [
+          {
+            "label": "日程・詳細",
+            "url": "https://jyuken.teu.ac.jp/entrance/open/index.html"
+          }
+        ]
+      }
+    }
   },
-  "last_fetch_at": "2026-04-04T15:29:14+00:00",
-  "last_content_change_at": "2026-04-04T08:12:02+00:00"
+  "last_fetch_at": "2026-04-04T15:47:39+00:00",
+  "last_content_change_at": "2026-04-04T15:46:56+00:00"
 }

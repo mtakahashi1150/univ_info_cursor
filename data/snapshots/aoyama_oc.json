@@ -11,7 +11,7 @@
   "page_url": "https://www.aoyama.ac.jp/admission/undergraduate/open_campus/open_campus.html",
   "reservation_url": null,
   "fingerprint": "0ab467781cfeba0e4c2d88b7dc61611e6fee8d23a615e54ab332f33d107079dc",
-  "previous_fingerprint": "f36e2cf2e6bb28e38f8f3d8bc6a67b089d8eff9ce589b21a0006cbf50b9d31c2",
+  "previous_fingerprint": "0ab467781cfeba0e4c2d88b7dc61611e6fee8d23a615e54ab332f33d107079dc",
   "normalized": {
     "page_title": "2025年度オープンキャンパス | 青山学院大学",
     "highlights": [],
@@ -45,6 +45,6 @@
       }
     }
   },
-  "last_fetch_at": "2026-04-04T15:29:12+00:00",
+  "last_fetch_at": "2026-04-04T15:47:38+00:00",
   "last_content_change_at": "2026-04-04T15:29:12+00:00"
 }

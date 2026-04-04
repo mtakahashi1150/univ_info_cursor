@@ -10,12 +10,14 @@
   ],
   "page_url": "https://www.shibaura-it.ac.jp/extra/oc-special/",
   "reservation_url": null,
-  "fingerprint": "9995c5632cd6e8a941f75819b9729e9c2329266b9e2bc1c08279f4aa2c165d91",
-  "previous_fingerprint": "9995c5632cd6e8a941f75819b9729e9c2329266b9e2bc1c08279f4aa2c165d91",
+  "fingerprint": "d362d8cf14128ac88bd26b450f7c4717cad0b74d5dd554dfcf2423389d67bbbd",
+  "previous_fingerprint": "d362d8cf14128ac88bd26b450f7c4717cad0b74d5dd554dfcf2423389d67bbbd",
   "normalized": {
     "page_title": "オープンキャンパス2025｜芝浦工業大学",
     "highlights": [],
     "schedule_lines": [
+      "大宮キャンパス: 大宮: 8月2日(土)・3日(日)（og:description 掲載）",
+      "豊洲キャンパス: 豊洲: 8月23日(土)、24日(日)（og:description 掲載）",
       "オープンキャンパス2025は終了しました。",
       "【ダイジェスト】芝浦工業大学 オープンキャンパス2025",
       "オープンキャンパス"
@@ -23,8 +25,30 @@
     "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
     "application_period_note": "各キャンパス・日程の予約は公式を参照",
     "catalog_season_warning": "",
-    "omit_table_schedule_dates": false
+    "omit_table_schedule_dates": false,
+    "campus_block_schedule": {
+      "大宮キャンパス": {
+        "schedule_summary_line": "大宮: 8月2日(土)・3日(日)（og:description 掲載）",
+        "dept_line": "工学部・システム理工学域ほか（公式参照）",
+        "apply_links": [
+          {
+            "label": "日程・詳細",
+            "url": "https://www.shibaura-it.ac.jp/extra/oc-special"
+          }
+        ]
+      },
+      "豊洲キャンパス": {
+        "schedule_summary_line": "豊洲: 8月23日(土)、24日(日)（og:description 掲載）",
+        "dept_line": "理工系OCの会場の一つ（公式参照）",
+        "apply_links": [
+          {
+            "label": "日程・詳細",
+            "url": "https://www.shibaura-it.ac.jp/extra/oc-special"
+          }
+        ]
+      }
+    }
   },
-  "last_fetch_at": "2026-04-04T15:29:13+00:00",
-  "last_content_change_at": "2026-04-04T08:11:42+00:00"
+  "last_fetch_at": "2026-04-04T15:47:39+00:00",
+  "last_content_change_at": "2026-04-04T15:46:44+00:00"
 }

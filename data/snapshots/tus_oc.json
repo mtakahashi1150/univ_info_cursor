@@ -10,8 +10,8 @@
   ],
   "page_url": "https://www.tus.ac.jp/admissions/university/visittus/opencampus2025/index.html",
   "reservation_url": null,
-  "fingerprint": "46371d7fb3a866c2682cdb0d8ef5505ca4169fb67086ff8b9516c04c8ec69c93",
-  "previous_fingerprint": "46371d7fb3a866c2682cdb0d8ef5505ca4169fb67086ff8b9516c04c8ec69c93",
+  "fingerprint": "e94df6b293a4c64f8342d20250e1c8a162f4cc4bf85649262bd6a1d972285cd1",
+  "previous_fingerprint": "e94df6b293a4c64f8342d20250e1c8a162f4cc4bf85649262bd6a1d972285cd1",
   "normalized": {
     "page_title": "オープンキャンパス 2025｜東京理科大学",
     "highlights": [],
@@ -25,8 +25,40 @@
     "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
     "application_period_note": "各キャンパス・日程の予約は公式を参照",
     "catalog_season_warning": "※URLに2025年度のOC案内が含まれる可能性が高いです。掲載日程が**既に過去の年度**であることがあります。**最新の開催は必ず公式サイトで確認してください。**",
-    "omit_table_schedule_dates": true
+    "omit_table_schedule_dates": true,
+    "campus_block_schedule": {
+      "野田キャンパス": {
+        "schedule_summary_line": "2025年8月9日開催",
+        "dept_line": "創域情報・工学・先進工学ほか（キャンパスにより異なる）",
+        "apply_links": [
+          {
+            "label": "日程・詳細",
+            "url": "https://www.tus.ac.jp/admissions/university/visittus/opencampus2025/index.html"
+          }
+        ]
+      },
+      "葛飾キャンパス": {
+        "schedule_summary_line": "2025年8月10日開催",
+        "dept_line": "創域情報・工学・先進工学ほか（キャンパスにより異なる）",
+        "apply_links": [
+          {
+            "label": "日程・詳細",
+            "url": "https://www.tus.ac.jp/admissions/university/visittus/opencampus2025/index.html"
+          }
+        ]
+      },
+      "神楽坂キャンパス": {
+        "schedule_summary_line": "2025年8月11日開催",
+        "dept_line": "創域情報・工学・先進工学ほか（キャンパスにより異なる）",
+        "apply_links": [
+          {
+            "label": "日程・詳細",
+            "url": "https://www.tus.ac.jp/admissions/university/visittus/opencampus2025/index.html"
+          }
+        ]
+      }
+    }
   },
-  "last_fetch_at": "2026-04-04T15:29:11+00:00",
-  "last_content_change_at": "2026-04-04T04:27:10+00:00"
+  "last_fetch_at": "2026-04-04T15:47:37+00:00",
+  "last_content_change_at": "2026-04-04T15:46:36+00:00"
 }

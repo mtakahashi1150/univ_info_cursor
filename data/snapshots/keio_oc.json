@@ -10,21 +10,45 @@
   ],
   "page_url": "https://www.keio.ac.jp/ja/admissions/oc/",
   "reservation_url": null,
-  "fingerprint": "5d8f46e44d4b539525fbbbf2481f1eec7ee3d6d1bdd2a932329deda87c4ac7da",
-  "previous_fingerprint": "5d8f46e44d4b539525fbbbf2481f1eec7ee3d6d1bdd2a932329deda87c4ac7da",
+  "fingerprint": "af937b608768a2e02e73aa592a2ffd4cece51ecb83d0da2100a9c5ee57a6a753",
+  "previous_fingerprint": "af937b608768a2e02e73aa592a2ffd4cece51ecb83d0da2100a9c5ee57a6a753",
   "normalized": {
     "page_title": "「オープンキャンパス2026」の開催について：[慶應義塾]",
-    "highlights": [],
+    "highlights": [
+      "日吉キャンパス: 2026年6月7日（日） 講義編（事前申込・開始は4月下旬予定の案内）",
+      "三田キャンパス: 2026年8月4日（火）・8月5日（水） 学生生活編（事前申込）"
+    ],
     "schedule_lines": [
-      "「オープンキャンパス2026」の開催について",
-      "2026年6月7日（日）",
-      "2026年8月4日（火）、8月5日（水）"
+      "日吉キャンパス: 2026年6月7日（日） 講義編（事前申込・開始は4月下旬予定の案内）",
+      "三田キャンパス: 2026年8月4日（火）・8月5日（水） 学生生活編（事前申込）"
     ],
     "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
-    "application_period_note": "各キャンパス・日程の予約は公式を参照",
+    "application_period_note": "事前申込制（詳細は公式の案内）",
     "catalog_season_warning": "",
-    "omit_table_schedule_dates": false
+    "omit_table_schedule_dates": false,
+    "campus_block_schedule": {
+      "日吉キャンパス": {
+        "schedule_summary_line": "2026年6月7日（日） 講義編（事前申込・開始は4月下旬予定の案内）",
+        "dept_line": "全学部対象（講義編・学部説明・模擬講義中心）",
+        "apply_links": [
+          {
+            "label": "日程・詳細",
+            "url": "https://www.keio.ac.jp/ja/admissions/oc"
+          }
+        ]
+      },
+      "三田キャンパス": {
+        "schedule_summary_line": "2026年8月4日（火）・8月5日（水） 学生生活編（事前申込）",
+        "dept_line": "全学部対象（学生生活編）",
+        "apply_links": [
+          {
+            "label": "日程・詳細",
+            "url": "https://www.keio.ac.jp/ja/admissions/oc"
+          }
+        ]
+      }
+    }
   },
-  "last_fetch_at": "2026-04-04T15:29:11+00:00",
-  "last_content_change_at": "2026-04-04T15:05:11+00:00"
+  "last_fetch_at": "2026-04-04T15:47:37+00:00",
+  "last_content_change_at": "2026-04-04T15:46:36+00:00"
 }

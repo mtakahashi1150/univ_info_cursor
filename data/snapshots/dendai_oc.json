@@ -10,14 +10,16 @@
   ],
   "page_url": "https://www.dendai.ac.jp/about/admission/opencampus/index2026.html",
   "reservation_url": null,
-  "fingerprint": "7610d15b6fc15db52648edd9239ec313f73b1b3f1ccc9bdab605262b75cc8f7c",
-  "previous_fingerprint": "7610d15b6fc15db52648edd9239ec313f73b1b3f1ccc9bdab605262b75cc8f7c",
+  "fingerprint": "1c329d6ea0a23f32019a8be8ce754a303cbf739c590ffb78cfcce4d319637a28",
+  "previous_fingerprint": "1c329d6ea0a23f32019a8be8ce754a303cbf739c590ffb78cfcce4d319637a28",
   "normalized": {
     "page_title": "オープンキャンパス2026 | 東京電機大学",
     "highlights": [
       "入試・オープンキャンパス"
     ],
     "schedule_lines": [
+      "東京千住キャンパス: 東京千住キャンパス システムデザイン工学部 未来科学部 工学部6/7（日）8/1（土）8/2（日）",
+      "埼玉鳩山キャンパス: 埼玉鳩山キャンパス 理工学部 6/14（日）7/12（日）8/1（土）8/2（日）",
       "オープンキャンパス2026",
       "2025年度の来場者の99.6%は オープンキャンパスに満足！！",
       "興味のある分野を見つけて オープンキャンパスへ行こう！"
@@ -25,8 +27,30 @@
     "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
     "application_period_note": "各キャンパス・日程の予約は公式を参照",
     "catalog_season_warning": "",
-    "omit_table_schedule_dates": false
+    "omit_table_schedule_dates": false,
+    "campus_block_schedule": {
+      "東京千住キャンパス": {
+        "schedule_summary_line": "東京千住キャンパス システムデザイン工学部 未来科学部 工学部6/7（日）8/1（土）8/2（日）",
+        "dept_line": "",
+        "apply_links": [
+          {
+            "label": "日程・詳細・事前登録",
+            "url": "https://www.dendai.ac.jp/about/admission/opencampus/index2026.html"
+          }
+        ]
+      },
+      "埼玉鳩山キャンパス": {
+        "schedule_summary_line": "埼玉鳩山キャンパス 理工学部 6/14（日）7/12（日）8/1（土）8/2（日）",
+        "dept_line": "",
+        "apply_links": [
+          {
+            "label": "日程・詳細・事前登録",
+            "url": "https://www.dendai.ac.jp/about/admission/opencampus/index2026.html"
+          }
+        ]
+      }
+    }
   },
-  "last_fetch_at": "2026-04-04T15:29:14+00:00",
-  "last_content_change_at": "2026-04-04T08:12:01+00:00"
+  "last_fetch_at": "2026-04-04T15:47:39+00:00",
+  "last_content_change_at": "2026-04-04T15:46:55+00:00"
 }

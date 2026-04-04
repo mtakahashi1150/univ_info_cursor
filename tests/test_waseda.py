@@ -20,6 +20,9 @@ def test_waseda_extracts_sci_campuses_from_table() -> None:
     assert any("西早稲田" in ln and "基幹理工" in ln for ln in lines)
     assert any("TWIns" in ln and "創造理工" in ln for ln in lines)
     assert any("8月1日" in ln or "概要" in ln for ln in lines)
+    cbs = out["normalized"].get("campus_block_schedule") or {}
+    assert "西早稲田キャンパス" in cbs
+    assert "基幹理工" in cbs["西早稲田キャンパス"]["schedule_summary_line"]
 
 
 def test_generic_catalog_season_warning_for_2025_url() -> None:

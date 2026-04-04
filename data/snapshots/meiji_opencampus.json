@@ -11,7 +11,7 @@
   "page_url": "https://www.meiji.ac.jp/exam/event/opencampus/index.html",
   "reservation_url": "https://www.meiji.ac.jp/exam/reference/official_line.html",
   "fingerprint": "5e5afb7cae57ea9955b916fa6a0e8dc07efdb5a303b148c43d8b0d5d36f8fb95",
-  "previous_fingerprint": "f588518a83d01f4524bb241aac8505ee040873b86d79ce237d71fde5fdbe4fa6",
+  "previous_fingerprint": "5e5afb7cae57ea9955b916fa6a0e8dc07efdb5a303b148c43d8b0d5d36f8fb95",
   "normalized": {
     "page_title": "オープンキャンパス｜入試総合サイト｜明治大学",
     "highlights": [
@@ -70,6 +70,6 @@
       }
     }
   },
-  "last_fetch_at": "2026-04-04T15:29:11+00:00",
+  "last_fetch_at": "2026-04-04T15:47:38+00:00",
   "last_content_change_at": "2026-04-04T15:29:11+00:00"
 }

@@ -91,6 +91,41 @@ def _parse_tokyo_campus_table(table: Any) -> tuple[list[str], list[str]]:
     return schedule_lines, highlights
 
 
+def _campus_block_schedule_from_lines(
+    schedule_lines: list[str],
+    page_url: str,
+) -> dict[str, dict[str, Any]]:
+    """表由来の「【キャンパス略称】日時 学部」行を、カタログのキャンパス名にマップする。"""
+    short_to_full = {
+        "西早稲田": "西早稲田キャンパス",
+        "早稲田": "早稲田キャンパス",
+        "戸山": "戸山キャンパス",
+    }
+    buckets: dict[str, list[str]] = {}
+    for line in schedule_lines:
+        m = re.match(r"【([^】]+)】\s*(.+)", line)
+        if not m:
+            continue
+        short = m.group(1).strip()
+        rest = m.group(2).strip()
+        if "TWIns" in short or "先端生命医科学センター" in short:
+            full = "西早稲田キャンパス"
+            rest = f"（TWIns）{rest}"
+        else:
+            full = short_to_full.get(short, short if short.endswith("キャンパス") else f"{short}キャンパス")
+        buckets.setdefault(full, []).append(rest)
+    link = page_url.split("#")[0].rstrip("/")
+    out: dict[str, dict[str, Any]] = {}
+    for campus, parts in buckets.items():
+        blob = " / ".join(parts)[:500]
+        out[campus] = {
+            "schedule_summary_line": blob,
+            "dept_line": "",
+            "apply_links": [{"label": "日程・詳細", "url": link}],
+        }
+    return out
+
+
 def _section_intro(soup: BeautifulSoup, section_id: str) -> str:
     hdr = soup.find(id=section_id)
     if not hdr:
@@ -141,12 +176,17 @@ def parse(
         if not all_sched:
             all_sched.append("（表の抽出に失敗しました。公式ページで確認してください）")
 
+    campus_block_schedule = _campus_block_schedule_from_lines(all_sched, page_url)
+
     normalized = {
         "page_title": page_title,
         "highlights": (all_high[:8] if all_high else all_sched[:4])[:8],
         "schedule_lines": all_sched[:20],
         "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
         "application_period_note": "各キャンパス・日程の予約は公式を参照",
+        "catalog_season_warning": "",
+        "omit_table_schedule_dates": False,
+        "campus_block_schedule": campus_block_schedule,
     }
 
     canon = "|".join(
@@ -154,6 +194,7 @@ def parse(
             page_title,
             "##".join(normalized["highlights"][:8]),
             "##".join(normalized["schedule_lines"][:16]),
+            str(sorted(campus_block_schedule.keys())),
         ]
     )
     fingerprint = hashlib.sha256(canon.encode("utf-8")).hexdigest()

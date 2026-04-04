@@ -9,20 +9,47 @@
   ],
   "page_url": "https://nyushi.hosei.ac.jp/event/oc",
   "reservation_url": null,
-  "fingerprint": "e22edc8c6d8a6c2a42ed8b105a4f001d60ab90e402e1456dd3b36d55dfa75d3c",
-  "previous_fingerprint": "e22edc8c6d8a6c2a42ed8b105a4f001d60ab90e402e1456dd3b36d55dfa75d3c",
+  "fingerprint": "1af57a8bd9e9b5f964b762a279f49835b8029f76fecbb2d7fd3557e966697ee6",
+  "previous_fingerprint": "1af57a8bd9e9b5f964b762a279f49835b8029f76fecbb2d7fd3557e966697ee6",
   "normalized": {
     "page_title": "オープンキャンパス :: 法政大学入試情報サイト",
-    "highlights": [],
+    "highlights": [
+      "2026年度は、3キャンパス対面にてオープンキャンパス実施を予定しております。",
+      "市ケ谷キャンパス: 開催日は公式ページ内「開催日」の画像で掲載（自動抽出では日付テキストなし）／対象: 法学部・文学部・経営学部・国際文化学部・人間環境学部・キャリアデザイン学部・デザイン工学部・GIS（グローバル教養）学部",
+      "小金井キャンパス: 開催日は公式ページ内「開催日」の画像で掲載（自動抽出では日付テキストなし）／対象: 情報科学部・理工学部・生命科学部"
+    ],
     "schedule_lines": [
       "2026年度は、3キャンパス対面にてオープンキャンパス実施を予定しております。",
-      "2025年度開催の様子"
+      "市ケ谷キャンパス: 開催日は公式ページ内「開催日」の画像で掲載（自動抽出では日付テキストなし）／対象: 法学部・文学部・経営学部・国際文化学部・人間環境学部・キャリアデザイン学部・デザイン工学部・GIS（グローバル教養）学部",
+      "小金井キャンパス: 開催日は公式ページ内「開催日」の画像で掲載（自動抽出では日付テキストなし）／対象: 情報科学部・理工学部・生命科学部"
     ],
     "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
-    "application_period_note": "各キャンパス・日程の予約は公式を参照",
+    "application_period_note": "各キャンパスの申込は公式を参照",
     "catalog_season_warning": "",
-    "omit_table_schedule_dates": false
+    "omit_table_schedule_dates": true,
+    "campus_block_schedule": {
+      "市ケ谷キャンパス": {
+        "schedule_summary_line": "開催日は公式ページ内「開催日」の画像で掲載（自動抽出では日付テキストなし）",
+        "dept_line": "法学部・文学部・経営学部・国際文化学部・人間環境学部・キャリアデザイン学部・デザイン工学部・GIS（グローバル教養）学部",
+        "apply_links": [
+          {
+            "label": "市ケ谷キャンパス（このページ）",
+            "url": "https://nyushi.hosei.ac.jp/event/oc#a01"
+          }
+        ]
+      },
+      "小金井キャンパス": {
+        "schedule_summary_line": "開催日は公式ページ内「開催日」の画像で掲載（自動抽出では日付テキストなし）",
+        "dept_line": "情報科学部・理工学部・生命科学部",
+        "apply_links": [
+          {
+            "label": "小金井キャンパス（このページ）",
+            "url": "https://nyushi.hosei.ac.jp/event/oc#a03"
+          }
+        ]
+      }
+    }
   },
-  "last_fetch_at": "2026-04-04T15:29:12+00:00",
-  "last_content_change_at": "2026-04-04T04:27:11+00:00"
+  "last_fetch_at": "2026-04-04T15:47:38+00:00",
+  "last_content_change_at": "2026-04-04T15:46:44+00:00"
 }

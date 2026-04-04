@@ -9,8 +9,8 @@
   ],
   "page_url": "https://www.waseda.jp/inst/admission/visiting/opencampus/",
   "reservation_url": null,
-  "fingerprint": "a045393441c97f54b5e8a7f0c9d71b42d709e30d383726d798126ef639511d13",
-  "previous_fingerprint": "a045393441c97f54b5e8a7f0c9d71b42d709e30d383726d798126ef639511d13",
+  "fingerprint": "35c517b151b2bd8785b7bcb7ed6a1abe076ea23a22d42f290b5e724a4eac968e",
+  "previous_fingerprint": "15b98dcb17d0f9ac7606aed21ab88d02f9a58942f89b23b1dbcf91aaa7101092",
   "normalized": {
     "page_title": "オープンキャンパス – 早稲田大学 入学センター",
     "highlights": [
@@ -23,8 +23,22 @@
       "【TWIns （先端生命医科学センター）】2026年8月1日(土)8月2日(日) 教育学部 創造理工学部 先進理工学部"
     ],
     "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
-    "application_period_note": "各キャンパス・日程の予約は公式を参照"
+    "application_period_note": "各キャンパス・日程の予約は公式を参照",
+    "catalog_season_warning": "",
+    "omit_table_schedule_dates": false,
+    "campus_block_schedule": {
+      "西早稲田キャンパス": {
+        "schedule_summary_line": "2026年8月1日(土)8月2日(日) 基幹理工学部 創造理工学部 先進理工学部 / （TWIns）2026年8月1日(土)8月2日(日) 教育学部 創造理工学部 先進理工学部",
+        "dept_line": "",
+        "apply_links": [
+          {
+            "label": "日程・詳細",
+            "url": "https://www.waseda.jp/inst/admission/visiting/opencampus"
+          }
+        ]
+      }
+    }
   },
-  "last_fetch_at": "2026-04-04T15:29:11+00:00",
-  "last_content_change_at": "2026-04-04T04:27:10+00:00"
+  "last_fetch_at": "2026-04-04T15:47:37+00:00",
+  "last_content_change_at": "2026-04-04T15:47:37+00:00"
 }

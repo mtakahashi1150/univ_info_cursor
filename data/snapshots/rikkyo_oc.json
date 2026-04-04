@@ -11,7 +11,7 @@
   "page_url": "https://www.rikkyo.ac.jp/admissions/visit/opencampus/index.html",
   "reservation_url": null,
   "fingerprint": "a8aa3c754cf03c2439e3c13a3cbd582bdc9bc8dd571b81faf6bc57c5b5404d24",
-  "previous_fingerprint": "ba854a6e729c7a44cb3fed03380f34d5977147a93e93defbcd17072aefa403e9",
+  "previous_fingerprint": "a8aa3c754cf03c2439e3c13a3cbd582bdc9bc8dd571b81faf6bc57c5b5404d24",
   "normalized": {
     "page_title": "オープンキャンパス | 立教大学",
     "highlights": [],
@@ -45,6 +45,6 @@
       }
     }
   },
-  "last_fetch_at": "2026-04-04T15:29:12+00:00",
+  "last_fetch_at": "2026-04-04T15:47:38+00:00",
   "last_content_change_at": "2026-04-04T15:29:12+00:00"
 }

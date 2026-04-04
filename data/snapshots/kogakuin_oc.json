@@ -9,19 +9,43 @@
   ],
   "page_url": "https://www.kogakuin.ac.jp/admissions/event/oc.html",
   "reservation_url": null,
-  "fingerprint": "37507c78eab289f4e0488d7ee47ef648e9c7c80cc41d70871ebbb19f6e1b4c48",
-  "previous_fingerprint": "37507c78eab289f4e0488d7ee47ef648e9c7c80cc41d70871ebbb19f6e1b4c48",
+  "fingerprint": "f21e980f0aeb5973b102c5aa9f2fcc33598fb593ad711851e92fc33cdbd57e57",
+  "previous_fingerprint": "f21e980f0aeb5973b102c5aa9f2fcc33598fb593ad711851e92fc33cdbd57e57",
   "normalized": {
     "page_title": "オープンキャンパス | 2026オープンキャンパス・相談会 | 工学院大学 入試サイト",
     "highlights": [],
     "schedule_lines": [
+      "八王子キャンパス: 6/14（日） 来場型（八王子キャンパス）（予約: 5月下旬）",
+      "新宿キャンパス: 8/1（土）、8/2（日） 来場型（新宿キャンパス）（予約: 7月中旬）",
       "今後のオープンキャンパスの予定"
     ],
     "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
     "application_period_note": "各キャンパス・日程の予約は公式を参照",
     "catalog_season_warning": "",
-    "omit_table_schedule_dates": false
+    "omit_table_schedule_dates": false,
+    "campus_block_schedule": {
+      "八王子キャンパス": {
+        "schedule_summary_line": "6/14（日） 来場型（八王子キャンパス）（予約: 5月下旬）",
+        "dept_line": "工学部・先端工学部（公式参照）",
+        "apply_links": [
+          {
+            "label": "日程・詳細",
+            "url": "https://www.kogakuin.ac.jp/admissions/event/oc.html"
+          }
+        ]
+      },
+      "新宿キャンパス": {
+        "schedule_summary_line": "8/1（土）、8/2（日） 来場型（新宿キャンパス）（予約: 7月中旬）",
+        "dept_line": "工学部・先端工学部（公式参照）",
+        "apply_links": [
+          {
+            "label": "日程・詳細",
+            "url": "https://www.kogakuin.ac.jp/admissions/event/oc.html"
+          }
+        ]
+      }
+    }
   },
-  "last_fetch_at": "2026-04-04T15:29:14+00:00",
-  "last_content_change_at": "2026-04-04T08:12:02+00:00"
+  "last_fetch_at": "2026-04-04T15:47:39+00:00",
+  "last_content_change_at": "2026-04-04T15:46:56+00:00"
 }

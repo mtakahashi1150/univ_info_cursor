@@ -22,7 +22,7 @@ sources:
     area_prefectures:
       - 東京都
       - 神奈川県
-    parser: generic
+    parser: keio
     page_url: https://www.keio.ac.jp/ja/admissions/oc/
     reservation_url: null
     tags: [情報系]
@@ -34,7 +34,7 @@ sources:
     campus_label: 四谷・目白聖母キャンパス
     area_prefectures:
       - 東京都
-    parser: generic
+    parser: sophia
     page_url: https://adm.sophia.ac.jp/jpn/event_ad/oc/
     reservation_url: null
     tags: [情報系]
@@ -47,7 +47,7 @@ sources:
     area_prefectures:
       - 東京都
       - 千葉県
-    parser: generic
+    parser: tus
     page_url: https://www.tus.ac.jp/admissions/university/visittus/opencampus2025/index.html
     reservation_url: null
     tags: [情報系]
@@ -98,7 +98,7 @@ sources:
     campus_label: 後楽園・市ヶ谷田町・多摩キャンパス
     area_prefectures:
       - 東京都
-    parser: generic
+    parser: chuo
     page_url: https://www.chuo-u.ac.jp/connect/event/opencampus2026.html
     reservation_url: null
     tags: [情報系]
@@ -110,7 +110,7 @@ sources:
     campus_label: 小金井・市ケ谷キャンパス
     area_prefectures:
       - 東京都
-    parser: generic
+    parser: hosei
     page_url: https://nyushi.hosei.ac.jp/event/oc
     reservation_url: null
     tags: [情報系]
@@ -123,7 +123,7 @@ sources:
     area_prefectures:
       - 東京都
       - 埼玉県
-    parser: generic
+    parser: shibaura
     page_url: https://www.shibaura-it.ac.jp/extra/oc-special/
     reservation_url: null
     tags: [情報系, 四工大]
@@ -136,7 +136,7 @@ sources:
     area_prefectures:
       - 東京都
       - 神奈川県
-    parser: generic
+    parser: tcu
     page_url: https://www.tcu.ac.jp/entrance/event/opencampus/
     reservation_url: null
     tags: [情報系, 四工大]
@@ -149,7 +149,7 @@ sources:
     area_prefectures:
       - 東京都
       - 埼玉県
-    parser: generic
+    parser: dendai
     page_url: https://www.dendai.ac.jp/about/admission/opencampus/index2026.html
     reservation_url: null
     tags: [情報系, 四工大]
@@ -161,7 +161,7 @@ sources:
     campus_label: 新宿・八王子キャンパス
     area_prefectures:
       - 東京都
-    parser: generic
+    parser: kogakuin
     page_url: https://www.kogakuin.ac.jp/admissions/event/oc.html
     reservation_url: null
     tags: [情報系, 四工大]
@@ -173,7 +173,7 @@ sources:
     campus_label: 八王子・蒲田キャンパス
     area_prefectures:
       - 東京都
-    parser: generic
+    parser: teu
     page_url: https://jyuken.teu.ac.jp/entrance/open/index.html
     reservation_url: null
     tags: [情報系]
