@@ -1,8 +1,8 @@
 リポジトリ: [mtakahashi1150/univ_info_cursor](https://github.com/mtakahashi1150/univ_info_cursor)
 
-**サイト更新（取得実行・UTC）**: `2026-04-04T22:18:58+00:00`
+**サイト更新（取得実行・UTC）**: `2026-04-04T22:25:55+00:00`
 
-**前回スナップショットとの差分**: あり（`tus_oc`）
+**前回スナップショットとの差分**: なし（フィンガープリント一致）
 
 > 表の **日程** は公式ページからの抜粋です。詳細・申込は **公式サイト** リンク先で確認してください。
 > **逗子（JR 横須賀線・逗子駅／または京急逗子・葉山駅）から** の所要は手動の目安です（`config/campus_access.yaml`）。経路で大きく変わります。未設定時は公式で確認してください。
@@ -82,7 +82,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#tus_oc">東京理科大学</a></td>
 <td data-label="学部・学科">創域情報学部・工学部（情報工学科等）<br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/informationsciencetechnology/" target="_blank" rel="noopener noreferrer">創域情報学部</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/informationsciencetechnology/informationsciencetechnology/" target="_blank" rel="noopener noreferrer">情報理工学科</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/engineering/" target="_blank" rel="noopener noreferrer">工学部</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/engineering/information/" target="_blank" rel="noopener noreferrer">情報工学科（工学部）</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/industrialscience_technology/" target="_blank" rel="noopener noreferrer">先進工学部</a></td>
 <td data-label="OC"><span class="oc-campus-name">神楽坂キャンパス（東京都）</span><br/><span class="oc-transit">（JR逗子→品川→JR飯田橋 約75〜90分+徒歩）</span><br/><span class="oc-duration">（所要 計85〜100分台）</span></td>
-<td data-label="日程" class="oc-col-dates"><span class="oc-new-inline">【NEW】</span> 2025年8月11日<br/><a class="oc-schedule-link" href="https://www.tus.ac.jp/admissions/university/visittus/opencampus" target="_blank" rel="noopener noreferrer">OCトップ</a></td>
+<td data-label="日程" class="oc-col-dates">2025年8月11日<br/><a class="oc-schedule-link" href="https://www.tus.ac.jp/admissions/university/visittus/opencampus" target="_blank" rel="noopener noreferrer">OCトップ</a></td>
 <td data-label="公式" class="oc-overview-links"><a href="https://www.tus.ac.jp/admissions/university/visittus/opencampus/" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#tus_oc">詳細</a></td>
 </tr>
@@ -90,7 +90,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#tus_oc">東京理科大学</a></td>
 <td data-label="学部・学科">薬・工学・先進工学（夏アーカイブ表記参照）<br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/informationsciencetechnology/" target="_blank" rel="noopener noreferrer">創域情報学部</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/informationsciencetechnology/informationsciencetechnology/" target="_blank" rel="noopener noreferrer">情報理工学科</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/engineering/" target="_blank" rel="noopener noreferrer">工学部</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/engineering/information/" target="_blank" rel="noopener noreferrer">情報工学科（工学部）</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/industrialscience_technology/" target="_blank" rel="noopener noreferrer">先進工学部</a></td>
 <td data-label="OC"><span class="oc-campus-name">葛飾キャンパス（東京都）</span><br/><span class="oc-transit">（JR逗子→東京→京成 お花茶屋 約85〜105分+バス）</span><br/><span class="oc-duration">（所要 計95〜115分台）</span></td>
-<td data-label="日程" class="oc-col-dates"><span class="oc-new-inline">【NEW】</span> 2025年8月10日、5月17日（日）<br/><a class="oc-schedule-link" href="https://www.tus.ac.jp/today/archive/20260204_0104.html" target="_blank" rel="noopener noreferrer">詳細（公式）</a><br/><a class="oc-schedule-link" href="https://www.tus.ac.jp/admissions/university/visittus/opencampus" target="_blank" rel="noopener noreferrer">OCトップ</a></td>
+<td data-label="日程" class="oc-col-dates">2025年8月10日、5月17日（日）<br/><a class="oc-schedule-link" href="https://www.tus.ac.jp/today/archive/20260204_0104.html" target="_blank" rel="noopener noreferrer">詳細（公式）</a><br/><a class="oc-schedule-link" href="https://www.tus.ac.jp/admissions/university/visittus/opencampus" target="_blank" rel="noopener noreferrer">OCトップ</a></td>
 <td data-label="公式" class="oc-overview-links"><a href="https://www.tus.ac.jp/admissions/university/visittus/opencampus/" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#tus_oc">詳細</a></td>
 </tr>
@@ -98,7 +98,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#tus_oc">東京理科大学</a></td>
 <td data-label="学部・学科">創域理工・創域情報（夏アーカイブ表記参照）<br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/informationsciencetechnology/" target="_blank" rel="noopener noreferrer">創域情報学部</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/informationsciencetechnology/informationsciencetechnology/" target="_blank" rel="noopener noreferrer">情報理工学科</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/engineering/" target="_blank" rel="noopener noreferrer">工学部</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/engineering/information/" target="_blank" rel="noopener noreferrer">情報工学科（工学部）</a><br/><a class="oc-dept-link" href="https://www.tus.ac.jp/academics/faculty/industrialscience_technology/" target="_blank" rel="noopener noreferrer">先進工学部</a></td>
 <td data-label="OC"><span class="oc-campus-name">野田キャンパス（千葉県）</span><br/><span class="oc-transit">（JR逗子→大船→東武アーバン 運河 約70〜90分）</span><br/><span class="oc-duration">（所要 計80〜100分台）</span></td>
-<td data-label="日程" class="oc-col-dates"><span class="oc-new-inline">【NEW】</span> 2025年8月9日、4月19日（日）<br/><a class="oc-schedule-link" href="https://www.tus.ac.jp/today/archive/20260218_0536.html" target="_blank" rel="noopener noreferrer">詳細（公式）</a><br/><a class="oc-schedule-link" href="https://www.tus.ac.jp/admissions/university/visittus/opencampus" target="_blank" rel="noopener noreferrer">OCトップ</a></td>
+<td data-label="日程" class="oc-col-dates">2025年8月9日、4月19日（日）<br/><a class="oc-schedule-link" href="https://www.tus.ac.jp/today/archive/20260218_0536.html" target="_blank" rel="noopener noreferrer">詳細（公式）</a><br/><a class="oc-schedule-link" href="https://www.tus.ac.jp/admissions/university/visittus/opencampus" target="_blank" rel="noopener noreferrer">OCトップ</a></td>
 <td data-label="公式" class="oc-overview-links"><a href="https://www.tus.ac.jp/admissions/university/visittus/opencampus/" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#tus_oc">詳細</a></td>
 </tr>
@@ -318,9 +318,9 @@
 
 </div>
 
-<div class="oc-card oc-card--updated" id="tus_oc" markdown="1">
+<div class="oc-card" id="tus_oc" markdown="1">
 
-<h3 class="oc-title">東京理科大学 <span class="oc-new-badge">NEW</span></h3>
+<h3 class="oc-title">東京理科大学</h3>
 
 <p class="oc-catalog-warning">※2025年度夏のOCアーカイブ・動画が同ページにあります。**2026年春の開催は「重要なお知らせ」の日付を優先して確認してください。**</p>
 
@@ -443,7 +443,7 @@
 
 </div>
 
-_Generated at 2026-04-04T22:18:58+00:00_
+_Generated at 2026-04-04T22:25:55+00:00_
 
 ---
 
