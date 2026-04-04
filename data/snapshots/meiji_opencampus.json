@@ -10,7 +10,7 @@
   ],
   "page_url": "https://www.meiji.ac.jp/exam/event/opencampus/index.html",
   "reservation_url": "https://www.meiji.ac.jp/exam/reference/official_line.html",
-  "fingerprint": "f588518a83d01f4524bb241aac8505ee040873b86d79ce237d71fde5fdbe4fa6",
+  "fingerprint": "5e5afb7cae57ea9955b916fa6a0e8dc07efdb5a303b148c43d8b0d5d36f8fb95",
   "previous_fingerprint": "f588518a83d01f4524bb241aac8505ee040873b86d79ce237d71fde5fdbe4fa6",
   "normalized": {
     "page_title": "オープンキャンパス｜入試総合サイト｜明治大学",
@@ -24,8 +24,52 @@
       "【生田】2026年8月2日（日）、3日（月）10：00～16：00"
     ],
     "reservation_note": "LINE による事前参加登録（詳細は公式ページ・LINE案内を参照）",
-    "application_period_note": "（ページ内に予約関連の日付表記あり: 2025/8/5 付近を参照）"
+    "application_period_note": "（ページ内に予約関連の日付表記あり: 2025/8/5 付近を参照）",
+    "campus_block_schedule": {
+      "駿河台キャンパス": {
+        "schedule_summary_line": "【駿河台】2026年8月6日（木）、7日（金）10：00～16：00",
+        "dept_line": "実施学部：法学部、商学部、政治経済学部、文学部、経営学部、情報コミュニケーション学部、農学部（食料環境政策学科）",
+        "apply_links": [
+          {
+            "label": "このキャンパスの日程・学部",
+            "url": "https://www.meiji.ac.jp/exam/event/opencampus/index.html#title5-2-1"
+          },
+          {
+            "label": "申込（LINE）",
+            "url": "https://www.meiji.ac.jp/exam/reference/official_line.html"
+          }
+        ]
+      },
+      "中野キャンパス": {
+        "schedule_summary_line": "【中野】2026年8月6日（木）、7日（金）10：00～16：00",
+        "dept_line": "実施学部：国際日本学部、総合数理学部、理工学部（情報科学科）",
+        "apply_links": [
+          {
+            "label": "このキャンパスの日程・学部",
+            "url": "https://www.meiji.ac.jp/exam/event/opencampus/index.html#title5-3-1"
+          },
+          {
+            "label": "申込（LINE）",
+            "url": "https://www.meiji.ac.jp/exam/reference/official_line.html"
+          }
+        ]
+      },
+      "生田キャンパス": {
+        "schedule_summary_line": "【生田】2026年8月2日（日）、3日（月）10：00～16：00",
+        "dept_line": "実施学部：理工学部、農学部、総合数理学部",
+        "apply_links": [
+          {
+            "label": "このキャンパスの日程・学部",
+            "url": "https://www.meiji.ac.jp/exam/event/opencampus/index.html#title5-4-1"
+          },
+          {
+            "label": "申込（LINE）",
+            "url": "https://www.meiji.ac.jp/exam/reference/official_line.html"
+          }
+        ]
+      }
+    }
   },
-  "last_fetch_at": "2026-04-04T15:05:12+00:00",
-  "last_content_change_at": "2026-04-04T00:50:13+00:00"
+  "last_fetch_at": "2026-04-04T15:29:11+00:00",
+  "last_content_change_at": "2026-04-04T15:29:11+00:00"
 }

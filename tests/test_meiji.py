@@ -18,6 +18,11 @@ def test_meiji_parse_fingerprint_stable() -> None:
     assert len(out["fingerprint"]) == 64
     assert "オープンキャンパス" in out["normalized"]["page_title"] or "明治" in out["normalized"]["page_title"]
     assert out["normalized"]["schedule_lines"]
+    cbs = out["normalized"].get("campus_block_schedule") or {}
+    assert "駿河台キャンパス" in cbs and "生田キャンパス" in cbs
+    assert "8月6日" in cbs["駿河台キャンパス"]["schedule_summary_line"]
+    assert "8月2日" in cbs["生田キャンパス"]["schedule_summary_line"]
+    assert "title5-2-1" in cbs["駿河台キャンパス"]["apply_links"][0]["url"]
 
 
 def test_render_table() -> None:

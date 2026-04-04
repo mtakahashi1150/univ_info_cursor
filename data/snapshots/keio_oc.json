@@ -11,7 +11,7 @@
   "page_url": "https://www.keio.ac.jp/ja/admissions/oc/",
   "reservation_url": null,
   "fingerprint": "5d8f46e44d4b539525fbbbf2481f1eec7ee3d6d1bdd2a932329deda87c4ac7da",
-  "previous_fingerprint": "a7f9b34da78cb4c69f8d28a74a6056053c6e3d5c69b9d2888b4727e6fed93fb4",
+  "previous_fingerprint": "5d8f46e44d4b539525fbbbf2481f1eec7ee3d6d1bdd2a932329deda87c4ac7da",
   "normalized": {
     "page_title": "「オープンキャンパス2026」の開催について：[慶應義塾]",
     "highlights": [],
@@ -25,6 +25,6 @@
     "catalog_season_warning": "",
     "omit_table_schedule_dates": false
   },
-  "last_fetch_at": "2026-04-04T15:05:11+00:00",
+  "last_fetch_at": "2026-04-04T15:29:11+00:00",
   "last_content_change_at": "2026-04-04T15:05:11+00:00"
 }

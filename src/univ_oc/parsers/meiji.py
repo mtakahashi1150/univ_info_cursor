@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import json
 import re
 from typing import Any, Optional
 
@@ -11,6 +12,59 @@ from bs4 import BeautifulSoup
 
 def _norm_text(s: str) -> str:
     return re.sub(r"\s+", " ", s).strip()
+
+
+def _page_url_with_fragment(page_url: str, fragment: str) -> str:
+    base = (page_url or "").split("#")[0].rstrip("/")
+    frag = fragment.lstrip("#")
+    return f"{base}#{frag}" if base else f"#{frag}"
+
+
+_CAMPUS_MAP = {
+    "駿河台": "駿河台キャンパス",
+    "中野": "中野キャンパス",
+    "生田": "生田キャンパス",
+}
+
+
+def _build_campus_block_schedule(
+    soup: BeautifulSoup,
+    *,
+    page_url: str,
+    reservation_url: Optional[str],
+) -> dict[str, dict[str, Any]]:
+    out: dict[str, dict[str, Any]] = {}
+    for jp, catalog_name in _CAMPUS_MAP.items():
+        h3 = None
+        for cand in soup.select("h3.title"):
+            t = _norm_text(cand.get_text())
+            if t.startswith(f"【{jp}】"):
+                h3 = cand
+                break
+        if not h3 or not h3.get("id"):
+            continue
+        title_line = _norm_text(h3.get_text())
+        dept_line = ""
+        sec = h3.find_parent("section")
+        if sec:
+            h4 = sec.find("h4", class_="title")
+            if h4:
+                dt = _norm_text(h4.get_text())
+                if dt.startswith("実施学部"):
+                    dept_line = dt
+        frag = h3.get("id", "")
+        detail_url = _page_url_with_fragment(page_url, frag)
+        apply_links: list[dict[str, str]] = [
+            {"label": "このキャンパスの日程・学部", "url": detail_url},
+        ]
+        if reservation_url:
+            apply_links.append({"label": "申込（LINE）", "url": reservation_url})
+        out[catalog_name] = {
+            "schedule_summary_line": title_line,
+            "dept_line": dept_line,
+            "apply_links": apply_links,
+        }
+    return out
 
 
 def parse(
@@ -27,7 +81,6 @@ def parse(
 
     highlights: list[str] = []
     skip_labels = {"オープンキャンパス開催日程", "プログラム", "参加資格・予約方法・よくある問い合わせ", "更新情報"}
-    # 「更新情報」ブロック付近の目次リンク（日付付き告知を優先）
     for ul in soup.select("div.examContent ul.anchorLink"):
         for a in ul.find_all("a", href=True):
             t = _norm_text(a.get_text())
@@ -56,6 +109,10 @@ def parse(
                 schedule_lines.append(t)
     schedule_lines = schedule_lines[:12]
 
+    campus_block_schedule = _build_campus_block_schedule(
+        soup, page_url=page_url, reservation_url=reservation_url
+    )
+
     app_period_note = ""
     m = re.search(
         r"(\d{4}/\d{1,2}/\d{1,2})[^。]*予約",
@@ -70,13 +127,16 @@ def parse(
         "schedule_lines": schedule_lines,
         "reservation_note": "LINE による事前参加登録（詳細は公式ページ・LINE案内を参照）",
         "application_period_note": app_period_note or "公式ページの記載に従う（自動抽出は参考）",
+        "campus_block_schedule": campus_block_schedule,
     }
 
+    cbs_ser = json.dumps(campus_block_schedule, ensure_ascii=False, sort_keys=True)
     canon = "|".join(
         [
             page_title,
             "##".join(normalized["highlights"]),
             "##".join(normalized["schedule_lines"]),
+            cbs_ser,
         ]
     )
     fingerprint = hashlib.sha256(canon.encode("utf-8")).hexdigest()

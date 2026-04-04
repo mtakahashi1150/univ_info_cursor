@@ -73,7 +73,7 @@ sources:
     area_prefectures:
       - 東京都
       - 神奈川県
-    parser: generic
+    parser: aoyama
     page_url: https://www.aoyama.ac.jp/admission/undergraduate/open_campus/open_campus.html
     reservation_url: null
     tags: [情報系]
@@ -86,7 +86,7 @@ sources:
     area_prefectures:
       - 東京都
       - 埼玉県
-    parser: generic
+    parser: rikkyo
     page_url: https://www.rikkyo.ac.jp/admissions/visit/opencampus/index.html
     reservation_url: null
     tags: [情報系]

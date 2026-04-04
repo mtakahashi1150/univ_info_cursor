@@ -42,20 +42,31 @@ def _dedupe_date_substrings(phrases: list[str]) -> list[str]:
     return out
 
 
-def extract_schedule_dates_only(normalized: dict[str, Any], schedule_summary: str) -> str:
-    """表用: 日付らしき部分だけ抽出。"""
-    blob = schedule_summary + "\n" + "\n".join(normalized.get("schedule_lines") or [])
+def extract_schedule_dates_only_from_blob(blob: str) -> str:
+    """任意テキストから表用の日付断片を抽出（立教の 8/3（月）形式を含む）。"""
+    if not blob or not blob.strip():
+        return "—"
     found: list[str] = []
     for pat in (
         r"\d{4}年\d{1,2}月\d{1,2}日(?:\([日月火水木金土]\)|（[^）]+）)?",
         r"\d{1,2}月\d{1,2}日(?:\([日月火水木金土]\)|（[^）]+）)?",
+        r"、\d{1,2}日(?:\([日月火水木金土]\)|（[日月火水木金土]）)",
         r"\d{4}/\d{1,2}/\d{1,2}",
+        r"\d{1,2}/\d{1,2}（[日月火水木金土]）",
     ):
         for m in re.findall(pat, blob):
+            if m.startswith("、"):
+                m = m[1:]
             if m not in found:
                 found.append(m)
     found = _dedupe_date_substrings(found)
     return "、".join(found[:14]) if found else "—"
+
+
+def extract_schedule_dates_only(normalized: dict[str, Any], schedule_summary: str) -> str:
+    """表用: 日付らしき部分だけ抽出。"""
+    blob = schedule_summary + "\n" + "\n".join(normalized.get("schedule_lines") or [])
+    return extract_schedule_dates_only_from_blob(blob)
 
 
 def sort_base_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -70,7 +81,7 @@ def sort_base_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 
 def _parse_campus_access_value(val: Union[str, dict[str, Any], None]) -> tuple[str, str]:
-    """YAML の値が str または {access,duration} 辞書のとき、(図志から目安, 所要目安) を返す。"""
+    """YAML の値が str または {access,duration} 辞書のとき、(逗子から目安, 所要目安) を返す。"""
     if val is None:
         return "（目安未設定・公式で確認）", "—"
     if isinstance(val, dict):
@@ -103,6 +114,7 @@ def expand_display_rows(
             short_dept = "・".join(depts[:2])
             if len(short_dept) > 100:
                 short_dept = short_dept[:97] + "…"
+            cbs = r.get("campus_block_schedule") or {}
             for oc in cu["oc_campuses"]:
                 campus_name = str(oc.get("campus", ""))
                 pref = str(oc.get("prefecture", ""))
@@ -113,6 +125,25 @@ def expand_display_rows(
                 tr, dur = _parse_campus_access_value(raw_av)
                 rr["transit_note"] = tr
                 rr["duration_note"] = dur
+
+                block = cbs.get(campus_name) if isinstance(cbs, dict) else None
+                if isinstance(block, dict) and block.get("schedule_summary_line"):
+                    blob = str(block["schedule_summary_line"])
+                    rr["schedule_dates_only"] = extract_schedule_dates_only_from_blob(blob)
+                    dline = (block.get("dept_line") or "").strip()
+                    if dline:
+                        rr["display_dept_short"] = dline[:200]
+                    rr["schedule_apply_links"] = list(block.get("apply_links") or [])
+
+                if not rr.get("schedule_apply_links"):
+                    sl: list[dict[str, str]] = []
+                    if r.get("reservation_url"):
+                        sl.append({"label": "申込・予約", "url": str(r["reservation_url"])})
+                    pu = r.get("page_url") or ""
+                    if pu and not any(x.get("url") == pu for x in sl):
+                        sl.append({"label": "日程・詳細", "url": str(pu)})
+                    rr["schedule_apply_links"] = sl
+
                 out.append(rr)
         else:
             rr = {**r}
@@ -121,6 +152,13 @@ def expand_display_rows(
             tr, dur = _parse_campus_access_value(acc.get("_default"))
             rr["transit_note"] = tr
             rr["duration_note"] = dur
+            sl = []
+            if r.get("reservation_url"):
+                sl.append({"label": "申込・予約", "url": str(r["reservation_url"])})
+            pu = r.get("page_url") or ""
+            if pu and not any(x.get("url") == pu for x in sl):
+                sl.append({"label": "日程・詳細", "url": str(pu)})
+            rr["schedule_apply_links"] = sl
             out.append(rr)
     return sorted(
         out,
@@ -153,7 +191,7 @@ def render_repo_and_run_banner(run_meta: dict[str, Any]) -> str:
             diff_line,
             "",
             "> 表の **日程** は公式ページからの抜粋です。詳細・申込は **公式サイト** リンク先で確認してください。",
-            "> **図志駅から** の所要は手動の目安です（`config/campus_access.yaml`）。未設定時は公式で確認してください。",
+            "> **逗子（JR 横須賀線・逗子駅／または京急逗子・葉山駅）から** の所要は手動の目安です（`config/campus_access.yaml`）。経路で大きく変わります。未設定時は公式で確認してください。",
             "",
         ]
     )
@@ -202,6 +240,21 @@ def render_catalog_markdown(catalog: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+def _schedule_cell_html(dates_plain: str, apply_links: list[dict[str, str]]) -> str:
+    """日程列: テキスト＋申込・詳細リンク（markdown=0 の表用 HTML）。"""
+    parts: list[str] = [html.escape(dates_plain)]
+    for link in apply_links:
+        lab = html.escape(link.get("label") or "リンク")
+        u = link.get("url") or ""
+        if not u:
+            continue
+        u_esc = html.escape(u, quote=True)
+        parts.append(
+            f'<a class="oc-schedule-link" href="{u_esc}" target="_blank" rel="noopener noreferrer">{lab}</a>'
+        )
+    return "<br/>".join(parts)
+
+
 def _external_links_html(page_url: str, reservation_url: str) -> str:
     chunks: list[str] = []
     if page_url:
@@ -229,7 +282,7 @@ def render_oc_overview_html_table(display_rows: list[dict[str, Any]]) -> str:
         "<thead><tr>",
         '<th data-label="大学">大学</th>',
         '<th data-label="学部・学科">学部・学科</th>',
-        '<th data-label="OC">オープンキャンパス<br/><span class="oc-th-sub">図志駅から（目安）</span><br/><span class="oc-th-sub">所要（目安）</span></th>',
+        '<th data-label="OC">オープンキャンパス<br/><span class="oc-th-sub">逗子から（目安）</span><br/><span class="oc-th-sub">所要（目安）</span></th>',
         '<th data-label="日程">日程</th>',
         '<th data-label="差分">差分</th>',
         '<th data-label="公式">公式</th>',
@@ -266,14 +319,15 @@ def render_oc_overview_html_table(display_rows: list[dict[str, Any]]) -> str:
             dates_display = f"更新 {raw_dates}" if raw_dates != "—" else "更新"
         else:
             dates_display = raw_dates
-        dates = html.escape(dates_display)
+        apply_links = list(r.get("schedule_apply_links") or [])
+        dates_td = _schedule_cell_html(dates_display, apply_links)
         diff_cell = "○" if r.get("changed_this_run") else "—"
         links_td = _external_links_html(r.get("page_url") or "", r.get("reservation_url") or "")
         detail_td = f'<a href="#{sid}">詳細</a>' if sid_raw else "—"
 
         lines.append(f'<td data-label="学部・学科">{dept}</td>')
         lines.append(f'<td data-label="OC">{oc_cell}</td>')
-        lines.append(f'<td data-label="日程" class="oc-col-dates">{dates}</td>')
+        lines.append(f'<td data-label="日程" class="oc-col-dates">{dates_td}</td>')
         lines.append(f'<td data-label="差分" class="oc-col-diff">{diff_cell}</td>')
         lines.append(f'<td data-label="公式" class="oc-overview-links">{links_td}</td>')
         lines.append(f'<td data-label="詳細">{detail_td}</td>')
@@ -317,8 +371,20 @@ def render_oc_detail_cards(rows: list[dict[str, Any]]) -> str:
         if cw:
             lines.append(f'<p class="oc-catalog-warning">{html.escape(cw)}</p>')
             lines.append("")
-        lines.append("- **日程（抜粋）**")
-        lines.append(_schedule_bullets(r.get("schedule_summary") or ""))
+        cbs = r.get("campus_block_schedule") or {}
+        if isinstance(cbs, dict) and cbs:
+            lines.append("- **キャンパス別日程（抜粋・公式の該当リンクで確認）**")
+            for cname in sorted(cbs.keys()):
+                blk = cbs[cname]
+                if not isinstance(blk, dict):
+                    continue
+                sl = (blk.get("schedule_summary_line") or "").replace("\n", " ").strip()
+                if len(sl) > 260:
+                    sl = sl[:257] + "…"
+                lines.append(f"    - **{cname}**: {sl}")
+        else:
+            lines.append("- **日程（抜粋）**")
+            lines.append(_schedule_bullets(r.get("schedule_summary") or ""))
         lines.append(
             f"- **公式**: {_external_links_html(r.get('page_url') or '', r.get('reservation_url') or '')}"
         )
@@ -388,6 +454,7 @@ def build_row(
         "application_note": app_note,
         "schedule_summary": sched,
         "schedule_dates_only": schedule_dates_only,
+        "campus_block_schedule": normalized.get("campus_block_schedule") or {},
         "reservation_url": reservation_url or "",
         "page_url": page_url,
         "last_fetch_at": last_fetch_at,

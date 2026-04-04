@@ -10,27 +10,41 @@
   ],
   "page_url": "https://www.rikkyo.ac.jp/admissions/visit/opencampus/index.html",
   "reservation_url": null,
-  "fingerprint": "ba854a6e729c7a44cb3fed03380f34d5977147a93e93defbcd17072aefa403e9",
+  "fingerprint": "a8aa3c754cf03c2439e3c13a3cbd582bdc9bc8dd571b81faf6bc57c5b5404d24",
   "previous_fingerprint": "ba854a6e729c7a44cb3fed03380f34d5977147a93e93defbcd17072aefa403e9",
   "normalized": {
     "page_title": "オープンキャンパス | 立教大学",
-    "highlights": [
-      "池袋オープンキャンパス（主要プログラムは事前予約制）",
-      "新座オープンキャンパス（予約不要）",
-      "オープンキャンパスQ＆A"
-    ],
+    "highlights": [],
     "schedule_lines": [
-      "オープンキャンパス立教大学へ行ってみよう",
-      "池袋オープンキャンパス（主要プログラムは事前予約制）",
-      "2026年度開催日時・対象学部",
-      "新座オープンキャンパス（予約不要）",
-      "オープンキャンパスQ＆A"
+      "【池袋】8/3（月）9:40～16:10 理、環境、社会、法、観光 8/4（火）9:40～16:10 文、異文化コミュニケーション、現代心理、GLAP 8/5（水）9:40～16:10 経済、経営、コミュニティ福祉、スポーツウエルネス ※日程ごとに開催する学部が異なりますので、ご来場の際はご注意ください。",
+      "【新座】8/7（金）9:40～16:10 観光、コミュニティ福祉、現代心理、スポーツウエルネス 8/8（土）9:40～16:10 観光、コミュニティ福祉、現代心理、スポーツウエルネス"
     ],
-    "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
-    "application_period_note": "各キャンパス・日程の予約は公式を参照",
+    "reservation_note": "池袋の一部プログラムは事前予約（マイページ）。詳細は公式参照。",
+    "application_period_note": "予約受付は公式記載の時期にマイページから（自動抽出は参考）",
     "catalog_season_warning": "",
-    "omit_table_schedule_dates": false
+    "campus_block_schedule": {
+      "池袋キャンパス": {
+        "schedule_summary_line": "8/3（月）9:40～16:10　　理、環境、社会、法、観光\n8/4（火）9:40～16:10　　文、異文化コミュニケーション、現代心理、GLAP\n8/5（水）9:40～16:10　　経済、経営、コミュニティ福祉、スポーツウエルネス\n※日程ごとに開催する学部が異なりますので、ご来場の際はご注意ください。",
+        "dept_line": "（日程ごとに対象学部が異なります。公式の池袋セクションを参照）",
+        "apply_links": [
+          {
+            "label": "池袋：日程・予約案内",
+            "url": "https://www.rikkyo.ac.jp/admissions/visit/opencampus/index.html#池袋キャンパス"
+          }
+        ]
+      },
+      "新座キャンパス": {
+        "schedule_summary_line": "8/7（金）9:40～16:10　　観光、コミュニティ福祉、現代心理、スポーツウエルネス\n8/8（土）9:40～16:10　　観光、コミュニティ福祉、現代心理、スポーツウエルネス",
+        "dept_line": "（新座は予約不要・入退場自由。公式の新座セクションを参照）",
+        "apply_links": [
+          {
+            "label": "新座：日程案内",
+            "url": "https://www.rikkyo.ac.jp/admissions/visit/opencampus/index.html#新座キャンパス"
+          }
+        ]
+      }
+    }
   },
-  "last_fetch_at": "2026-04-04T15:05:13+00:00",
-  "last_content_change_at": "2026-04-04T04:27:11+00:00"
+  "last_fetch_at": "2026-04-04T15:29:12+00:00",
+  "last_content_change_at": "2026-04-04T15:29:12+00:00"
 }

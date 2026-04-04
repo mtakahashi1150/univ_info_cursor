@@ -29,6 +29,13 @@
   color: var(--md-default-fg-color--light, rgba(0, 0, 0, 0.65));
 }
 
+.oc-overview-table .oc-schedule-link {
+  display: inline-block;
+  margin: 0.2rem 0.45rem 0 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
 .oc-overview-table th,
 .oc-overview-table td {
   border: 1px solid var(--md-default-fg-color--lightest, rgba(0, 0, 0, 0.1));

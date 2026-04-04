@@ -4,14 +4,18 @@ from typing import Any, Optional
 
 from bs4 import BeautifulSoup
 
+from univ_oc.parsers import aoyama as aoyama_mod
 from univ_oc.parsers import generic as generic_mod
 from univ_oc.parsers import meiji as meiji_mod
+from univ_oc.parsers import rikkyo as rikkyo_mod
 from univ_oc.parsers import waseda as waseda_mod
 
 PARSERS: dict[str, Any] = {
     "meiji": meiji_mod.parse,
     "waseda": waseda_mod.parse,
     "generic": generic_mod.parse,
+    "aoyama": aoyama_mod.parse,
+    "rikkyo": rikkyo_mod.parse,
 }
 
 
