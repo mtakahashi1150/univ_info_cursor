@@ -65,6 +65,8 @@ mkdocs serve
 
 リポジトリ **Settings → Pages** で **Source: GitHub Actions** を選びます（初回はワークフロー実行後、環境 `github-pages` の承認が求められる場合があります）。以前 **gh-pages** ブランチを使っていた場合は、ソースを切り替えてください。
 
+**すぐ Pages の状況だけ確認したいとき**: **Actions** タブ → **Deploy MkDocs (quick)** → 右上 **Run workflow** → **Run workflow**。取得・SMTP は行わず、`main` の `docs/` をビルドしてデプロイします。
+
 ## 新しい大学を追加する
 
 1. ブラウザで公式（または信頼できる）案内ページを開き、内容を確認する。
