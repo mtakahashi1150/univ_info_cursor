@@ -1,0 +1,48 @@
+from __future__ import annotations
+
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Optional
+
+import yaml
+
+
+@dataclass(frozen=True)
+class Source:
+    id: str
+    university: str
+    department_label: str
+    parser: str
+    page_url: str
+    reservation_url: Optional[str]
+    regions: list[str]
+    tags: list[str]
+
+
+def load_sources(path: Optional[Path] = None) -> list[Source]:
+    base = path or Path("config/sources.yaml")
+    raw = yaml.safe_load(base.read_text(encoding="utf-8"))
+    sources: list[Source] = []
+    for item in raw.get("sources", []):
+        sources.append(
+            Source(
+                id=item["id"],
+                university=item["university"],
+                department_label=item.get("department_label", ""),
+                parser=item["parser"],
+                page_url=item["page_url"],
+                reservation_url=item.get("reservation_url"),
+                regions=list(item.get("regions", [])),
+                tags=list(item.get("tags", [])),
+            )
+        )
+    return sources
+
+
+def repo_root() -> Path:
+    """config/sources.yaml からリポジトリルートを推定。"""
+    cwd = Path.cwd()
+    for p in (cwd, *cwd.parents):
+        if (p / "config" / "sources.yaml").is_file():
+            return p
+    return cwd

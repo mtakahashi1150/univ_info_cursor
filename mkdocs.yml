@@ -1,0 +1,24 @@
+site_name: 大学OC情報（univ_info_cursor）
+site_description: 検証済み URL から取得した OC 情報の累積表
+site_url: https://mtakahashi1150.github.io/univ_info_cursor/
+repo_url: https://github.com/mtakahashi1150/univ_info_cursor
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: ja
+  features:
+    - navigation.instant
+    - content.code.copy
+
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - ホーム: index.md
+  - 累積表: opencampus.md
+
+plugins:
+  - search

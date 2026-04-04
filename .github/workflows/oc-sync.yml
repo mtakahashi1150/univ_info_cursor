@@ -1,0 +1,66 @@
+name: Sync open campus data
+
+on:
+  schedule:
+    # 毎日 15:00 UTC 前後（日本時間 0:00 付近）。必要に応じて変更。
+    - cron: "0 15 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: oc-sync
+  cancel-in-progress: true
+
+jobs:
+  sync-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install package
+        run: pip install -e .
+
+      - name: Install MkDocs
+        run: pip install -r requirements-docs.txt
+
+      - name: Fetch and update snapshots
+        run: univ-oc-cursor run --notify
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          PAGES_BASE_URL: ${{ secrets.PAGES_BASE_URL }}
+
+      - name: Build static site
+        run: mkdocs build
+
+      - name: Commit snapshot changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/snapshots docs/opencampus.md || true
+          if git diff --staged --quiet; then
+            echo "No snapshot changes to commit."
+          else
+            git commit -m "chore: update OC snapshots and table"
+            git push
+          fi
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          force_orphan: true

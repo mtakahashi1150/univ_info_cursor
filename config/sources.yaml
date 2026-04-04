@@ -1,0 +1,18 @@
+# このファイルに書く URL は、必ずブラウザで開いて内容を確認したものだけを追加してください。
+# 推測でパスを作らないでください。
+
+sources:
+  - id: meiji_opencampus
+    university: 明治大学
+    # 一覧上の「学科」列に出すラベル（情報系に関連する例を明示）
+    department_label: 理工学部（情報科学科）等・他学部
+    parser: meiji
+    # 検証済み: 入試総合サイト「オープンキャンパス」公式ページ
+    page_url: https://www.meiji.ac.jp/exam/event/opencampus/index.html
+    # 予約は LINE（公式案内ページ）。検証済みで追加。
+    reservation_url: https://www.meiji.ac.jp/exam/reference/official_line.html
+    regions:
+      - tokyo
+      - kanagawa
+    tags:
+      - 情報系

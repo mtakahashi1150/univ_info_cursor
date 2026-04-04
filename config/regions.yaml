@@ -1,0 +1,6 @@
+# フィルタ用タグ（sources の regions と対応）。将来の拡張用。
+regions:
+  tokyo: { label: 東京都 }
+  kanagawa: { label: 神奈川県 }
+  chiba: { label: 千葉県 }
+  saitama: { label: 埼玉県 }
