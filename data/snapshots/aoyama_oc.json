@@ -10,8 +10,8 @@
   ],
   "page_url": "https://www.aoyama.ac.jp/admission/undergraduate/open_campus/open_campus.html",
   "reservation_url": null,
-  "fingerprint": "48b001f60393bb30e54288368c6d405f80b6be30b4159b8344fb84b73706e715",
-  "previous_fingerprint": "48b001f60393bb30e54288368c6d405f80b6be30b4159b8344fb84b73706e715",
+  "fingerprint": "f36e2cf2e6bb28e38f8f3d8bc6a67b089d8eff9ce589b21a0006cbf50b9d31c2",
+  "previous_fingerprint": "f36e2cf2e6bb28e38f8f3d8bc6a67b089d8eff9ce589b21a0006cbf50b9d31c2",
   "normalized": {
     "page_title": "2025年度オープンキャンパス | 青山学院大学",
     "highlights": [],
@@ -19,12 +19,19 @@
       "オープンキャンパス",
       "相模原オープンキャンパス",
       "青山オープンキャンパス",
-      "オンラインオープンキャンパス"
+      "オンラインオープンキャンパス",
+      "開催日 ：2026年7月12日（日）",
+      "開催日 ：2026年8月2日（日）、8月3日（月）、8月4日（火）",
+      "対象学部：8月2日（日）法学部・国際政治経済学部・総合文化政策学部",
+      "8月3日（月）経済学部・経営学部 ・統計データサイエンス学環（※設置構想中）",
+      "8月4日（火）文学部、教育人間科学部",
+      "開催期間：2026年7月21日（火） ～ 8月31日（月）"
     ],
     "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
     "application_period_note": "各キャンパス・日程の予約は公式を参照",
-    "catalog_season_warning": ""
+    "catalog_season_warning": "",
+    "omit_table_schedule_dates": false
   },
-  "last_fetch_at": "2026-04-04T14:18:33+00:00",
-  "last_content_change_at": "2026-04-04T04:27:11+00:00"
+  "last_fetch_at": "2026-04-04T15:05:12+00:00",
+  "last_content_change_at": "2026-04-04T15:02:14+00:00"
 }

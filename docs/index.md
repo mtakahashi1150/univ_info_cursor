@@ -1,6 +1,6 @@
 リポジトリ: [mtakahashi1150/univ_info_cursor](https://github.com/mtakahashi1150/univ_info_cursor)
 
-**サイト更新（取得実行・UTC）**: `2026-04-04T14:33:49+00:00`
+**サイト更新（取得実行・UTC）**: `2026-04-04T15:05:52+00:00`
 
 **前回スナップショットとの差分**: なし（フィンガープリント一致）
 
@@ -27,7 +27,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#waseda_oc">早稲田大学</a></td>
 <td data-label="学部・学科">基幹理工学部（情報理工学科ほか）・創造理工学部</td>
 <td data-label="OC"><span class="oc-campus-name">戸山キャンパス（東京都）</span><br/><span class="oc-transit">（図志→地下鉄 新宿三丁目 徒歩圏（要公式））</span></td>
-<td data-label="日程" class="oc-col-dates">2026年8月1日(土)、8月1日（土）、8月1日(土)、8月2日(日)</td>
+<td data-label="日程" class="oc-col-dates">2026年8月1日(土)、8月1日（土）、8月2日(日)</td>
 <td data-label="差分" class="oc-col-diff">—</td>
 <td data-label="公式" class="oc-overview-links"><a href="https://www.waseda.jp/inst/admission/visiting/opencampus/" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#waseda_oc">詳細</a></td>
@@ -36,7 +36,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#waseda_oc">早稲田大学</a></td>
 <td data-label="学部・学科">基幹理工学部（情報理工学科ほか）・創造理工学部</td>
 <td data-label="OC"><span class="oc-campus-name">早稲田キャンパス（東京都）</span><br/><span class="oc-transit">（図志→地下鉄早稲田 約20分+徒歩）</span><br/><span class="oc-duration">（所要 計40分台）</span></td>
-<td data-label="日程" class="oc-col-dates">2026年8月1日(土)、8月1日（土）、8月1日(土)、8月2日(日)</td>
+<td data-label="日程" class="oc-col-dates">2026年8月1日(土)、8月1日（土）、8月2日(日)</td>
 <td data-label="差分" class="oc-col-diff">—</td>
 <td data-label="公式" class="oc-overview-links"><a href="https://www.waseda.jp/inst/admission/visiting/opencampus/" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#waseda_oc">詳細</a></td>
@@ -45,7 +45,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#waseda_oc">早稲田大学</a></td>
 <td data-label="学部・学科">基幹理工学部（情報理工学科ほか）・創造理工学部</td>
 <td data-label="OC"><span class="oc-campus-name">西早稲田キャンパス（東京都）</span><br/><span class="oc-transit">（図志→JR高田馬場 約12分+徒歩10分）</span><br/><span class="oc-duration">（所要 計35分台）</span></td>
-<td data-label="日程" class="oc-col-dates">2026年8月1日(土)、8月1日（土）、8月1日(土)、8月2日(日)</td>
+<td data-label="日程" class="oc-col-dates">2026年8月1日(土)、8月1日（土）、8月2日(日)</td>
 <td data-label="差分" class="oc-col-diff">—</td>
 <td data-label="公式" class="oc-overview-links"><a href="https://www.waseda.jp/inst/admission/visiting/opencampus/" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#waseda_oc">詳細</a></td>
@@ -54,7 +54,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#keio_oc">慶應義塾大学</a></td>
 <td data-label="学部・学科">理工学部（情報系領域を含む）</td>
 <td data-label="OC"><span class="oc-campus-name">三田キャンパス（東京都）</span><br/><span class="oc-transit">（図志→JR田町 約25分+徒歩）</span></td>
-<td data-label="日程" class="oc-col-dates">—</td>
+<td data-label="日程" class="oc-col-dates">2026年6月7日（日）、2026年8月4日（火）、8月5日（水）</td>
 <td data-label="差分" class="oc-col-diff">—</td>
 <td data-label="公式" class="oc-overview-links"><a href="https://www.keio.ac.jp/ja/admissions/oc/" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#keio_oc">詳細</a></td>
@@ -63,7 +63,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#keio_oc">慶應義塾大学</a></td>
 <td data-label="学部・学科">理工学部（情報系領域を含む）</td>
 <td data-label="OC"><span class="oc-campus-name">日吉キャンパス（神奈川県）</span><br/><span class="oc-transit">（図志→横浜線日吉 約45分）</span></td>
-<td data-label="日程" class="oc-col-dates">—</td>
+<td data-label="日程" class="oc-col-dates">2026年6月7日（日）、2026年8月4日（火）、8月5日（水）</td>
 <td data-label="差分" class="oc-col-diff">—</td>
 <td data-label="公式" class="oc-overview-links"><a href="https://www.keio.ac.jp/ja/admissions/oc/" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#keio_oc">詳細</a></td>
@@ -90,7 +90,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#tus_oc">東京理科大学</a></td>
 <td data-label="学部・学科">創域情報学部・工学部（情報工学科等）</td>
 <td data-label="OC"><span class="oc-campus-name">神楽坂キャンパス（東京都）</span><br/><span class="oc-transit">（図志→飯田橋 約15分+徒歩）</span></td>
-<td data-label="日程" class="oc-col-dates">2025年8月9日、2025年8月10日、2025年8月11日、8月9日、8月10日、8月11日</td>
+<td data-label="日程" class="oc-col-dates">—</td>
 <td data-label="差分" class="oc-col-diff">—</td>
 <td data-label="公式" class="oc-overview-links"><a href="https://www.tus.ac.jp/admissions/university/visittus/opencampus2025/index.html" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#tus_oc">詳細</a></td>
@@ -99,7 +99,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#tus_oc">東京理科大学</a></td>
 <td data-label="学部・学科">創域情報学部・工学部（情報工学科等）</td>
 <td data-label="OC"><span class="oc-campus-name">葛飾キャンパス（東京都）</span><br/><span class="oc-transit">（図志→京成お花茶屋 約40分+バス）</span></td>
-<td data-label="日程" class="oc-col-dates">2025年8月9日、2025年8月10日、2025年8月11日、8月9日、8月10日、8月11日</td>
+<td data-label="日程" class="oc-col-dates">—</td>
 <td data-label="差分" class="oc-col-diff">—</td>
 <td data-label="公式" class="oc-overview-links"><a href="https://www.tus.ac.jp/admissions/university/visittus/opencampus2025/index.html" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#tus_oc">詳細</a></td>
@@ -108,7 +108,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#tus_oc">東京理科大学</a></td>
 <td data-label="学部・学科">創域情報学部・工学部（情報工学科等）</td>
 <td data-label="OC"><span class="oc-campus-name">野田キャンパス（千葉県）</span><br/><span class="oc-transit">（図志→東武野田線運河駅等 約60分台）</span></td>
-<td data-label="日程" class="oc-col-dates">2025年8月9日、2025年8月10日、2025年8月11日、8月9日、8月10日、8月11日</td>
+<td data-label="日程" class="oc-col-dates">—</td>
 <td data-label="差分" class="oc-col-diff">—</td>
 <td data-label="公式" class="oc-overview-links"><a href="https://www.tus.ac.jp/admissions/university/visittus/opencampus2025/index.html" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#tus_oc">詳細</a></td>
@@ -117,7 +117,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#meiji_opencampus">明治大学</a></td>
 <td data-label="学部・学科">理工学部（情報科学科）・総合数理学部（情報系領域）</td>
 <td data-label="OC"><span class="oc-campus-name">中野キャンパス（東京都）</span><br/><span class="oc-transit">（図志→JR中野 約10分+徒歩）</span></td>
-<td data-label="日程" class="oc-col-dates">2026年8月6日（木）、2026年8月2日（日）、8月6日（木）、8月2日（日）</td>
+<td data-label="日程" class="oc-col-dates">2026年8月6日（木）、2026年8月2日（日）</td>
 <td data-label="差分" class="oc-col-diff">—</td>
 <td data-label="公式" class="oc-overview-links"><a href="https://www.meiji.ac.jp/exam/event/opencampus/index.html" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a> <a href="https://www.meiji.ac.jp/exam/reference/official_line.html" target="_blank" rel="noopener noreferrer">申込・予約</a></td>
 <td data-label="詳細"><a href="#meiji_opencampus">詳細</a></td>
@@ -126,7 +126,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#meiji_opencampus">明治大学</a></td>
 <td data-label="学部・学科">理工学部（情報科学科）・総合数理学部（情報系領域）</td>
 <td data-label="OC"><span class="oc-campus-name">生田キャンパス（神奈川県）</span><br/><span class="oc-transit">（図志→小田急生田 約35分+徒歩）</span></td>
-<td data-label="日程" class="oc-col-dates">2026年8月6日（木）、2026年8月2日（日）、8月6日（木）、8月2日（日）</td>
+<td data-label="日程" class="oc-col-dates">2026年8月6日（木）、2026年8月2日（日）</td>
 <td data-label="差分" class="oc-col-diff">—</td>
 <td data-label="公式" class="oc-overview-links"><a href="https://www.meiji.ac.jp/exam/event/opencampus/index.html" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a> <a href="https://www.meiji.ac.jp/exam/reference/official_line.html" target="_blank" rel="noopener noreferrer">申込・予約</a></td>
 <td data-label="詳細"><a href="#meiji_opencampus">詳細</a></td>
@@ -135,7 +135,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#meiji_opencampus">明治大学</a></td>
 <td data-label="学部・学科">理工学部（情報科学科）・総合数理学部（情報系領域）</td>
 <td data-label="OC"><span class="oc-campus-name">駿河台キャンパス（東京都）</span><br/><span class="oc-transit">（図志→御茶ノ水 約20分+徒歩）</span></td>
-<td data-label="日程" class="oc-col-dates">2026年8月6日（木）、2026年8月2日（日）、8月6日（木）、8月2日（日）</td>
+<td data-label="日程" class="oc-col-dates">2026年8月6日（木）、2026年8月2日（日）</td>
 <td data-label="差分" class="oc-col-diff">—</td>
 <td data-label="公式" class="oc-overview-links"><a href="https://www.meiji.ac.jp/exam/event/opencampus/index.html" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a> <a href="https://www.meiji.ac.jp/exam/reference/official_line.html" target="_blank" rel="noopener noreferrer">申込・予約</a></td>
 <td data-label="詳細"><a href="#meiji_opencampus">詳細</a></td>
@@ -144,7 +144,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#aoyama_oc">青山学院大学</a></td>
 <td data-label="学部・学科">理工学部・社会情報学部</td>
 <td data-label="OC"><span class="oc-campus-name">相模原キャンパス（神奈川県）</span><br/><span class="oc-transit">（図志→JR相模原 約50分+徒歩）</span></td>
-<td data-label="日程" class="oc-col-dates">—</td>
+<td data-label="日程" class="oc-col-dates">2026年7月12日（日）、2026年8月2日（日）、2026年7月21日（火）、8月3日（月）、8月4日（火）、8月31日（月）</td>
 <td data-label="差分" class="oc-col-diff">—</td>
 <td data-label="公式" class="oc-overview-links"><a href="https://www.aoyama.ac.jp/admission/undergraduate/open_campus/open_campus.html" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#aoyama_oc">詳細</a></td>
@@ -153,7 +153,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#aoyama_oc">青山学院大学</a></td>
 <td data-label="学部・学科">理工学部・社会情報学部</td>
 <td data-label="OC"><span class="oc-campus-name">青山キャンパス（東京都）</span><br/><span class="oc-transit">（図志→表参道 約25分+徒歩）</span></td>
-<td data-label="日程" class="oc-col-dates">—</td>
+<td data-label="日程" class="oc-col-dates">2026年7月12日（日）、2026年8月2日（日）、2026年7月21日（火）、8月3日（月）、8月4日（火）、8月31日（月）</td>
 <td data-label="差分" class="oc-col-diff">—</td>
 <td data-label="公式" class="oc-overview-links"><a href="https://www.aoyama.ac.jp/admission/undergraduate/open_campus/open_campus.html" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#aoyama_oc">詳細</a></td>
@@ -180,7 +180,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#chuo_oc">中央大学</a></td>
 <td data-label="学部・学科">国際情報学部・基幹理工学部</td>
 <td data-label="OC"><span class="oc-campus-name">多摩キャンパス（東京都）</span><br/><span class="oc-transit">（図志→京王多摩川 約35分+徒歩）</span></td>
-<td data-label="日程" class="oc-col-dates">2026年4月18日(土)、2026年4月6日(月)、4月18日(土)、4月6日(月)、4月16日(木)</td>
+<td data-label="日程" class="oc-col-dates">2026年4月18日(土)、2026年4月6日(月)、4月16日(木)</td>
 <td data-label="差分" class="oc-col-diff">—</td>
 <td data-label="公式" class="oc-overview-links"><a href="https://www.chuo-u.ac.jp/connect/event/opencampus2026.html" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#chuo_oc">詳細</a></td>
@@ -189,7 +189,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#chuo_oc">中央大学</a></td>
 <td data-label="学部・学科">国際情報学部・基幹理工学部</td>
 <td data-label="OC"><span class="oc-campus-name">市ヶ谷田町キャンパス（東京都）</span><br/><span class="oc-transit">（図志→地下鉄市ヶ谷 約20分+徒歩）</span></td>
-<td data-label="日程" class="oc-col-dates">2026年4月18日(土)、2026年4月6日(月)、4月18日(土)、4月6日(月)、4月16日(木)</td>
+<td data-label="日程" class="oc-col-dates">2026年4月18日(土)、2026年4月6日(月)、4月16日(木)</td>
 <td data-label="差分" class="oc-col-diff">—</td>
 <td data-label="公式" class="oc-overview-links"><a href="https://www.chuo-u.ac.jp/connect/event/opencampus2026.html" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#chuo_oc">詳細</a></td>
@@ -198,7 +198,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#chuo_oc">中央大学</a></td>
 <td data-label="学部・学科">国際情報学部・基幹理工学部</td>
 <td data-label="OC"><span class="oc-campus-name">後楽園キャンパス（東京都）</span><br/><span class="oc-transit">（図志→地下鉄後楽園 約25分）</span></td>
-<td data-label="日程" class="oc-col-dates">2026年4月18日(土)、2026年4月6日(月)、4月18日(土)、4月6日(月)、4月16日(木)</td>
+<td data-label="日程" class="oc-col-dates">2026年4月18日(土)、2026年4月6日(月)、4月16日(木)</td>
 <td data-label="差分" class="oc-col-diff">—</td>
 <td data-label="公式" class="oc-overview-links"><a href="https://www.chuo-u.ac.jp/connect/event/opencampus2026.html" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#chuo_oc">詳細</a></td>
@@ -335,6 +335,8 @@
 
 - **日程（抜粋）**
     - 「オープンキャンパス2026」の開催について
+    - 2026年6月7日（日）
+    - 2026年8月4日（火）、8月5日（水）
 - **公式**: <a href="https://www.keio.ac.jp/ja/admissions/oc/" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a>
 
 </div>
@@ -356,10 +358,7 @@
 <p class="oc-catalog-warning">※URLに2025年度のOC案内が含まれる可能性が高いです。掲載日程が**既に過去の年度**であることがあります。**最新の開催は必ず公式サイトで確認してください。**</p>
 
 - **日程（抜粋）**
-    - オープンキャンパス 2025ADMISSIONS & AID
-    - 2025年度オープンキャンパスの動画を公開中！
-    - 野田キャンパス（2025年8月9日開催）
-    - 葛飾キャンパス（2025年8月10日開催）
+    - （掲載URL・抽出元は過去年度の可能性があります。最新の日程は公式サイトで確認）
 - **公式**: <a href="https://www.tus.ac.jp/admissions/university/visittus/opencampus2025/index.html" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a>
 
 </div>
@@ -484,7 +483,7 @@
 
 </div>
 
-_Generated at 2026-04-04T14:33:49+00:00_
+_Generated at 2026-04-04T15:05:52+00:00_
 
 ---
 

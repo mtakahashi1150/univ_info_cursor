@@ -33,3 +33,29 @@ def test_generic_catalog_season_warning_for_2025_url() -> None:
         reservation_url=None,
     )
     assert out["normalized"].get("catalog_season_warning")
+    assert out["normalized"].get("omit_table_schedule_dates") is True
+
+
+def test_generic_keio_like_body_dates() -> None:
+    from univ_oc.parsers.generic import parse
+
+    html = """<html><head><title>OC2026</title></head><body><main>
+    <h2>オープンキャンパス2026</h2>
+    <ul><li class="listItem">■日時　2026年8月4日（火）、8月5日（水）</li></ul>
+    </main></body></html>"""
+    soup = BeautifulSoup(html, "html.parser")
+    out = parse(soup, page_url="https://www.keio.ac.jp/ja/admissions/oc/", reservation_url=None)
+    sl = " ".join(out["normalized"]["schedule_lines"])
+    assert "2026年8月4日" in sl
+
+
+def test_generic_aoyama_like_paragraph_dates() -> None:
+    from univ_oc.parsers.generic import parse
+
+    html = """<html><head><title>OC</title></head><body><main>
+    <p class="parabox2_text">開催日　：2026年7月12日（日）<br/>開催時間：10:00～16:00</p>
+    </main></body></html>"""
+    soup = BeautifulSoup(html, "html.parser")
+    out = parse(soup, page_url="https://www.aoyama.ac.jp/admission/undergraduate/open_campus/open_campus.html", reservation_url=None)
+    sl = " ".join(out["normalized"]["schedule_lines"])
+    assert "2026年7月12日" in sl

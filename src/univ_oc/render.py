@@ -31,6 +31,17 @@ def _md_table_cell(value: Optional[str]) -> str:
     return s.replace("|", "\\|")
 
 
+def _dedupe_date_substrings(phrases: list[str]) -> list[str]:
+    """「2026年8月4日」と「8月4日」のように長い表記に含まれる短い表記を除く。"""
+    out: list[str] = []
+    for s in phrases:
+        if any(t != s and len(t) > len(s) and s in t for t in phrases):
+            continue
+        if s not in out:
+            out.append(s)
+    return out
+
+
 def extract_schedule_dates_only(normalized: dict[str, Any], schedule_summary: str) -> str:
     """表用: 日付らしき部分だけ抽出。"""
     blob = schedule_summary + "\n" + "\n".join(normalized.get("schedule_lines") or [])
@@ -43,6 +54,7 @@ def extract_schedule_dates_only(normalized: dict[str, Any], schedule_summary: st
         for m in re.findall(pat, blob):
             if m not in found:
                 found.append(m)
+    found = _dedupe_date_substrings(found)
     return "、".join(found[:14]) if found else "—"
 
 
@@ -249,7 +261,12 @@ def render_oc_overview_html_table(display_rows: list[dict[str, Any]]) -> str:
         if dur_esc:
             oc_cell += f'<br/><span class="oc-duration">（所要 {dur_esc}）</span>'
 
-        dates = html.escape(r.get("schedule_dates_only") or "—")
+        raw_dates = (r.get("schedule_dates_only") or "—").strip()
+        if r.get("changed_this_run"):
+            dates_display = f"更新 {raw_dates}" if raw_dates != "—" else "更新"
+        else:
+            dates_display = raw_dates
+        dates = html.escape(dates_display)
         diff_cell = "○" if r.get("changed_this_run") else "—"
         links_td = _external_links_html(r.get("page_url") or "", r.get("reservation_url") or "")
         detail_td = f'<a href="#{sid}">詳細</a>' if sid_raw else "—"
@@ -354,7 +371,12 @@ def build_row(
         status = f"直近 {days_no_update} 日間、内容に変化なし"
 
     catalog_season_warning = (normalized.get("catalog_season_warning") or "").strip()
-    schedule_dates_only = extract_schedule_dates_only(normalized, sched)
+
+    if normalized.get("omit_table_schedule_dates"):
+        schedule_dates_only = "—"
+        sched = "（掲載URL・抽出元は過去年度の可能性があります。最新の日程は公式サイトで確認）"
+    else:
+        schedule_dates_only = extract_schedule_dates_only(normalized, sched)
 
     return {
         "source_id": source_id,
