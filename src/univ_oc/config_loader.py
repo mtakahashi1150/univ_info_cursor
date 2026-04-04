@@ -51,6 +51,24 @@ def load_target_catalog(path: Optional[Path] = None) -> dict[str, Any]:
     return yaml.safe_load(p.read_text(encoding="utf-8"))
 
 
+def load_department_links(path: Optional[Path] = None) -> dict[str, list[dict[str, str]]]:
+    """department_links.yaml: by_source_id -> [{label, url}, ...]"""
+    p = path or Path("config/department_links.yaml")
+    if not p.is_file():
+        return {}
+    raw = yaml.safe_load(p.read_text(encoding="utf-8")) or {}
+    out: dict[str, list[dict[str, str]]] = {}
+    for sid, items in (raw.get("by_source_id") or {}).items():
+        if not isinstance(items, list):
+            continue
+        links: list[dict[str, str]] = []
+        for it in items:
+            if isinstance(it, dict) and it.get("label") and it.get("url"):
+                links.append({"label": str(it["label"]), "url": str(it["url"])})
+        out[str(sid)] = links
+    return out
+
+
 def load_campus_access(path: Optional[Path] = None) -> dict[str, dict[str, Any]]:
     """campus_access.yaml: by_source_id -> { キャンパス名: 目安文字列 or {access,duration} }"""
     p = path or Path("config/campus_access.yaml")

@@ -36,6 +36,20 @@
   font-weight: 600;
 }
 
+.oc-overview-table .oc-new-inline {
+  color: #b71c1c;
+  font-weight: 800;
+  font-size: 0.78rem;
+  margin-right: 0.25rem;
+}
+
+.oc-overview-table .oc-dept-link {
+  display: inline-block;
+  margin: 0.12rem 0.45rem 0 0;
+  font-size: 0.74rem;
+  font-weight: 600;
+}
+
 .oc-overview-table th,
 .oc-overview-table td {
   border: 1px solid var(--md-default-fg-color--lightest, rgba(0, 0, 0, 0.1));

@@ -8,57 +8,66 @@
     "東京都",
     "千葉県"
   ],
-  "page_url": "https://www.tus.ac.jp/admissions/university/visittus/opencampus2025/index.html",
+  "page_url": "https://www.tus.ac.jp/admissions/university/visittus/opencampus/",
   "reservation_url": null,
-  "fingerprint": "e94df6b293a4c64f8342d20250e1c8a162f4cc4bf85649262bd6a1d972285cd1",
+  "fingerprint": "748f4d866b423c7983435d0f1b8f7d9a74be22b5ed596fd5c708aa83d9d16ebd",
   "previous_fingerprint": "e94df6b293a4c64f8342d20250e1c8a162f4cc4bf85649262bd6a1d972285cd1",
   "normalized": {
-    "page_title": "オープンキャンパス 2025｜東京理科大学",
-    "highlights": [],
+    "page_title": "オープンキャンパス｜東京理科大学",
+    "highlights": [
+      "2026年春に次のオープンキャンパスの開催を予定しています！ ・ 4月19日（日）野田キャンパス ・ 5月17日（日）葛飾キャンパス"
+    ],
     "schedule_lines": [
-      "オープンキャンパス 2025ADMISSIONS & AID",
-      "2025年度オープンキャンパスの動画を公開中！",
-      "野田キャンパス（2025年8月9日開催）",
-      "葛飾キャンパス（2025年8月10日開催）",
-      "神楽坂キャンパス（2025年8月11日開催）"
+      "2026年春に次のオープンキャンパスの開催を予定しています！ ・ 4月19日（日）野田キャンパス ・ 5月17日（日）葛飾キャンパス",
+      "神楽坂キャンパス: 2026年春の日付は同ページの先頭告知では未掲載のため公式で確認 / 2025年8月11日 夏のOC（アーカイブ・動画等は公式ページ）",
+      "葛飾キャンパス: 2026年春 OC 予定: 5月17日（日）葛飾キャンパス（公式「重要なお知らせ」） / 2025年8月10日 夏のOC（アーカイブ・動画等は公式ページ）",
+      "野田キャンパス: 2026年春 OC 予定: 4月19日（日）野田キャンパス（公式「重要なお知らせ」） / 2025年8月9日 夏のOC（アーカイブ・動画等は公式ページ）"
     ],
     "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
     "application_period_note": "各キャンパス・日程の予約は公式を参照",
-    "catalog_season_warning": "※URLに2025年度のOC案内が含まれる可能性が高いです。掲載日程が**既に過去の年度**であることがあります。**最新の開催は必ず公式サイトで確認してください。**",
-    "omit_table_schedule_dates": true,
+    "catalog_season_warning": "※2025年度夏のOCアーカイブ・動画が同ページにあります。**2026年春の開催は「重要なお知らせ」の日付を優先して確認してください。**",
+    "omit_table_schedule_dates": false,
     "campus_block_schedule": {
       "野田キャンパス": {
-        "schedule_summary_line": "2025年8月9日開催",
-        "dept_line": "創域情報・工学・先進工学ほか（キャンパスにより異なる）",
+        "schedule_summary_line": "2026年春 OC 予定: 4月19日（日）野田キャンパス（公式「重要なお知らせ」） / 2025年8月9日 夏のOC（アーカイブ・動画等は公式ページ）",
+        "dept_line": "創域理工・創域情報（夏アーカイブ表記参照）",
         "apply_links": [
           {
-            "label": "日程・詳細",
-            "url": "https://www.tus.ac.jp/admissions/university/visittus/opencampus2025/index.html"
+            "label": "詳細（公式）",
+            "url": "https://www.tus.ac.jp/today/archive/20260218_0536.html"
+          },
+          {
+            "label": "OCトップ",
+            "url": "https://www.tus.ac.jp/admissions/university/visittus/opencampus"
           }
         ]
       },
       "葛飾キャンパス": {
-        "schedule_summary_line": "2025年8月10日開催",
-        "dept_line": "創域情報・工学・先進工学ほか（キャンパスにより異なる）",
+        "schedule_summary_line": "2026年春 OC 予定: 5月17日（日）葛飾キャンパス（公式「重要なお知らせ」） / 2025年8月10日 夏のOC（アーカイブ・動画等は公式ページ）",
+        "dept_line": "薬・工学・先進工学（夏アーカイブ表記参照）",
         "apply_links": [
           {
-            "label": "日程・詳細",
-            "url": "https://www.tus.ac.jp/admissions/university/visittus/opencampus2025/index.html"
+            "label": "詳細（公式）",
+            "url": "https://www.tus.ac.jp/today/archive/20260204_0104.html"
+          },
+          {
+            "label": "OCトップ",
+            "url": "https://www.tus.ac.jp/admissions/university/visittus/opencampus"
           }
         ]
       },
       "神楽坂キャンパス": {
-        "schedule_summary_line": "2025年8月11日開催",
-        "dept_line": "創域情報・工学・先進工学ほか（キャンパスにより異なる）",
+        "schedule_summary_line": "2026年春の日付は同ページの先頭告知では未掲載のため公式で確認 / 2025年8月11日 夏のOC（アーカイブ・動画等は公式ページ）",
+        "dept_line": "",
         "apply_links": [
           {
-            "label": "日程・詳細",
-            "url": "https://www.tus.ac.jp/admissions/university/visittus/opencampus2025/index.html"
+            "label": "OCトップ",
+            "url": "https://www.tus.ac.jp/admissions/university/visittus/opencampus"
           }
         ]
       }
     }
   },
-  "last_fetch_at": "2026-04-04T15:47:37+00:00",
-  "last_content_change_at": "2026-04-04T15:46:36+00:00"
+  "last_fetch_at": "2026-04-04T22:18:54+00:00",
+  "last_content_change_at": "2026-04-04T22:18:54+00:00"
 }

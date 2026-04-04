@@ -62,7 +62,7 @@ def test_render_table() -> None:
     assert "一覧表" in md
     assert "oc-overview-table" in md
     assert "前回スナップショットとの差分" in md
-    assert "NEW" in md
+    assert "【NEW】" in md
     assert "オープンキャンパス案内" in md
     assert 'target="_blank"' in md
     assert "test_src" in md

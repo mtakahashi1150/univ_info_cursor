@@ -48,7 +48,7 @@ sources:
       - 東京都
       - 千葉県
     parser: tus
-    page_url: https://www.tus.ac.jp/admissions/university/visittus/opencampus2025/index.html
+    page_url: https://www.tus.ac.jp/admissions/university/visittus/opencampus/
     reservation_url: null
     tags: [情報系]
 

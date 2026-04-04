@@ -141,9 +141,10 @@ def expand_display_rows(
                         sl.append({"label": "申込・予約", "url": str(r["reservation_url"])})
                     pu = r.get("page_url") or ""
                     if pu and not any(x.get("url") == pu for x in sl):
-                        sl.append({"label": "日程・詳細", "url": str(pu)})
+                        sl.append({"label": "OC公式ページ", "url": str(pu)})
                     rr["schedule_apply_links"] = sl
 
+                rr["department_portal_links"] = list(r.get("department_portal_links") or [])
                 out.append(rr)
         else:
             rr = {**r}
@@ -159,6 +160,7 @@ def expand_display_rows(
             if pu and not any(x.get("url") == pu for x in sl):
                 sl.append({"label": "日程・詳細", "url": str(pu)})
             rr["schedule_apply_links"] = sl
+            rr["department_portal_links"] = list(r.get("department_portal_links") or [])
             out.append(rr)
     return sorted(
         out,
@@ -240,9 +242,29 @@ def render_catalog_markdown(catalog: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
-def _schedule_cell_html(dates_plain: str, apply_links: list[dict[str, str]]) -> str:
-    """日程列: テキスト＋申込・詳細リンク（markdown=0 の表用 HTML）。"""
-    parts: list[str] = [html.escape(dates_plain)]
+def _dept_cell_html(plain: str, links: list[dict[str, str]]) -> str:
+    """学部・学科列: 設定された公式リンクのみ target=_blank で列挙。"""
+    base = html.escape(plain or "")
+    if not links:
+        return base
+    parts: list[str] = []
+    if base:
+        parts.append(base)
+    for link in links:
+        lab = html.escape(link.get("label") or "")
+        u = link.get("url") or ""
+        if not lab or not u:
+            continue
+        u_esc = html.escape(u, quote=True)
+        parts.append(
+            f'<a class="oc-dept-link" href="{u_esc}" target="_blank" rel="noopener noreferrer">{lab}</a>'
+        )
+    return "<br/>".join(parts)
+
+
+def _schedule_cell_html(dates_inner_html: str, apply_links: list[dict[str, str]]) -> str:
+    """日程列: dates_inner_html は呼び出し側でエスケープ済みの安全な断片＋任意の span。"""
+    parts: list[str] = [dates_inner_html]
     for link in apply_links:
         lab = html.escape(link.get("label") or "リンク")
         u = link.get("url") or ""
@@ -281,31 +303,27 @@ def render_oc_overview_html_table(display_rows: list[dict[str, Any]]) -> str:
         '<table class="oc-overview-table">',
         "<thead><tr>",
         '<th data-label="大学">大学</th>',
-        '<th data-label="学部・学科">学部・学科</th>',
+        '<th data-label="学部・学科">学部・学科<br/><span class="oc-th-sub">（公式サイト・別窓）</span></th>',
         '<th data-label="OC">オープンキャンパス<br/><span class="oc-th-sub">逗子から（目安）</span><br/><span class="oc-th-sub">所要（目安）</span></th>',
-        '<th data-label="日程">日程</th>',
-        '<th data-label="差分">差分</th>',
+        '<th data-label="日程">日程<br/><span class="oc-th-sub">（更新時は【NEW】）</span></th>',
         '<th data-label="公式">公式</th>',
         '<th data-label="詳細">詳細</th>',
         "</tr></thead>",
         "<tbody>",
     ]
 
-    seen_changed_sid: set[str] = set()
     for r in display_rows:
         sid_raw = (r.get("source_id") or "").replace('"', "").replace("'", "")
         sid = html.escape(sid_raw)
         uni_plain = html.escape(r.get("university", "") or "")
-        new_html = ""
-        if r.get("changed_this_run") and sid_raw and sid_raw not in seen_changed_sid:
-            new_html = ' <span class="oc-new-badge">NEW</span>'
-            seen_changed_sid.add(sid_raw)
-        uni_cell = f'<a class="oc-overview-uni" href="#{sid}">{uni_plain}</a>{new_html}'
+        uni_cell = f'<a class="oc-overview-uni" href="#{sid}">{uni_plain}</a>'
 
         lines.append("<tr>")
         lines.append(f'<td data-label="大学">{uni_cell}</td>')
 
-        dept = html.escape(r.get("display_dept_short") or "")
+        dept_plain = r.get("display_dept_short") or ""
+        dept_links = list(r.get("department_portal_links") or [])
+        dept = _dept_cell_html(dept_plain, dept_links)
         campus = html.escape(r.get("display_campus_line") or "")
         transit = html.escape(r.get("transit_note") or "")
         dur_raw = (r.get("duration_note") or "").strip()
@@ -315,20 +333,17 @@ def render_oc_overview_html_table(display_rows: list[dict[str, Any]]) -> str:
             oc_cell += f'<br/><span class="oc-duration">（所要 {dur_esc}）</span>'
 
         raw_dates = (r.get("schedule_dates_only") or "—").strip()
-        if r.get("changed_this_run"):
-            dates_display = f"更新 {raw_dates}" if raw_dates != "—" else "更新"
-        else:
-            dates_display = raw_dates
+        new_html = '<span class="oc-new-inline">【NEW】</span> ' if r.get("changed_this_run") else ""
+        dates_esc = html.escape(raw_dates) if raw_dates != "—" else "—"
+        dates_inner = f"{new_html}{dates_esc}"
         apply_links = list(r.get("schedule_apply_links") or [])
-        dates_td = _schedule_cell_html(dates_display, apply_links)
-        diff_cell = "○" if r.get("changed_this_run") else "—"
+        dates_td = _schedule_cell_html(dates_inner, apply_links)
         links_td = _external_links_html(r.get("page_url") or "", r.get("reservation_url") or "")
         detail_td = f'<a href="#{sid}">詳細</a>' if sid_raw else "—"
 
         lines.append(f'<td data-label="学部・学科">{dept}</td>')
         lines.append(f'<td data-label="OC">{oc_cell}</td>')
         lines.append(f'<td data-label="日程" class="oc-col-dates">{dates_td}</td>')
-        lines.append(f'<td data-label="差分" class="oc-col-diff">{diff_cell}</td>')
         lines.append(f'<td data-label="公式" class="oc-overview-links">{links_td}</td>')
         lines.append(f'<td data-label="詳細">{detail_td}</td>')
         lines.append("</tr>")
@@ -412,6 +427,7 @@ def build_row(
     last_content_change_at: str,
     changed_this_run: bool,
     days_no_update: int,
+    department_portal_links: Optional[list[dict[str, str]]] = None,
 ) -> dict[str, Any]:
     sched = " / ".join(normalized.get("schedule_lines", [])[:4]) or "（ページ要確認）"
     if len(sched) > 220:
@@ -463,6 +479,7 @@ def build_row(
         "changed_this_run": changed_this_run,
         "update_snippet": update_snippet,
         "catalog_season_warning": catalog_season_warning,
+        "department_portal_links": list(department_portal_links or []),
     }
 
 

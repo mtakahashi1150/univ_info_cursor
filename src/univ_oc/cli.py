@@ -7,7 +7,13 @@ import typer
 from dotenv import load_dotenv
 
 from univ_oc import fetch as fetch_mod
-from univ_oc.config_loader import load_campus_access, load_sources, load_target_catalog, repo_root
+from univ_oc.config_loader import (
+    load_campus_access,
+    load_department_links,
+    load_sources,
+    load_target_catalog,
+    repo_root,
+)
 from univ_oc.mail import build_email_body, load_smtp_settings_from_env, send_update_email
 from univ_oc.parsers import parse as parse_with
 from univ_oc.render import build_row, render_full_document
@@ -34,6 +40,7 @@ def run(
     sources = load_sources(root / "config" / "sources.yaml")
     catalog = load_target_catalog(root / "config" / "target_catalog.yaml")
     campus_access = load_campus_access(root / "config" / "campus_access.yaml")
+    dept_links_by_sid = load_department_links(root / "config" / "department_links.yaml")
     snapshot_dir = root / "data" / "snapshots"
     out_md = root / "docs" / "index.md"
 
@@ -45,37 +52,43 @@ def run(
         snap_path = snapshot_dir / f"{src.id}.json"
         prev = load_snapshot(snap_path)
 
+        changed = False
         if dry_run:
             if not prev:
                 typer.echo("dry-run には既存の data/snapshots/*.json が必要です。", err=True)
                 raise typer.Exit(code=1)
-            normalized = prev["normalized"]
-            fp = prev["fingerprint"]
-            changed = False
         else:
-            html = fetch_mod.fetch_html(src.page_url)
-            soup = fetch_mod.parse_html(html)
-            parsed = parse_with(src.parser, soup, page_url=src.page_url, reservation_url=src.reservation_url)
-            fp = parsed["fingerprint"]
-            normalized = parsed["normalized"]
-            merged, changed = merge_snapshot(
-                src.id,
-                src.university,
-                src.university_group,
-                src.department_label,
-                src.campus_label,
-                list(src.area_prefectures),
-                src.page_url,
-                src.reservation_url,
-                fp,
-                normalized,
-                prev,
-            )
-            save_snapshot(snap_path, merged)
-            if changed:
-                any_changed.append(src.id)
-                hl = ", ".join(normalized.get("highlights", [])[:2])
-                change_details.append(f"- {src.university}: {hl or '本文構成の変化'}")
+            try:
+                html = fetch_mod.fetch_html(src.page_url)
+            except Exception as e:  # noqa: BLE001 — 取得失敗時は前回スナップショットで継続
+                typer.echo(f"FETCH_FAIL {src.id} ({src.page_url}): {e}", err=True)
+                if prev is None:
+                    typer.echo(f"前回スナップショットが無いため {src.id} をスキップできません。", err=True)
+                    raise typer.Exit(code=1) from e
+                typer.echo(f"→ 前回のスナップショットをそのまま使用します: {src.id}", err=True)
+            else:
+                soup = fetch_mod.parse_html(html)
+                parsed = parse_with(src.parser, soup, page_url=src.page_url, reservation_url=src.reservation_url)
+                fp = parsed["fingerprint"]
+                normalized = parsed["normalized"]
+                merged, changed = merge_snapshot(
+                    src.id,
+                    src.university,
+                    src.university_group,
+                    src.department_label,
+                    src.campus_label,
+                    list(src.area_prefectures),
+                    src.page_url,
+                    src.reservation_url,
+                    fp,
+                    normalized,
+                    prev,
+                )
+                save_snapshot(snap_path, merged)
+                if changed:
+                    any_changed.append(src.id)
+                    hl = ", ".join(normalized.get("highlights", [])[:2])
+                    change_details.append(f"- {src.university}: {hl or '本文構成の変化'}")
 
         data = load_snapshot(snap_path)
         assert data is not None
@@ -94,6 +107,7 @@ def run(
             last_content_change_at=data["last_content_change_at"],
             changed_this_run=changed if not dry_run else False,
             days_no_update=ddays,
+            department_portal_links=dept_links_by_sid.get(src.id, []),
         )
         rows.append(row)
 

@@ -10,7 +10,7 @@
   "page_url": "https://www.waseda.jp/inst/admission/visiting/opencampus/",
   "reservation_url": null,
   "fingerprint": "35c517b151b2bd8785b7bcb7ed6a1abe076ea23a22d42f290b5e724a4eac968e",
-  "previous_fingerprint": "15b98dcb17d0f9ac7606aed21ab88d02f9a58942f89b23b1dbcf91aaa7101092",
+  "previous_fingerprint": "35c517b151b2bd8785b7bcb7ed6a1abe076ea23a22d42f290b5e724a4eac968e",
   "normalized": {
     "page_title": "オープンキャンパス – 早稲田大学 入学センター",
     "highlights": [
@@ -39,6 +39,6 @@
       }
     }
   },
-  "last_fetch_at": "2026-04-04T15:47:37+00:00",
+  "last_fetch_at": "2026-04-04T22:18:52+00:00",
   "last_content_change_at": "2026-04-04T15:47:37+00:00"
 }

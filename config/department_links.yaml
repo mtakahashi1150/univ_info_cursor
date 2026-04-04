@@ -1,0 +1,9 @@
+# 学部・学科の公式ページ（sources のドメイン上で確認済みのパスのみ）。未設定の source は表ではテキストのみ。
+# URL は推測で増やさないこと。
+by_source_id:
+  tus_oc:
+    - { label: "創域情報学部", url: "https://www.tus.ac.jp/academics/faculty/informationsciencetechnology/" }
+    - { label: "情報理工学科", url: "https://www.tus.ac.jp/academics/faculty/informationsciencetechnology/informationsciencetechnology/" }
+    - { label: "工学部", url: "https://www.tus.ac.jp/academics/faculty/engineering/" }
+    - { label: "情報工学科（工学部）", url: "https://www.tus.ac.jp/academics/faculty/engineering/information/" }
+    - { label: "先進工学部", url: "https://www.tus.ac.jp/academics/faculty/industrialscience_technology/" }
