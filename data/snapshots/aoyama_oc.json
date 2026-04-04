@@ -1,0 +1,30 @@
+{
+  "source_id": "aoyama_oc",
+  "university": "青山学院大学",
+  "university_group": "G-MARCH",
+  "department_label": "理工学部・社会情報学部",
+  "campus_label": "相模原・青山キャンパス",
+  "area_prefectures": [
+    "東京都",
+    "神奈川県"
+  ],
+  "page_url": "https://www.aoyama.ac.jp/admission/undergraduate/open_campus/open_campus.html",
+  "reservation_url": null,
+  "fingerprint": "48b001f60393bb30e54288368c6d405f80b6be30b4159b8344fb84b73706e715",
+  "previous_fingerprint": "48b001f60393bb30e54288368c6d405f80b6be30b4159b8344fb84b73706e715",
+  "normalized": {
+    "page_title": "2025年度オープンキャンパス | 青山学院大学",
+    "highlights": [],
+    "schedule_lines": [
+      "オープンキャンパス",
+      "相模原オープンキャンパス",
+      "青山オープンキャンパス",
+      "オンラインオープンキャンパス"
+    ],
+    "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
+    "application_period_note": "各キャンパス・日程の予約は公式を参照",
+    "catalog_season_warning": ""
+  },
+  "last_fetch_at": "2026-04-04T08:12:12+00:00",
+  "last_content_change_at": "2026-04-04T04:27:11+00:00"
+}

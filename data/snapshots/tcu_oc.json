@@ -1,0 +1,30 @@
+{
+  "source_id": "tcu_oc",
+  "university": "東京都市大学",
+  "university_group": "東京4理工（四工大）",
+  "department_label": "情報工学部・理工学部（情報・電気等）",
+  "campus_label": "世田谷・横浜キャンパス",
+  "area_prefectures": [
+    "東京都",
+    "神奈川県"
+  ],
+  "page_url": "https://www.tcu.ac.jp/entrance/event/opencampus/",
+  "reservation_url": null,
+  "fingerprint": "40fe141cbf971b0835ce9a2924f44d6404f8c22093bb6351fa4c424191e0abde",
+  "previous_fingerprint": "40fe141cbf971b0835ce9a2924f44d6404f8c22093bb6351fa4c424191e0abde",
+  "normalized": {
+    "page_title": "東京都市大学｜入学案内｜オープンキャンパス・イベント情報｜オープンキャンパス",
+    "highlights": [
+      "オープンキャンパス・イベント情報",
+      "2026年度 志願者速報"
+    ],
+    "schedule_lines": [
+      "オープンキャンパス"
+    ],
+    "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
+    "application_period_note": "各キャンパス・日程の予約は公式を参照",
+    "catalog_season_warning": ""
+  },
+  "last_fetch_at": "2026-04-04T08:12:12+00:00",
+  "last_content_change_at": "2026-04-04T08:12:01+00:00"
+}

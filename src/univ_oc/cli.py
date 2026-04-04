@@ -6,10 +6,10 @@ import typer
 from dotenv import load_dotenv
 
 from univ_oc import fetch as fetch_mod
-from univ_oc.config_loader import load_sources, repo_root
+from univ_oc.config_loader import load_sources, load_target_catalog, repo_root
 from univ_oc.mail import build_email_body, load_smtp_settings_from_env, send_update_email
 from univ_oc.parsers import parse as parse_with
-from univ_oc.render import build_row, render_markdown_table
+from univ_oc.render import build_row, render_full_document
 from univ_oc.snapshot import (
     days_since_content_change,
     load_snapshot,
@@ -31,6 +31,7 @@ def run(
     os.chdir(root)
 
     sources = load_sources(root / "config" / "sources.yaml")
+    catalog = load_target_catalog(root / "config" / "target_catalog.yaml")
     snapshot_dir = root / "data" / "snapshots"
     out_md = root / "docs" / "opencampus.md"
 
@@ -58,7 +59,10 @@ def run(
             merged, changed = merge_snapshot(
                 src.id,
                 src.university,
+                src.university_group,
                 src.department_label,
+                src.campus_label,
+                list(src.area_prefectures),
                 src.page_url,
                 src.reservation_url,
                 fp,
@@ -75,8 +79,12 @@ def run(
         assert data is not None
         ddays = days_since_content_change(data["last_content_change_at"])
         row = build_row(
+            source_id=src.id,
+            university_group=src.university_group,
             university=src.university,
             department_label=src.department_label,
+            campus_label=src.campus_label,
+            area_prefectures=list(src.area_prefectures),
             page_url=src.page_url,
             reservation_url=src.reservation_url,
             normalized=data["normalized"],
@@ -87,7 +95,7 @@ def run(
         )
         rows.append(row)
 
-    md = render_markdown_table(rows)
+    md = render_full_document(catalog, rows)
     out_md.parent.mkdir(parents=True, exist_ok=True)
     out_md.write_text(md, encoding="utf-8")
 

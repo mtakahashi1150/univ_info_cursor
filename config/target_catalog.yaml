@@ -1,0 +1,155 @@
+# 対象グループ・大学ごとの「情報工学・情報科学系」に該当する学部・学科と、
+# オープンキャンパスが主に想定されるキャンパス（首都圏4都県に限定して記載）。
+# ※ OC は大学単位・キャンパス単位の開催が中心のため、キャンパスごとに整理しています。
+
+meta:
+  area_prefectures:
+    - 東京都
+    - 神奈川県
+    - 千葉県
+    - 埼玉県
+  focus: 情報工学・情報科学系（および直近の情報理工・データ科学等を含む理工情報系）
+  groups_note: 早慶上理・G-MARCHに加え、東京理工系4大学（通称・四工大／東京4理工）を含みます。東京工科大学は四工大協定の正式メンバーではありませんが首都圏私立理工として参考掲載します。
+
+universities:
+  - name: 早稲田大学
+    group: 早慶上理
+    info_departments:
+      - 基幹理工学部（情報理工学科ほか）
+      - 創造理工学部
+      - 先進理工学部
+    oc_campuses:
+      - { campus: 西早稲田キャンパス, prefecture: 東京都, note: 理工3学部の来校型OCの主会場の一つ }
+      - { campus: 早稲田キャンパス, prefecture: 東京都, note: 政治経済・法学等（参考：他学部） }
+      - { campus: 戸山キャンパス, prefecture: 東京都, note: 文化構想・文学等（参考） }
+
+  - name: 慶應義塾大学
+    group: 早慶上理
+    info_departments:
+      - 理工学部（情報系領域を含む）
+    oc_campuses:
+      - { campus: 日吉キャンパス, prefecture: 神奈川県, note: 講義編OC等 }
+      - { campus: 三田キャンパス, prefecture: 東京都, note: 学生生活編等 }
+
+  - name: 上智大学
+    group: 早慶上理
+    info_departments:
+      - 理工学部（情報理工学科ほか）
+    oc_campuses:
+      - { campus: 四谷キャンパス, prefecture: 東京都, note: 夏季OCの主会場 }
+      - { campus: 目白聖母キャンパス, prefecture: 東京都, note: 一部プログラム }
+
+  - name: 東京理科大学
+    group: 早慶上理
+    info_departments:
+      - 創域情報学部
+      - 工学部（情報工学科等）
+      - 先進工学部
+    oc_campuses:
+      - { campus: 野田キャンパス, prefecture: 千葉県, note: 創域理工・創域情報等 }
+      - { campus: 葛飾キャンパス, prefecture: 東京都, note: 工学・先進工学等 }
+      - { campus: 神楽坂キャンパス, prefecture: 東京都, note: 理学・経営等（一部理工） }
+
+  - name: 明治大学
+    group: G-MARCH
+    info_departments:
+      - 理工学部（情報科学科）
+      - 総合数理学部（情報系領域）
+    oc_campuses:
+      - { campus: 中野キャンパス, prefecture: 東京都, note: 理工・情報科学科等 }
+      - { campus: 駿河台キャンパス, prefecture: 東京都, note: 複数学部 }
+      - { campus: 生田キャンパス, prefecture: 神奈川県, note: 理工等 }
+
+  - name: 青山学院大学
+    group: G-MARCH
+    info_departments:
+      - 理工学部
+      - 社会情報学部
+    oc_campuses:
+      - { campus: 相模原キャンパス, prefecture: 神奈川県, note: 理工・社会情報・地共・コミ人科等のOC }
+      - { campus: 青山キャンパス, prefecture: 東京都, note: 文系中心日程あり（理工は相模原が主） }
+
+  - name: 立教大学
+    group: G-MARCH
+    info_departments:
+      - 人工知能科学部
+      - 理学部（数理・物理科学科等）
+    oc_campuses:
+      - { campus: 新座キャンパス, prefecture: 埼玉県, note: 理工・人工知能科学部等 }
+      - { campus: 池袋キャンパス, prefecture: 東京都, note: 文系中心・ミニOC等 }
+
+  - name: 中央大学
+    group: G-MARCH
+    info_departments:
+      - 国際情報学部
+      - 基幹理工学部
+      - 社会理工学部
+      - 先進理工学部
+    oc_campuses:
+      - { campus: 後楽園キャンパス, prefecture: 東京都, note: 理工3学部 }
+      - { campus: 市ヶ谷田町キャンパス, prefecture: 東京都, note: 国際情報学部 }
+      - { campus: 多摩キャンパス, prefecture: 東京都, note: 経済・商・文等（スポーツ情報等の記載は要項参照） }
+
+  - name: 法政大学
+    group: G-MARCH
+    info_departments:
+      - 情報科学部
+      - 理工学部
+      - デザイン工学部（情報系領域）
+    oc_campuses:
+      - { campus: 小金井キャンパス, prefecture: 東京都, note: 情報科学・理工・生命等 }
+      - { campus: 市ケ谷キャンパス, prefecture: 東京都, note: 多学部（情報科学以外が主な日もあり） }
+
+  - name: 芝浦工業大学
+    group: 東京4理工（四工大）
+    info_departments:
+      - 工学部（情報・通信工学系・情報工学コース等）
+      - システム理工学域（情報・通信系領域を含む）
+    oc_campuses:
+      - { campus: 豊洲キャンパス, prefecture: 東京都, note: 理工系OCの主会場の一つ }
+      - { campus: 大宮キャンパス, prefecture: 埼玉県, note: 1・2年次学修・理工系OC }
+
+  - name: 東京都市大学
+    group: 東京4理工（四工大）
+    info_departments:
+      - 情報工学部
+      - 理工学部（情報・電気・数理等の理工情報系）
+    oc_campuses:
+      - { campus: 世田谷キャンパス, prefecture: 東京都, note: 情報工学部等 }
+      - { campus: 横浜キャンパス, prefecture: 神奈川県, note: 理工・建築等 }
+
+  - name: 東京電機大学
+    group: 東京4理工（四工大）
+    info_departments:
+      - システムデザイン工学部
+      - 未来科学部
+      - 工学部・理工学部（情報・電気・情報通信等）
+    oc_campuses:
+      - { campus: 東京千住キャンパス, prefecture: 東京都, note: システムデザイン工学部・未来科学部・工学部等 }
+      - { campus: 埼玉鳩山キャンパス, prefecture: 埼玉県, note: 理工学部等 }
+
+  - name: 工学院大学
+    group: 東京4理工（四工大）
+    info_departments:
+      - 工学部（情報通信工学科等）
+      - 先端工学部
+    oc_campuses:
+      - { campus: 新宿キャンパス, prefecture: 東京都, note: 新宿祭等 }
+      - { campus: 八王子キャンパス, prefecture: 東京都, note: 八王子祭・理工系 }
+
+  - name: 東京工科大学
+    group: 首都圏私立理工（四工大協定外）
+    info_departments:
+      - コンピュータサイエンス学部
+      - 工学部（情報・メディア等の理工情報系）
+    oc_campuses:
+      - { campus: 八王子キャンパス, prefecture: 東京都, note: コンピュータサイエンス学部等 }
+      - { campus: 蒲田キャンパス, prefecture: 東京都, note: デザイン・メディア等 }
+
+  - name: 学習院大学
+    group: G-MARCH
+    info_departments:
+      - （独立の「情報工学・情報科学部」はなし。理学部等のみのため本ツールの自動取得対象外）
+    oc_campuses:
+      - { campus: 目白キャンパス, prefecture: 東京都, note: 全学部向け来校型OC }
+      - { campus: 戸山キャンパス, prefecture: 東京都, note: 国際文化交流学部 }

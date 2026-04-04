@@ -1,0 +1,27 @@
+{
+  "source_id": "hosei_oc",
+  "university": "法政大学",
+  "university_group": "G-MARCH",
+  "department_label": "情報科学部・理工学部・デザイン工学部（情報系領域）",
+  "campus_label": "小金井・市ケ谷キャンパス",
+  "area_prefectures": [
+    "東京都"
+  ],
+  "page_url": "https://nyushi.hosei.ac.jp/event/oc",
+  "reservation_url": null,
+  "fingerprint": "e22edc8c6d8a6c2a42ed8b105a4f001d60ab90e402e1456dd3b36d55dfa75d3c",
+  "previous_fingerprint": "e22edc8c6d8a6c2a42ed8b105a4f001d60ab90e402e1456dd3b36d55dfa75d3c",
+  "normalized": {
+    "page_title": "オープンキャンパス :: 法政大学入試情報サイト",
+    "highlights": [],
+    "schedule_lines": [
+      "2026年度は、3キャンパス対面にてオープンキャンパス実施を予定しております。",
+      "2025年度開催の様子"
+    ],
+    "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
+    "application_period_note": "各キャンパス・日程の予約は公式を参照",
+    "catalog_season_warning": ""
+  },
+  "last_fetch_at": "2026-04-04T08:12:12+00:00",
+  "last_content_change_at": "2026-04-04T04:27:11+00:00"
+}

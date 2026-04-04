@@ -1,0 +1,38 @@
+{
+  "source_id": "teu_oc",
+  "university": "東京工科大学",
+  "university_group": "首都圏私立理工（四工大協定外）",
+  "department_label": "コンピュータサイエンス学部・工学部（情報・メディア等）",
+  "campus_label": "八王子・蒲田キャンパス",
+  "area_prefectures": [
+    "東京都"
+  ],
+  "page_url": "https://jyuken.teu.ac.jp/entrance/open/index.html",
+  "reservation_url": null,
+  "fingerprint": "b64faf5039271686d5ddd6c24ff32ff98a2abaae5858a88b7ff751f647dfa08d",
+  "previous_fingerprint": "b64faf5039271686d5ddd6c24ff32ff98a2abaae5858a88b7ff751f647dfa08d",
+  "normalized": {
+    "page_title": "オープンキャンパス情報 | 入試・入学案内 | 東京工科大学",
+    "highlights": [
+      "2026年度入試カレンダー",
+      "2025年度入試出願状況",
+      "2024年度入試出願状況",
+      "2023年度入試出願状況",
+      "2022年度入試出願状況",
+      "2021年度入試出願状況",
+      "バーチャルオープンキャンパス（工科大ナビ）",
+      "オープンキャンパス・入試説明会"
+    ],
+    "schedule_lines": [
+      "オープンキャンパスについて",
+      "過去のオープンキャンパスの様子",
+      "蒲田キャンパス オープンキャンパス日程",
+      "八王子キャンパス オープンキャンパス日程"
+    ],
+    "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
+    "application_period_note": "各キャンパス・日程の予約は公式を参照",
+    "catalog_season_warning": ""
+  },
+  "last_fetch_at": "2026-04-04T08:12:13+00:00",
+  "last_content_change_at": "2026-04-04T08:12:02+00:00"
+}

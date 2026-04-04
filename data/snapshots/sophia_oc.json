@@ -1,0 +1,30 @@
+{
+  "source_id": "sophia_oc",
+  "university": "上智大学",
+  "university_group": "早慶上理",
+  "department_label": "理工学部（情報理工学科ほか）",
+  "campus_label": "四谷・目白聖母キャンパス",
+  "area_prefectures": [
+    "東京都"
+  ],
+  "page_url": "https://adm.sophia.ac.jp/jpn/event_ad/oc/",
+  "reservation_url": null,
+  "fingerprint": "1e14b2e1946f405a4b4c4410be5aafd4ca1b43d8a71b7abee1c063d141397dad",
+  "previous_fingerprint": "1e14b2e1946f405a4b4c4410be5aafd4ca1b43d8a71b7abee1c063d141397dad",
+  "normalized": {
+    "page_title": "四谷キャンパス・目白聖母キャンパスで開催のイベント｜上智大学 入試情報",
+    "highlights": [
+      "イベント・オープンキャンパス・進学相談会情報",
+      "WEB OPEN CAMPUS 2023",
+      "上智大学公式LINEアカウント 上智大学入学センター公式LINEアカウントでは、入学試験情報やイベント・オープンキャンパス情報、上智大学のキャンパスメディアのご案内などを配信しています。"
+    ],
+    "schedule_lines": [
+      "■2023年度 夏のオープンキャンパス"
+    ],
+    "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
+    "application_period_note": "各キャンパス・日程の予約は公式を参照",
+    "catalog_season_warning": ""
+  },
+  "last_fetch_at": "2026-04-04T08:12:11+00:00",
+  "last_content_change_at": "2026-04-04T04:27:10+00:00"
+}

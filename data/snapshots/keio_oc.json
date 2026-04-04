@@ -1,0 +1,27 @@
+{
+  "source_id": "keio_oc",
+  "university": "慶應義塾大学",
+  "university_group": "早慶上理",
+  "department_label": "理工学部（情報・理工系）",
+  "campus_label": "日吉・三田キャンパス",
+  "area_prefectures": [
+    "東京都",
+    "神奈川県"
+  ],
+  "page_url": "https://www.keio.ac.jp/ja/admissions/oc/",
+  "reservation_url": null,
+  "fingerprint": "a7f9b34da78cb4c69f8d28a74a6056053c6e3d5c69b9d2888b4727e6fed93fb4",
+  "previous_fingerprint": "a7f9b34da78cb4c69f8d28a74a6056053c6e3d5c69b9d2888b4727e6fed93fb4",
+  "normalized": {
+    "page_title": "「オープンキャンパス2026」の開催について：[慶應義塾]",
+    "highlights": [],
+    "schedule_lines": [
+      "「オープンキャンパス2026」の開催について"
+    ],
+    "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
+    "application_period_note": "各キャンパス・日程の予約は公式を参照",
+    "catalog_season_warning": ""
+  },
+  "last_fetch_at": "2026-04-04T08:12:11+00:00",
+  "last_content_change_at": "2026-04-04T04:27:10+00:00"
+}

@@ -1,0 +1,30 @@
+{
+  "source_id": "waseda_oc",
+  "university": "早稲田大学",
+  "university_group": "早慶上理",
+  "department_label": "基幹理工・創造理工・先進理工学部（情報理工系）",
+  "campus_label": "西早稲田・早稲田・戸山キャンパス（来校型OC）",
+  "area_prefectures": [
+    "東京都"
+  ],
+  "page_url": "https://www.waseda.jp/inst/admission/visiting/opencampus/",
+  "reservation_url": null,
+  "fingerprint": "a045393441c97f54b5e8a7f0c9d71b42d709e30d383726d798126ef639511d13",
+  "previous_fingerprint": "a045393441c97f54b5e8a7f0c9d71b42d709e30d383726d798126ef639511d13",
+  "normalized": {
+    "page_title": "オープンキャンパス – 早稲田大学 入学センター",
+    "highlights": [
+      "【西早稲田】2026年8月1日(土)8月2日(日) 基幹理工学部 創造理工学部 先進理工学部",
+      "【TWIns （先端生命医科学センター）】2026年8月1日(土)8月2日(日) 教育学部 創造理工学部 先進理工学部"
+    ],
+    "schedule_lines": [
+      "（概要）8月1日（土）、2日（日）の二日間にかけて、オープンキャンパスを開催いたします。",
+      "【西早稲田】2026年8月1日(土)8月2日(日) 基幹理工学部 創造理工学部 先進理工学部",
+      "【TWIns （先端生命医科学センター）】2026年8月1日(土)8月2日(日) 教育学部 創造理工学部 先進理工学部"
+    ],
+    "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
+    "application_period_note": "各キャンパス・日程の予約は公式を参照"
+  },
+  "last_fetch_at": "2026-04-04T08:12:11+00:00",
+  "last_content_change_at": "2026-04-04T04:27:10+00:00"
+}

@@ -1,0 +1,30 @@
+{
+  "source_id": "chuo_oc",
+  "university": "中央大学",
+  "university_group": "G-MARCH",
+  "department_label": "国際情報・基幹理工・社会理工・先進理工学部",
+  "campus_label": "後楽園・市ヶ谷田町・多摩キャンパス",
+  "area_prefectures": [
+    "東京都"
+  ],
+  "page_url": "https://www.chuo-u.ac.jp/connect/event/opencampus2026.html",
+  "reservation_url": null,
+  "fingerprint": "8947c47f114a6677aeb92e97781f5a401e418047249d5a36f820781defda759b",
+  "previous_fingerprint": "8947c47f114a6677aeb92e97781f5a401e418047249d5a36f820781defda759b",
+  "normalized": {
+    "page_title": "オープンキャンパス 2026 | 中央大学",
+    "highlights": [],
+    "schedule_lines": [
+      "夏のオープンキャンパスやめました。",
+      "「オープンキャンパスは、夏。」その常識を、中央大学が変えます。",
+      "ミニオープンキャンパスin多摩",
+      "開催日2026年4月18日(土)10時～11時30分【事前申込制】",
+      "申込開始日2026年4月6日(月)16時00分～4月16日(木) 23時50分"
+    ],
+    "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
+    "application_period_note": "各キャンパス・日程の予約は公式を参照",
+    "catalog_season_warning": ""
+  },
+  "last_fetch_at": "2026-04-04T08:12:12+00:00",
+  "last_content_change_at": "2026-04-04T04:27:11+00:00"
+}

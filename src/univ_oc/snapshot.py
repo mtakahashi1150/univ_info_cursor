@@ -20,7 +20,10 @@ def save_snapshot(path: Path, data: dict[str, Any]) -> None:
 def merge_snapshot(
     source_id: str,
     university: str,
+    university_group: str,
     department_label: str,
+    campus_label: str,
+    area_prefectures: list[str],
     page_url: str,
     reservation_url: Optional[str],
     new_fp: str,
@@ -42,7 +45,10 @@ def merge_snapshot(
     data = {
         "source_id": source_id,
         "university": university,
+        "university_group": university_group,
         "department_label": department_label,
+        "campus_label": campus_label,
+        "area_prefectures": area_prefectures,
         "page_url": page_url,
         "reservation_url": reservation_url,
         "fingerprint": new_fp,

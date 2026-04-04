@@ -1,18 +1,179 @@
-# このファイルに書く URL は、必ずブラウザで開いて内容を確認したものだけを追加してください。
-# 推測でパスを作らないでください。
+# 検証済みの公式 URL のみ。推測パスは禁止。
+# 早慶上理・G-MARCH・東京4理工（四工大）ほか、情報工学・情報科学系を追う大学（学習院は情報系学部なしのため未登録）。
 
 sources:
+  - id: waseda_oc
+    university_group: 早慶上理
+    university: 早稲田大学
+    department_label: 基幹理工・創造理工・先進理工学部（情報理工系）
+    campus_label: 西早稲田・早稲田・戸山キャンパス（来校型OC）
+    area_prefectures:
+      - 東京都
+    parser: waseda
+    page_url: https://www.waseda.jp/inst/admission/visiting/opencampus/
+    reservation_url: null
+    tags: [情報系]
+
+  - id: keio_oc
+    university_group: 早慶上理
+    university: 慶應義塾大学
+    department_label: 理工学部（情報・理工系）
+    campus_label: 日吉・三田キャンパス
+    area_prefectures:
+      - 東京都
+      - 神奈川県
+    parser: generic
+    page_url: https://www.keio.ac.jp/ja/admissions/oc/
+    reservation_url: null
+    tags: [情報系]
+
+  - id: sophia_oc
+    university_group: 早慶上理
+    university: 上智大学
+    department_label: 理工学部（情報理工学科ほか）
+    campus_label: 四谷・目白聖母キャンパス
+    area_prefectures:
+      - 東京都
+    parser: generic
+    page_url: https://adm.sophia.ac.jp/jpn/event_ad/oc/
+    reservation_url: null
+    tags: [情報系]
+
+  - id: tus_oc
+    university_group: 早慶上理
+    university: 東京理科大学
+    department_label: 創域情報・工学・先進工学（情報工学科等）
+    campus_label: 野田・葛飾・神楽坂キャンパス
+    area_prefectures:
+      - 東京都
+      - 千葉県
+    parser: generic
+    page_url: https://www.tus.ac.jp/admissions/university/visittus/opencampus2025/index.html
+    reservation_url: null
+    tags: [情報系]
+
   - id: meiji_opencampus
+    university_group: G-MARCH
     university: 明治大学
-    # 一覧上の「学科」列に出すラベル（情報系に関連する例を明示）
-    department_label: 理工学部（情報科学科）等・他学部
+    department_label: 理工学部（情報科学科）・総合数理学部（情報系領域）
+    campus_label: 駿河台・和泉・生田・中野キャンパス
+    area_prefectures:
+      - 東京都
+      - 神奈川県
     parser: meiji
-    # 検証済み: 入試総合サイト「オープンキャンパス」公式ページ
     page_url: https://www.meiji.ac.jp/exam/event/opencampus/index.html
-    # 予約は LINE（公式案内ページ）。検証済みで追加。
     reservation_url: https://www.meiji.ac.jp/exam/reference/official_line.html
-    regions:
-      - tokyo
-      - kanagawa
-    tags:
-      - 情報系
+    tags: [情報系]
+
+  - id: aoyama_oc
+    university_group: G-MARCH
+    university: 青山学院大学
+    department_label: 理工学部・社会情報学部
+    campus_label: 相模原・青山キャンパス
+    area_prefectures:
+      - 東京都
+      - 神奈川県
+    parser: generic
+    page_url: https://www.aoyama.ac.jp/admission/undergraduate/open_campus/open_campus.html
+    reservation_url: null
+    tags: [情報系]
+
+  - id: rikkyo_oc
+    university_group: G-MARCH
+    university: 立教大学
+    department_label: 人工知能科学部・理学部（数理・物理等）
+    campus_label: 新座・池袋キャンパス
+    area_prefectures:
+      - 東京都
+      - 埼玉県
+    parser: generic
+    page_url: https://www.rikkyo.ac.jp/admissions/visit/opencampus/index.html
+    reservation_url: null
+    tags: [情報系]
+
+  - id: chuo_oc
+    university_group: G-MARCH
+    university: 中央大学
+    department_label: 国際情報・基幹理工・社会理工・先進理工学部
+    campus_label: 後楽園・市ヶ谷田町・多摩キャンパス
+    area_prefectures:
+      - 東京都
+    parser: generic
+    page_url: https://www.chuo-u.ac.jp/connect/event/opencampus2026.html
+    reservation_url: null
+    tags: [情報系]
+
+  - id: hosei_oc
+    university_group: G-MARCH
+    university: 法政大学
+    department_label: 情報科学部・理工学部・デザイン工学部（情報系領域）
+    campus_label: 小金井・市ケ谷キャンパス
+    area_prefectures:
+      - 東京都
+    parser: generic
+    page_url: https://nyushi.hosei.ac.jp/event/oc
+    reservation_url: null
+    tags: [情報系]
+
+  - id: shibaura_oc
+    university_group: 東京4理工（四工大）
+    university: 芝浦工業大学
+    department_label: 工学部（情報・通信工学系）・システム理工学域（情報系領域）
+    campus_label: 豊洲・大宮キャンパス
+    area_prefectures:
+      - 東京都
+      - 埼玉県
+    parser: generic
+    page_url: https://www.shibaura-it.ac.jp/extra/oc-special/
+    reservation_url: null
+    tags: [情報系, 四工大]
+
+  - id: tcu_oc
+    university_group: 東京4理工（四工大）
+    university: 東京都市大学
+    department_label: 情報工学部・理工学部（情報・電気等）
+    campus_label: 世田谷・横浜キャンパス
+    area_prefectures:
+      - 東京都
+      - 神奈川県
+    parser: generic
+    page_url: https://www.tcu.ac.jp/entrance/event/opencampus/
+    reservation_url: null
+    tags: [情報系, 四工大]
+
+  - id: dendai_oc
+    university_group: 東京4理工（四工大）
+    university: 東京電機大学
+    department_label: システムデザイン工学部・未来科学部・工学部・理工学部（情報系領域）
+    campus_label: 東京千住・埼玉鳩山キャンパス
+    area_prefectures:
+      - 東京都
+      - 埼玉県
+    parser: generic
+    page_url: https://www.dendai.ac.jp/about/admission/opencampus/index2026.html
+    reservation_url: null
+    tags: [情報系, 四工大]
+
+  - id: kogakuin_oc
+    university_group: 東京4理工（四工大）
+    university: 工学院大学
+    department_label: 工学部（情報通信工等）・先端工学部
+    campus_label: 新宿・八王子キャンパス
+    area_prefectures:
+      - 東京都
+    parser: generic
+    page_url: https://www.kogakuin.ac.jp/admissions/event/oc.html
+    reservation_url: null
+    tags: [情報系, 四工大]
+
+  - id: teu_oc
+    university_group: 首都圏私立理工（四工大協定外）
+    university: 東京工科大学
+    department_label: コンピュータサイエンス学部・工学部（情報・メディア等）
+    campus_label: 八王子・蒲田キャンパス
+    area_prefectures:
+      - 東京都
+    parser: generic
+    page_url: https://jyuken.teu.ac.jp/entrance/open/index.html
+    reservation_url: null
+    tags: [情報系]

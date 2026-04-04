@@ -1,0 +1,31 @@
+{
+  "source_id": "dendai_oc",
+  "university": "東京電機大学",
+  "university_group": "東京4理工（四工大）",
+  "department_label": "システムデザイン工学部・未来科学部・工学部・理工学部（情報系領域）",
+  "campus_label": "東京千住・埼玉鳩山キャンパス",
+  "area_prefectures": [
+    "東京都",
+    "埼玉県"
+  ],
+  "page_url": "https://www.dendai.ac.jp/about/admission/opencampus/index2026.html",
+  "reservation_url": null,
+  "fingerprint": "7610d15b6fc15db52648edd9239ec313f73b1b3f1ccc9bdab605262b75cc8f7c",
+  "previous_fingerprint": "7610d15b6fc15db52648edd9239ec313f73b1b3f1ccc9bdab605262b75cc8f7c",
+  "normalized": {
+    "page_title": "オープンキャンパス2026 | 東京電機大学",
+    "highlights": [
+      "入試・オープンキャンパス"
+    ],
+    "schedule_lines": [
+      "オープンキャンパス2026",
+      "2025年度の来場者の99.6%は オープンキャンパスに満足！！",
+      "興味のある分野を見つけて オープンキャンパスへ行こう！"
+    ],
+    "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
+    "application_period_note": "各キャンパス・日程の予約は公式を参照",
+    "catalog_season_warning": ""
+  },
+  "last_fetch_at": "2026-04-04T08:12:12+00:00",
+  "last_content_change_at": "2026-04-04T08:12:01+00:00"
+}

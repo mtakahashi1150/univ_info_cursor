@@ -11,6 +11,8 @@ GitHub ユーザー **`mtakahashi1150`** 配下のリポジトリ **`univ_info_c
 
 - Python 3.9+
 - 対象 URL は **`config/sources.yaml` に手動で検証したものだけ** を追加する（推測 URL は禁止）
+- **`config/target_catalog.yaml`**: 早慶上理・G-MARCH・首都圏4都県・情報系の学部学科・OCキャンパス一覧（表の先頭に埋め込み）
+- **学習院大学**は情報工学・情報科学の独立学部がないため **`sources.yaml` には未登録**（カタログには参考で記載）
 
 ## セットアップ
 

@@ -21,11 +21,15 @@ def test_meiji_parse_fingerprint_stable() -> None:
 
 
 def test_render_table() -> None:
-    from univ_oc.render import build_row, render_markdown_table
+    from univ_oc.render import build_row, render_full_document
 
     row = build_row(
+        source_id="test_src",
+        university_group="テスト群",
         university="テスト大学",
         department_label="情報",
+        campus_label="テストキャンパス",
+        area_prefectures=["東京都"],
         page_url="https://example.com/oc",
         reservation_url="https://example.com/r",
         normalized={
@@ -38,6 +42,12 @@ def test_render_table() -> None:
         changed_this_run=True,
         days_no_update=0,
     )
-    md = render_markdown_table([row])
+    catalog = {"meta": {"area_prefectures": ["東京都"], "focus": "情報系"}, "universities": []}
+    md = render_full_document(catalog, [row])
     assert "テスト大学" in md
     assert "累積" in md
+    assert "今回の更新サマリー" in md
+    assert "NEW" in md
+    assert "オープンキャンパス案内" in md
+    assert 'target="_blank"' in md
+    assert "test_src" in md

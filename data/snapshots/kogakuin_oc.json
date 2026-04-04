@@ -1,0 +1,26 @@
+{
+  "source_id": "kogakuin_oc",
+  "university": "工学院大学",
+  "university_group": "東京4理工（四工大）",
+  "department_label": "工学部（情報通信工等）・先端工学部",
+  "campus_label": "新宿・八王子キャンパス",
+  "area_prefectures": [
+    "東京都"
+  ],
+  "page_url": "https://www.kogakuin.ac.jp/admissions/event/oc.html",
+  "reservation_url": null,
+  "fingerprint": "37507c78eab289f4e0488d7ee47ef648e9c7c80cc41d70871ebbb19f6e1b4c48",
+  "previous_fingerprint": "37507c78eab289f4e0488d7ee47ef648e9c7c80cc41d70871ebbb19f6e1b4c48",
+  "normalized": {
+    "page_title": "オープンキャンパス | 2026オープンキャンパス・相談会 | 工学院大学 入試サイト",
+    "highlights": [],
+    "schedule_lines": [
+      "今後のオープンキャンパスの予定"
+    ],
+    "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
+    "application_period_note": "各キャンパス・日程の予約は公式を参照",
+    "catalog_season_warning": ""
+  },
+  "last_fetch_at": "2026-04-04T08:12:13+00:00",
+  "last_content_change_at": "2026-04-04T08:12:02+00:00"
+}

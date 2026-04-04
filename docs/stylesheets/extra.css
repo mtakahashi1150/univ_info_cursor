@@ -1,0 +1,73 @@
+/* 累積カード（スマホ優先・横スクロール最小） */
+.oc-card {
+  border: 1px solid var(--md-default-fg-color--lightest, rgba(0, 0, 0, 0.12));
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem 1rem;
+  margin-bottom: 1.25rem;
+  background: var(--md-default-bg-color);
+}
+
+.oc-card--updated {
+  border-left: 4px solid var(--md-typeset-a-color, #4051b5);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+[data-md-color-scheme="slate"] .oc-card--updated,
+[data-md-color-scheme="dracula"] .oc-card--updated {
+  background: rgba(100, 150, 255, 0.06);
+}
+
+.oc-new-badge {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.12rem 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  vertical-align: middle;
+  color: #fff;
+  background: #c62828;
+  border-radius: 0.25rem;
+}
+
+.oc-title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.oc-catalog-warning {
+  margin: 0 0 0.65rem;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--md-default-fg-color);
+  background: rgba(255, 152, 0, 0.12);
+  border-left: 4px solid #f57c00;
+  border-radius: 0.25rem;
+}
+
+[data-md-color-scheme="slate"] .oc-catalog-warning,
+[data-md-color-scheme="dracula"] .oc-catalog-warning {
+  background: rgba(255, 183, 77, 0.12);
+}
+
+/* カタログ用の広い表だけ横スクロール */
+.md-typeset h2 ~ * .md-typeset__table,
+.md-typeset h3 ~ .md-typeset__table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+  .oc-card {
+    padding: 0.55rem 0.7rem 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .oc-title {
+    font-size: 1rem;
+  }
+}

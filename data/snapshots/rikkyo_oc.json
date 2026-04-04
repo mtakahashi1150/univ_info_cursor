@@ -1,0 +1,35 @@
+{
+  "source_id": "rikkyo_oc",
+  "university": "立教大学",
+  "university_group": "G-MARCH",
+  "department_label": "人工知能科学部・理学部（数理・物理等）",
+  "campus_label": "新座・池袋キャンパス",
+  "area_prefectures": [
+    "東京都",
+    "埼玉県"
+  ],
+  "page_url": "https://www.rikkyo.ac.jp/admissions/visit/opencampus/index.html",
+  "reservation_url": null,
+  "fingerprint": "ba854a6e729c7a44cb3fed03380f34d5977147a93e93defbcd17072aefa403e9",
+  "previous_fingerprint": "ba854a6e729c7a44cb3fed03380f34d5977147a93e93defbcd17072aefa403e9",
+  "normalized": {
+    "page_title": "オープンキャンパス | 立教大学",
+    "highlights": [
+      "池袋オープンキャンパス（主要プログラムは事前予約制）",
+      "新座オープンキャンパス（予約不要）",
+      "オープンキャンパスQ＆A"
+    ],
+    "schedule_lines": [
+      "オープンキャンパス立教大学へ行ってみよう",
+      "池袋オープンキャンパス（主要プログラムは事前予約制）",
+      "2026年度開催日時・対象学部",
+      "新座オープンキャンパス（予約不要）",
+      "オープンキャンパスQ＆A"
+    ],
+    "reservation_note": "公式ページの案内に従う（自動抽出は参考）",
+    "application_period_note": "各キャンパス・日程の予約は公式を参照",
+    "catalog_season_warning": ""
+  },
+  "last_fetch_at": "2026-04-04T08:12:12+00:00",
+  "last_content_change_at": "2026-04-04T04:27:11+00:00"
+}
