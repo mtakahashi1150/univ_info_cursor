@@ -1,8 +1,8 @@
 リポジトリ: [mtakahashi1150/univ_info_cursor](https://github.com/mtakahashi1150/univ_info_cursor)
 
-**サイト更新（取得実行・UTC）**: `2026-04-04T22:27:07+00:00`
+**サイト更新（取得実行・UTC）**: `2026-04-05T15:27:25+00:00`
 
-**前回スナップショットとの差分**: あり（`sophia_oc`）
+**前回スナップショットとの差分**: なし（フィンガープリント一致）
 
 > 表の **日程** は公式ページからの抜粋です。詳細・申込は **公式サイト** リンク先で確認してください。
 > **逗子（JR 横須賀線・逗子駅／または京急逗子・葉山駅）から** の所要は手動の目安です（`config/campus_access.yaml`）。経路で大きく変わります。未設定時は公式で確認してください。
@@ -66,7 +66,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#sophia_oc">上智大学</a></td>
 <td data-label="学部・学科">理工学部（情報理工学科ほか）・OCは一覧の【理工】表記イベントを参照</td>
 <td data-label="OC"><span class="oc-campus-name">四谷キャンパス（東京都）</span><br/><span class="oc-transit">（JR逗子→品川→地下鉄四谷三丁目 約75〜90分+徒歩）</span><br/><span class="oc-duration">（所要 計85〜100分台）</span></td>
-<td data-label="日程" class="oc-col-dates"><span class="oc-new-inline">【NEW】</span> —<br/><a class="oc-schedule-link" href="https://adm.sophia.ac.jp/jpn/event_ad" target="_blank" rel="noopener noreferrer">イベント・OC一覧</a><br/><a class="oc-schedule-link" href="https://adm.sophia.ac.jp/eng/news/english-taught/2026engsessionjuly12/" target="_blank" rel="noopener noreferrer">詳細</a></td>
+<td data-label="日程" class="oc-col-dates">—<br/><a class="oc-schedule-link" href="https://adm.sophia.ac.jp/jpn/event_ad" target="_blank" rel="noopener noreferrer">イベント・OC一覧</a><br/><a class="oc-schedule-link" href="https://adm.sophia.ac.jp/eng/news/english-taught/2026engsessionjuly12/" target="_blank" rel="noopener noreferrer">詳細</a></td>
 <td data-label="公式" class="oc-overview-links"><a href="https://adm.sophia.ac.jp/jpn/event_ad/" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#sophia_oc">詳細</a></td>
 </tr>
@@ -74,7 +74,7 @@
 <td data-label="大学"><a class="oc-overview-uni" href="#sophia_oc">上智大学</a></td>
 <td data-label="学部・学科">同一ページに四谷・目白向けイベントを掲載（キャンパス別詳細は公式イベントを確認）</td>
 <td data-label="OC"><span class="oc-campus-name">目白聖母キャンパス（東京都）</span><br/><span class="oc-transit">（JR逗子→品川→JR目白 約75〜90分+徒歩）</span><br/><span class="oc-duration">（所要 計85〜100分台）</span></td>
-<td data-label="日程" class="oc-col-dates"><span class="oc-new-inline">【NEW】</span> —<br/><a class="oc-schedule-link" href="https://adm.sophia.ac.jp/jpn/event_ad" target="_blank" rel="noopener noreferrer">イベント・OC一覧</a><br/><a class="oc-schedule-link" href="https://adm.sophia.ac.jp/eng/news/english-taught/2026engsessionjuly12/" target="_blank" rel="noopener noreferrer">詳細</a></td>
+<td data-label="日程" class="oc-col-dates">—<br/><a class="oc-schedule-link" href="https://adm.sophia.ac.jp/jpn/event_ad" target="_blank" rel="noopener noreferrer">イベント・OC一覧</a><br/><a class="oc-schedule-link" href="https://adm.sophia.ac.jp/eng/news/english-taught/2026engsessionjuly12/" target="_blank" rel="noopener noreferrer">詳細</a></td>
 <td data-label="公式" class="oc-overview-links"><a href="https://adm.sophia.ac.jp/jpn/event_ad/" target="_blank" rel="noopener noreferrer">オープンキャンパス案内</a></td>
 <td data-label="詳細"><a href="#sophia_oc">詳細</a></td>
 </tr>
@@ -305,9 +305,9 @@
 
 </div>
 
-<div class="oc-card oc-card--updated" id="sophia_oc" markdown="1">
+<div class="oc-card" id="sophia_oc" markdown="1">
 
-<h3 class="oc-title">上智大学 <span class="oc-new-badge">NEW</span></h3>
+<h3 class="oc-title">上智大学</h3>
 
 <p class="oc-catalog-warning">※2026年8月5日の項目は、公式見出しが「SOPHIA OPEN CAMPUS 2025」表記です。日程・対象学部は必ず公式ページで確認してください。</p>
 
@@ -443,7 +443,7 @@
 
 </div>
 
-_Generated at 2026-04-04T22:27:07+00:00_
+_Generated at 2026-04-05T15:27:25+00:00_
 
 ---
 

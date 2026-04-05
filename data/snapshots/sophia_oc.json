@@ -10,7 +10,7 @@
   "page_url": "https://adm.sophia.ac.jp/jpn/event_ad/",
   "reservation_url": null,
   "fingerprint": "32d30a1060bf48de66273067224bd8276846781a834a5b06fd40f38217119116",
-  "previous_fingerprint": "af724a3f315815b605d849f629a674bf2cc0c1e97c3d6074c71b33d07fbe0bbd",
+  "previous_fingerprint": "32d30a1060bf48de66273067224bd8276846781a834a5b06fd40f38217119116",
   "normalized": {
     "page_title": "イベント・オープンキャンパス・進学相談会情報｜上智大学 入試情報",
     "highlights": [
@@ -58,6 +58,6 @@
       }
     }
   },
-  "last_fetch_at": "2026-04-04T22:27:06+00:00",
+  "last_fetch_at": "2026-04-05T15:24:23+00:00",
   "last_content_change_at": "2026-04-04T22:27:06+00:00"
 }
