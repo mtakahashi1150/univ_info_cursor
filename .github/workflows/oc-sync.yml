@@ -4,9 +4,7 @@ name: Sync open campus data
 # https://github.com/mtakahashi1150/univ_info_cursor/settings/pages
 
 on:
-  schedule:
-    # 毎日 15:00 UTC 前後（日本時間 0:00 付近）。必要に応じて変更。
-    - cron: "0 15 * * *"
+  # 定期実行（cron）は停止。必要なときだけ Actions から手動実行してください。
   workflow_dispatch:
 
 env:
